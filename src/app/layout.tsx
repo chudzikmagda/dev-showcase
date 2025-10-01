@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
+import { NextFont } from "next/dist/compiled/@next/font";
+import { Montserrat } from "next/font/google";
+import Logotype from "./components/ui/Logotype/Logotype";
+import "./css/global.css";
 import StyledJsxRegistry from "./registry";
+
+const montserrat: NextFont = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Magda Chudzik - software engineer and graphic designer",
@@ -14,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <head></head>
+      <body className={montserrat.className}>
+        <Logotype></Logotype>
         <StyledJsxRegistry>{children}</StyledJsxRegistry>
       </body>
     </html>

@@ -1,0 +1,20 @@
+@import "./_reset.css";
+@import "./_variables.css";
+
+body {
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--secondaryColor);
+    background-color: var(--black);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 5px;
+  }
+}
