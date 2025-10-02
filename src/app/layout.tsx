@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Montserrat } from "next/font/google";
-import Logotype from "./components/ui/Logotype/Logotype";
+import Header from "./components/layout/Header/Header";
 import "./css/global.css";
 import StyledJsxRegistry from "./registry";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={montserrat.className}>
-        <Logotype></Logotype>
+        <Header></Header>
         <StyledJsxRegistry>{children}</StyledJsxRegistry>
       </body>
     </html>
