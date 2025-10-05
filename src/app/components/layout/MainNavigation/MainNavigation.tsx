@@ -1,0 +1,63 @@
+"use client";
+
+import React, { useState } from "react";
+import styled from "styled-components";
+import HamburgerIcon from "./HamburgerIcon";
+import Menu from "./Menu";
+import SocialMediaMenu from "../../ui/SocialMediaMenu/SocialMediaMenu";
+
+const Overlay = styled.div`
+  display: none;
+
+  &.active {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: block;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(var(--secondary-color), 0.5);
+    backdrop-filter: blur(10px);
+    transition: right 0.6s;
+    transition-delay: 0.25s;
+  }
+`;
+
+const MenuContainer = styled.nav`
+  position: absolute;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(var(--secondary-color), 0.2);
+  transition: right 0.3s ease-out;
+
+  &.active {
+    right: 0;
+  }
+`;
+
+const MainNavigation: React.FC = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = (): void =>
+    setIsActive((activeState: boolean) => !activeState);
+
+  return (
+    <>
+      <HamburgerIcon active={isActive} onClick={toggleMenu} />
+      <Overlay className={isActive ? "active" : ""} />
+      <MenuContainer className={isActive ? "active" : ""}>
+        <Menu />
+        <SocialMediaMenu />
+      </MenuContainer>
+    </>
+  );
+};
+
+export default MainNavigation;

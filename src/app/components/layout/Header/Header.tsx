@@ -1,12 +1,14 @@
 "use client";
-import Logotype from "../../ui/Logotype/Logotype";
 import styled from "styled-components";
+import Logotype from "../../ui/Logotype/Logotype";
+import MainNavigation from "../MainNavigation/MainNavigation";
 
 const HeaderWrapper = styled.header`
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: var(--navbar-height);
   margin: 0 auto;
@@ -22,6 +24,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logotype></Logotype>
+      <MainNavigation></MainNavigation>
     </HeaderWrapper>
   );
 };
