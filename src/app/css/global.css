@@ -1,6 +1,16 @@
 @import "./_reset.css";
 @import "./_variables.css";
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   position: relative;
 
