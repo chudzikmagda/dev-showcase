@@ -1,28 +1,33 @@
 :root {
-  --primary-color: #ca4941;
+  --primary-color: rgb(202, 73, 65);
 
-  --secondary-color: #1c2238;
-  --secondary-color-90: #33384c;
-  --secondary-color-80: #494e60;
-  --secondary-color-70: #606474;
-  --secondary-color-60: #777a88;
-  --secondary-color-20: #d2d3d7;
-  --secondary-color-10: #e8e9eb;
+  --secondary-color-rgb: 28, 34, 56;
+  --secondary-color: rgb(var(--secondary-color));
+  --secondary-color-90: rgb(51, 56, 76);
+  --secondary-color-80: rgb(73, 78, 96);
+  --secondary-color-70: rgb(96, 100, 116);
+  --secondary-color-60: rgb(119, 122, 136);
+  --secondary-color-20: rgb(210, 211, 215);
+  --secondary-color-10: rgb(232, 233, 235);
 
-  --white: #f1f1f1;
-  --black: #111111;
-  --light-grey: #e6e6e6;
+  --white: rgb(241, 241, 241);
+  --black: rgb(17, 17, 17);
+  --light-grey: rgb(230, 230, 230);
 
   --primary-text-color: var(--white);
 
-  --success-color: #7fc6b9;
-  --success-color-dark: #094c3f;
+  --success-color: rgb(127, 198, 185);
+  --success-color-dark: rgb(9, 76, 63);
 
   --font-family-basic: "Montserrat", sans-serif;
   --font-size-basic: 1rem;
-  --font-bold: 600;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
 
   --container-max-width: 1360px;
+
+  --transition-default: 0.3s ease-in-out;
 
   --navbar-height: 80px;
 

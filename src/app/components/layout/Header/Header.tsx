@@ -17,6 +17,7 @@ const HeaderWrapper = styled.header`
 
   @media (min-width: var(--desktop)) {
     padding: 0 calc(var(--basic-spacer) * 4);
+    margin-bottom: 40px;
   }
 `;
 

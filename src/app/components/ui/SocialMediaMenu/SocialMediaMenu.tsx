@@ -20,7 +20,7 @@ const SocialMediaLink = styled.a`
   justify-content: center;
   padding: 0.25rem;
   transition: all 0.4s ease;
-  opacity: 0.2;
+  opacity: 0.4;
 
   &:hover {
     transform: scale(1.2);
