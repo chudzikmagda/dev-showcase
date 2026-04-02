@@ -1,4 +1,4 @@
-"use client";
+("use client");
 import styled from "styled-components";
 import HeroImage from "../../ui/HeroImage/HeroImage";
 import Button from "../../ui/Button/Button";
@@ -9,9 +9,9 @@ const SectionWrapper = styled.section`
   grid-template-columns: 1fr 40%;
   align-items: center;
   justify-content: center;
-  column-gap: calc(var(--basic-spacer) * 8);
+  column-gap: var(--intro-gap-columns);
   height: 100vh;
-  padding: var(--navbar-height);
+  padding: var(--intro-padding);
   background:
     url("/images/bg-section-welcome.svg") center top,
     #151a2d;
@@ -21,9 +21,8 @@ const SectionWrapper = styled.section`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     column-gap: 0;
-    row-gap: calc(var(--basic-spacer) * 2);
-    padding: var(--navbar-height) var(--basic-spacer) var(--basic-spacer)
-      var(--basic-spacer);
+    row-gap: var(--intro-gap-rows);
+    padding: var(--intro-padding-mobile);
     height: auto;
   }
 

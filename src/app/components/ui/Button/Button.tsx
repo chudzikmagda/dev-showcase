@@ -1,13 +1,13 @@
-"use client";
+("use client");
 import styled from "styled-components";
 import { ButtonProps, ButtonType } from "../models/button.model";
 
 const getButtonColor = (version: ButtonType) => {
   switch (version) {
     case ButtonType.PRIMARY:
-      return "var(--primary-color)";
+      return "var(--button-bg-primary)";
     case ButtonType.SECONDARY:
-      return "var(--black)";
+      return "var(--button-bg-secondary)";
     default:
       return undefined;
   }
@@ -16,9 +16,9 @@ const getButtonColor = (version: ButtonType) => {
 const getHoverColor = (version: ButtonType) => {
   switch (version) {
     case ButtonType.PRIMARY:
-      return "var(--white)";
+      return "var(--button-text-primary)";
     case ButtonType.SECONDARY:
-      return "var(--primary-color)";
+      return "var(--button-text-secondary)";
     default:
       return undefined;
   }
@@ -43,8 +43,8 @@ const ButtonWrapper = styled.button<{
   text-decoration: none;
   line-height: 1.25;
   transition:
-    color var(--transition-default),
-    transform var(--transition-default);
+    color var(--transition-base),
+    transform var(--transition-base);
   cursor: pointer;
 
   &::after {
@@ -59,7 +59,7 @@ const ButtonWrapper = styled.button<{
     -webkit-mask-image: url("/images/bracets/arrow-next-small.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-    transition: background-color var(--transition-default);
+    transition: background-color var(--transition-base);
   }
 
   &:hover {

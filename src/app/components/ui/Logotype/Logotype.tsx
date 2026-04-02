@@ -1,4 +1,4 @@
-"use client";
+("use client");
 import React from "react";
 import styled from "styled-components";
 
@@ -10,24 +10,24 @@ const HomepageLink = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
-  font-size: var(--font-size-basic);
-  font-family: var(--font-family-basic);
-  font-weight: var(--font-weight-bold);
+  gap: var(--logotype-gap);
+  font-size: var(--logotype-font-size);
+  font-family: var(--logotype-font-family);
+  font-weight: var(--logotype-font-weight);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0;
-  color: var(--primary-color);
+  color: var(--logotype-color);
   transition:
-    gap var(--transition-default),
-    letter-spacing var(--transition-default);
+    gap var(--transition-base),
+    letter-spacing var(--transition-base);
 
   &::before {
     content: "";
     display: inline-block;
     width: 8px;
     height: 22px;
-    background-color: var(--primary-color);
+    background-color: var(--color-accent-primary);
     mask-image: url("/images/bracets/arrow-before-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
@@ -41,7 +41,7 @@ const HomepageLink = styled.a`
     display: inline-block;
     width: 8px;
     height: 22px;
-    background-color: var(--primary-color);
+    background-color: var(--color-accent-primary);
     mask-image: url("/images/bracets/arrow-next-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
