@@ -31,6 +31,9 @@ const HomepageLink = styled.a`
     mask-image: url("/images/bracets/arrow-before-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
+    -webkit-mask-image: url("/images/bracets/arrow-before-small.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
   }
 
   &::after {
@@ -42,6 +45,9 @@ const HomepageLink = styled.a`
     mask-image: url("/images/bracets/arrow-next-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
+    -webkit-mask-image: url("/images/bracets/arrow-next-small.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
   }
 
   &:hover {
