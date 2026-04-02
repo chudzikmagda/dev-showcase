@@ -1,3 +1,10 @@
+.image-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  margin: 0 auto;
+}
 .st0 {
   opacity: 0.7;
   fill: #ca4941;

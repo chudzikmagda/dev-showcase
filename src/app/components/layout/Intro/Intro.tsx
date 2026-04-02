@@ -32,7 +32,7 @@ const SectionWrapper = styled.section`
   }
 `;
 
-const H1HEading = styled.h1`
+const H1Heading = styled.h1`
   margin-bottom: 1rem;
   font-size: clamp(1.25rem, 1.5rem + 2vw, calc(3rem + 2vmin));
   font-weight: 600;
@@ -40,7 +40,7 @@ const H1HEading = styled.h1`
   color: var(--primary-text-color);
 `;
 
-const H3HEading = styled.h3`
+const H3Heading = styled.h3`
   margin-bottom: 1rem;
   font-size: clamp(1rem, 0.9rem + 0.8vw, 1.35rem);
   font-weight: 600;
@@ -57,12 +57,10 @@ const Intro = () => {
   return (
     <SectionWrapper>
       <div>
-        <H3HEading aria-level={3} role="heading">
-          Hello
-        </H3HEading>
-        <H1HEading aria-level={1} role="heading">
+        <H3Heading>Hello</H3Heading>
+        <H1Heading>
           I&apos;m a software engineer and a graphic designer
-        </H1HEading>
+        </H1Heading>
         <Button
           version={ButtonType.PRIMARY}
           hasArrow={true}

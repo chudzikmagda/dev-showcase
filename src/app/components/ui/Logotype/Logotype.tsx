@@ -24,6 +24,7 @@ const HomepageLink = styled.a`
 
   &::before {
     content: "";
+    display: inline-block;
     width: 8px;
     height: 22px;
     background-color: var(--primary-color);
@@ -34,6 +35,7 @@ const HomepageLink = styled.a`
 
   &::after {
     content: "";
+    display: inline-block;
     width: 8px;
     height: 22px;
     background-color: var(--primary-color);
