@@ -56,6 +56,9 @@ const ButtonWrapper = styled.button<{
     mask-image: url("/images/bracets/arrow-next-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
+    -webkit-mask-image: url("/images/bracets/arrow-next-small.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
     transition: background-color var(--transition-default);
   }
 
@@ -80,7 +83,12 @@ const ButtonWrapper = styled.button<{
 
 const Button = ({ label, version, hasArrow, onClick }: ButtonProps) => {
   return (
-    <ButtonWrapper $version={version} $hasArrow={hasArrow} onClick={onClick}>
+    <ButtonWrapper
+      $version={version}
+      $hasArrow={hasArrow}
+      type="button"
+      onClick={onClick}
+    >
       {label}
     </ButtonWrapper>
   );

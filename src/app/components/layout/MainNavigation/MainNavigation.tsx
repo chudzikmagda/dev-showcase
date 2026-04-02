@@ -19,6 +19,7 @@ const Overlay = styled.div`
     height: 100vh;
     background-color: rgba(var(--secondary-color-rgb), 0.8);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: right 0.6s;
     transition-delay: 0.25s;
   }
