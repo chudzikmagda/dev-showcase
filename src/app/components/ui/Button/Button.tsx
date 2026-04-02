@@ -25,7 +25,7 @@ const getHoverColor = (version: ButtonType) => {
 };
 
 const ButtonWrapper = styled.button<{
-  version: ButtonType;
+  $version: ButtonType;
   $hasArrow: boolean;
 }>`
   all: unset;
@@ -39,49 +39,48 @@ const ButtonWrapper = styled.button<{
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: ${({ version }) => getButtonColor(version)};
+  color: ${({ $version }) => getButtonColor($version)};
+  text-decoration: none;
+  line-height: 1.25;
   transition:
     color var(--transition-default),
     transform var(--transition-default);
   cursor: pointer;
-
-  &:link,
-  &:visited {
-    text-decoration: none;
-    line-height: 1.25;
-  }
 
   &::after {
     content: "";
     width: 8px;
     height: 22px;
     display: ${({ $hasArrow }) => ($hasArrow ? "inline-block" : "none")};
-    background-color: ${({ version }) => getButtonColor(version)};
+    background-color: ${({ $version }) => getButtonColor($version)};
     mask-image: url("/images/bracets/arrow-next-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
     transition: background-color var(--transition-default);
   }
 
+  &:hover {
+    transform: scale(1.05);
+  }
+
   &:hover,
   &:focus-visible {
-    color: ${({ version }) => getHoverColor(version)};
-    transform: scale(1.05);
+    color: ${({ $version }) => getHoverColor($version)};
 
     &::after {
-      background-color: ${({ version }) => getHoverColor(version)};
+      background-color: ${({ $version }) => getHoverColor($version)};
     }
   }
 
   &:focus-visible {
-    padding: 0 8px;
-    margin: 2rem 4px;
+    outline: 2px solid ${({ $version }) => getHoverColor($version)};
+    outline-offset: 2px;
   }
 `;
 
 const Button = ({ label, version, hasArrow, onClick }: ButtonProps) => {
   return (
-    <ButtonWrapper version={version} $hasArrow={hasArrow} onClick={onClick}>
+    <ButtonWrapper $version={version} $hasArrow={hasArrow} onClick={onClick}>
       {label}
     </ButtonWrapper>
   );

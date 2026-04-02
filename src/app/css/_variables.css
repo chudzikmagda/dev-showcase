@@ -2,7 +2,7 @@
   --primary-color: rgb(202, 73, 65);
 
   --secondary-color-rgb: 28, 34, 56;
-  --secondary-color: rgb(var(--secondary-color));
+  --secondary-color: rgb(var(--secondary-color-rgb));
   --secondary-color-90: rgb(51, 56, 76);
   --secondary-color-80: rgb(73, 78, 96);
   --secondary-color-70: rgb(96, 100, 116);
