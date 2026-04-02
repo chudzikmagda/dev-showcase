@@ -26,7 +26,9 @@ export default function RootLayout({
       <head></head>
       <body className={montserrat.className}>
         <Header></Header>
-        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        <StyledJsxRegistry>
+          <main>{children}</main>
+        </StyledJsxRegistry>
       </body>
     </html>
   );
