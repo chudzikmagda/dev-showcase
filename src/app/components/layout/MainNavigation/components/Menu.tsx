@@ -2,7 +2,7 @@
 import { Link } from "@/app/shared/models/link.model";
 import * as React from "react";
 import styled from "styled-components";
-import { mainMenuItems } from "./config/mainMenu.config";
+import { mainMenuItems } from "../config/mainMenu.config";
 
 const MenuList = styled.ul`
   list-style: none;
