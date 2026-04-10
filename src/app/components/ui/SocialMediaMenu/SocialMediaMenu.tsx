@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
-import { SocialMediaMenuLink } from "../models/socialMediaMenu.model";
+import { SocialMediaMenuLink } from "./models/socialMediaMenu.model";
 
 const SocialMediaMenuWrapper = styled.div`
   display: flex;

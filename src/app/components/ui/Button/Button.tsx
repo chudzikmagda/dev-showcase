@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { ButtonProps, ButtonType } from "../models/button.model";
+import { ButtonProps, ButtonType } from "./models/button.model";
 
 const getButtonColor = (version: ButtonType) => {
   switch (version) {

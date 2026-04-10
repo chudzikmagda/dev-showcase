@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import HeroImage from "../../ui/HeroImage/HeroImage";
 import Button from "../../ui/Button/Button";
-import { ButtonType } from "../../ui/models/button.model";
+import { ButtonType } from "../../ui/Button/models/button.model";
 
 const SectionWrapper = styled.section`
   display: grid;
@@ -58,9 +58,7 @@ const Intro = () => {
     <SectionWrapper>
       <div>
         <H3Heading>Hello</H3Heading>
-        <H1Heading>
-          I&apos;m a software engineer and a graphic designer
-        </H1Heading>
+        <H1Heading>I&apos;m a software engineer and UI designer</H1Heading>
         <Button
           version={ButtonType.PRIMARY}
           hasArrow={true}

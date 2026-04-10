@@ -1,9 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import styled from "styled-components";
-import HamburgerIcon from "./HamburgerIcon";
-import Menu from "./Menu";
+import HamburgerIcon from "./components/HamburgerIcon";
+import Menu from "./components/Menu";
 import SocialMediaMenu from "../../ui/SocialMediaMenu/SocialMediaMenu";
 
 const Overlay = styled.div`
