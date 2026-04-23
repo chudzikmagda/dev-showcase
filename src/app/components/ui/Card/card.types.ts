@@ -1,8 +1,7 @@
-import type { CSSProperties } from "react";
+import { TagData } from "../Tag/tag.types";
 
-export interface CardData {
-  imageSrc: string;
+export interface CardProps {
+  borderColor: string;
   title: string;
-  imageStyle?: CSSProperties;
-  imageWidth?: string;
+  tags: TagData[];
 }
