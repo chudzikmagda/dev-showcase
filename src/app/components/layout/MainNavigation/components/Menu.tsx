@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "@/app/shared/models/link.model";
+import { Link } from "@/app/shared/models/link.types";
 import * as React from "react";
 import styled from "styled-components";
 import { mainMenuItems } from "../config/mainMenu.config";

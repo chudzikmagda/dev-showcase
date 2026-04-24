@@ -1,4 +1,4 @@
-import { Link } from "@/app/shared/models/link.model";
+import { Link } from "@/app/shared/models/link.types";
 
 export const mainMenuItems: Link[] = [
   { label: "About me", href: "", anchor: "about" },
