@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 export const SectionWrapper = styled.section`
   display: grid;
@@ -14,7 +15,7 @@ export const SectionWrapper = styled.section`
   background-size: cover;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.mobile}) {
     grid-template-columns: 1fr;
     column-gap: 0;
     row-gap: calc(var(--basic-spacer) * 2);

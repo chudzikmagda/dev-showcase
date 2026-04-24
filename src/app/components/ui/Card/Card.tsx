@@ -1,15 +1,15 @@
-import React from "react";
+import type { FC } from "react";
 import Tag from "../Tag/Tag";
 import { CardProps } from "./card.types";
 import { CardContainer, CardTitle, CardList } from "./card.styles";
 
-const Card: React.FC<CardProps> = ({ title, borderColor, tags }) => {
+const Card: FC<CardProps> = ({ title, borderColor, tags }) => {
   return (
-    <CardContainer style={{ "--border-color": borderColor }}>
+    <CardContainer $borderColor={borderColor}>
       <CardTitle>{title}</CardTitle>
       <CardList>
-        {tags.map((tagData, index) => (
-          <Tag key={index} {...tagData} />
+        {tags.map((tagData) => (
+          <Tag key={`${tagData.label}-${tagData.icon}`} {...tagData} />
         ))}
       </CardList>
     </CardContainer>

@@ -149,7 +149,7 @@ export const technologies: Technology[] = [
     category: TechStackCategories.Design,
   },
   {
-    image: { imageSrc: "/images/techstack/indesign.svg", label: "Indesign" },
+    image: { imageSrc: "/images/techstack/indesign.svg", label: "InDesign" },
     category: TechStackCategories.Design,
   },
 

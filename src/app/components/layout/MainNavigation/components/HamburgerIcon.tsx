@@ -1,5 +1,6 @@
 "use client";
 import styled from "styled-components";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 import { HamburgerIconProps } from "../models/MainNavigation.model";
 
 const HamburgerButton = styled.button`
@@ -13,7 +14,7 @@ const HamburgerButton = styled.button`
   overflow: hidden;
   z-index: 1;
 
-  @media (min-width: var(--desktop)) {
+  @media (min-width: ${breakpoints.desktop}) {
     width: var(--navbar-height);
   }
 

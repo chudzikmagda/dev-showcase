@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../shared/styles/breakpoints";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 export const SectionWrapper = styled.section`
   width: 100%;

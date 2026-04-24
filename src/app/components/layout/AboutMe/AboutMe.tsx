@@ -21,7 +21,7 @@ const AboutMe = () => {
   };
 
   return (
-    <SectionWrapper>
+    <SectionWrapper id="about">
       <InnerWrapper>
         <ContentWrapper>
           <H2Heading>About me</H2Heading>

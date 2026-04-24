@@ -1,9 +1,9 @@
-import React from "react";
+import type { FC } from "react";
 import styled from "styled-components";
-import { breakpoints } from "../../../shared/styles/breakpoints";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 import { TagData } from "./tag.types";
 
-export const Tag: React.FC<TagData> = ({ icon, label }) => {
+export const Tag: FC<TagData> = ({ icon, label }) => {
   return (
     <TagWrapper>
       <TagImage src={icon} alt={label} />

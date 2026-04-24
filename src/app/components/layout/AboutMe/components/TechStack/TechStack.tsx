@@ -3,46 +3,36 @@ import React from "react";
 import Card from "@/app/components/ui/Card/Card";
 import styled from "styled-components";
 import { gridPositions, technologies } from "./techstack.data";
-import { GridPosition, TechStackCategories } from "./techstack.types";
-import { breakpoints } from "../../../../../shared/styles/breakpoints";
+import type { GridPosition } from "./techstack.types";
+import { TechStackCategories } from "./techstack.types";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 const TechStack: React.FC = () => {
-  const categories = Object.values(TechStackCategories);
+  const data = Object.values(TechStackCategories).map((category) => ({
+    category,
+    position: gridPositions[category],
+    tags: technologies
+      .filter((t) => t.category === category)
+      .map((t) => ({ icon: t.image.imageSrc, label: t.image.label })),
+  }));
 
   return (
     <>
       <TechStackHeading>Technology Stack</TechStackHeading>
       <TechStackWrapper>
-        {categories.map((category: TechStackCategories) => {
-          const technologiesInCategory = technologies.filter(
-            (tech) => tech.category === category,
-          );
-          const tags = technologiesInCategory.map((tech) => ({
-            icon: tech.image.imageSrc,
-            label: tech.image.label,
-          }));
-          const position = gridPositions[category];
-          return (
-            <>
-              <GridItem
-                key={category}
-                colSpan={position.colSpan}
-                rowSpan={position.rowSpan}
-              >
-                <Card
-                  title={category}
-                  borderColor="var(--secondary-color-90)"
-                  tags={tags}
-                />
-              </GridItem>
-            </>
-          );
-        })}
+        {data.map(({ category, position, tags }) => (
+          <GridItem key={category} {...position}>
+            <Card
+              title={category}
+              tags={tags}
+              borderColor="var(--secondary-color-90)"
+            />
+          </GridItem>
+        ))}
       </TechStackWrapper>
     </>
   );
 };
-
 export default TechStack;
 
 const TechStackWrapper = styled.div`

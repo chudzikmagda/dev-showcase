@@ -1,11 +1,11 @@
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<{ $borderColor: string }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 2px solid var(--border-color, transparent);
+  border: 2px solid ${({ $borderColor }) => $borderColor};
   border-radius: 8px;
   padding: 1rem;
   height: 100%;
