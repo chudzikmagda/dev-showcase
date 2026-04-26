@@ -53,7 +53,7 @@ const MainNavigation: React.FC = () => {
       <Overlay className={isActive ? "active" : ""} />
       <MenuContainer className={isActive ? "active" : ""}>
         <Menu />
-        <SocialMediaMenu />
+        <SocialMediaMenu linkTabIndex={isActive ? 0 : -1} />
       </MenuContainer>
     </>
   );
