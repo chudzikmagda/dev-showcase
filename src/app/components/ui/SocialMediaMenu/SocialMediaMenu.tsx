@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
 import {
@@ -12,7 +11,7 @@ import {
   SocialMediaMenuWrapper,
 } from "./socialMediaMenu.styles";
 
-const SocialMediaMenu = ({ linkTabIndex = -1 }: SocialMediaMenuProps) => (
+const SocialMediaMenu = ({ linkTabIndex = 0 }: SocialMediaMenuProps) => (
   <SocialMediaMenuWrapper>
     {socialMediaLinks.map(({ label, href, iconSrc }: SocialMediaMenuLink) => (
       <SocialMediaLink

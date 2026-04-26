@@ -14,7 +14,7 @@ const Footer = () => {
     <FooterWrapper>
       <SocialMediaWrapper>
         <SocialMediaHeading>Meet me here:</SocialMediaHeading>
-        <SocialMediaMenu linkTabIndex={0} />
+        <SocialMediaMenu />
       </SocialMediaWrapper>
 
       <GoToTop />

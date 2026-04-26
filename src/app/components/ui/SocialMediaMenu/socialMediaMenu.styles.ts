@@ -6,7 +6,7 @@ export const SocialMediaMenuWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  width: clamp(300px, 50%, 40%);
+  width: clamp(300px, 40%, 50%);
 `;
 
 export const SocialMediaLink = styled.a`
