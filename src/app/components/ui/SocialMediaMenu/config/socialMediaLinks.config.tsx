@@ -1,4 +1,4 @@
-import { SocialMediaMenuLink } from "../models/socialMediaMenu.model";
+import { SocialMediaMenuLink } from "../socialMediaMenu.types";
 
 export const socialMediaLinks: SocialMediaMenuLink[] = [
   {

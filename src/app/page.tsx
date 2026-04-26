@@ -5,7 +5,7 @@ import AboutMe from "./components/layout/AboutMe/AboutMe";
 
 const Container = styled.div`
   background-color: var(--secondary-color);
-  height: 100vh;
+  min-height: 100vh;
 `;
 export default function Home() {
   return (

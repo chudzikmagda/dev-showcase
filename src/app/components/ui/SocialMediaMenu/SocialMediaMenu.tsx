@@ -1,40 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import styled from "styled-components";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
-import { SocialMediaMenuLink } from "./models/socialMediaMenu.model";
+import {
+  SocialMediaMenuLink,
+  SocialMediaMenuProps,
+} from "./socialMediaMenu.types";
+import {
+  IconWrapper,
+  SocialMediaLink,
+  SocialMediaMenuWrapper,
+} from "./socialMediaMenu.styles";
 
-const SocialMediaMenuWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: clamp(300px, 50%, 40%);
-`;
-
-const SocialMediaLink = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem;
-  transition: all 0.4s ease;
-  opacity: 0.4;
-
-  &:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-`;
-
-const IconWrapper = styled.div`
-  position: relative;
-  height: 32px;
-  width: 32px;
-`;
-
-const SocialMediaMenu = () => (
+const SocialMediaMenu = ({ linkTabIndex = -1 }: SocialMediaMenuProps) => (
   <SocialMediaMenuWrapper>
     {socialMediaLinks.map(({ label, href, iconSrc }: SocialMediaMenuLink) => (
       <SocialMediaLink
@@ -42,7 +20,7 @@ const SocialMediaMenu = () => (
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        tabIndex={-1}
+        tabIndex={linkTabIndex}
         aria-label={label}
       >
         <IconWrapper>
