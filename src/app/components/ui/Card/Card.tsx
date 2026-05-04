@@ -3,7 +3,7 @@ import Tag from "../Tag/Tag";
 import { CardProps } from "./card.types";
 import { CardContainer, CardTitle, CardList } from "./card.styles";
 
-const Card: FC<CardProps> = ({ title, borderColor, tags }) => {
+const TechCard: FC<CardProps> = ({ title, borderColor, tags }) => {
   return (
     <CardContainer $borderColor={borderColor}>
       <CardTitle>{title}</CardTitle>
@@ -16,4 +16,4 @@ const Card: FC<CardProps> = ({ title, borderColor, tags }) => {
   );
 };
 
-export default Card;
+export default TechCard;

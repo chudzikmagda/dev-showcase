@@ -1,7 +1,7 @@
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 import styled from "styled-components";
 
-export const CardContainer = styled.div<{ $borderColor: string }>`
+export const TechCardContainer = styled.div<{ $borderColor: string }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,7 +15,7 @@ export const CardContainer = styled.div<{ $borderColor: string }>`
   }
 `;
 
-export const CardTitle = styled.h4`
+export const TechCardTitle = styled.h4`
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
@@ -23,7 +23,7 @@ export const CardTitle = styled.h4`
   line-height: 1.2;
 `;
 
-export const CardList = styled.div`
+export const TechCardList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;

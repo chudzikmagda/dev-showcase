@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Card from "@/app/components/ui/Card/Card";
+import TechCard from "@/app/components/ui/TechCard/TechCard";
 import styled from "styled-components";
 import { gridPositions, technologies } from "./techstack.data";
 import type { GridPosition } from "./techstack.types";
@@ -22,7 +22,7 @@ const TechStack: React.FC = () => {
       <TechStackWrapper>
         {data.map(({ category, position, tags }) => (
           <GridItem key={category} {...position}>
-            <Card
+            <TechCard
               title={category}
               tags={tags}
               borderColor="var(--secondary-color-90)"
