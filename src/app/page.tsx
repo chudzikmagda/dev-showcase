@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import Intro from "./components/layout/Intro/Intro";
 import AboutMe from "./components/layout/AboutMe/AboutMe";
+import AfterWork from "./components/layout/AfterWork/AfterWork";
 
 const Container = styled.div`
   background-color: var(--secondary-color);
@@ -12,6 +13,7 @@ export default function Home() {
     <Container>
       <Intro></Intro>
       <AboutMe></AboutMe>
+      <AfterWork></AfterWork>
     </Container>
   );
 }
