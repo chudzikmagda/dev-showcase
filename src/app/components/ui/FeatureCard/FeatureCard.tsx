@@ -1,9 +1,6 @@
 "use client";
 import type { FC } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Button from "@/app/components/ui/Button/Button";
-import { ButtonType } from "@/app/components/ui/Button/models/button.model";
 import { FeatureCardProps } from "./featureCard.types";
 import {
   FeatureCardContainer,
@@ -11,6 +8,7 @@ import {
   FeatureCardCategory,
   FeatureCardTitle,
   FeatureCardDescription,
+  FeatureCardLink,
 } from "./featureCard.styles";
 
 const FeatureCard: FC<FeatureCardProps> = ({
@@ -20,7 +18,7 @@ const FeatureCard: FC<FeatureCardProps> = ({
   description,
   link,
 }) => {
-  const router = useRouter();
+  const isExternalLink = link?.url.startsWith("http");
 
   return (
     <FeatureCardContainer>
@@ -31,12 +29,13 @@ const FeatureCard: FC<FeatureCardProps> = ({
       <FeatureCardTitle>{title}</FeatureCardTitle>
       <FeatureCardDescription>{description}</FeatureCardDescription>
       {link && (
-        <Button
-          label={link.label}
-          version={ButtonType.PRIMARY}
-          hasArrow={true}
-          onClick={() => router.push(link.url)}
-        />
+        <FeatureCardLink
+          href={link.url}
+          target={isExternalLink ? "_blank" : undefined}
+          rel={isExternalLink ? "noopener noreferrer" : undefined}
+        >
+          {link.label}
+        </FeatureCardLink>
       )}
     </FeatureCardContainer>
   );

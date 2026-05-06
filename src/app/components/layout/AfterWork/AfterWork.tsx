@@ -1,4 +1,3 @@
-"use client";
 import FeatureCard from "@/app/components/ui/FeatureCard/FeatureCard";
 import {
   H2Heading,
@@ -20,8 +19,8 @@ const AfterWork = () => {
         </Intro>
       </TextWrapper>
       <CardsWrapper>
-        {afterWorkData.map((card, index) => (
-          <FeatureCard key={index} {...card} />
+        {afterWorkData.map((card) => (
+          <FeatureCard key={`${card.category}-${card.title}`} {...card} />
         ))}
       </CardsWrapper>
     </SectionWrapper>

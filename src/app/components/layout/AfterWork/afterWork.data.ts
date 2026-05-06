@@ -16,7 +16,7 @@ export const afterWorkData: FeatureCardProps[] = [
       "I like to re-define my surroundings, frequently showing simple elements in an unusual way. In my pieces, I work with light and clear forms, vesting my photos with a dose of nostalgia. My vision of the world has been recognized in many photography contests.",
     link: {
       label: "Check my pictures",
-      url: "/images/after-work/photos.svg",
+      url: "https://magdachudzik.pl",
     },
   },
   {

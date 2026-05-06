@@ -1,4 +1,5 @@
 import { breakpoints } from "@/app/shared/styles/breakpoints";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const FeatureCardContainer = styled.div`
@@ -34,7 +35,7 @@ export const FeatureCardContainer = styled.div`
     border-color: var(--primary-color);
   }
 
-  > button {
+  > a {
     margin-top: auto;
     margin-bottom: 0;
   }
@@ -80,5 +81,57 @@ export const FeatureCardDescription = styled.p`
   @media (min-width: ${breakpoints.mobile}) {
     max-width: 30ch;
     margin-bottom: 2rem;
+  }
+`;
+
+export const FeatureCardLink = styled(Link)`
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1rem 0;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  line-height: 1.25;
+  transition:
+    color var(--transition-default),
+    transform var(--transition-default);
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 22px;
+    display: inline-block;
+    background-color: var(--primary-color);
+    mask-image: url("/images/bracets/arrow-next-small.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-image: url("/images/bracets/arrow-next-small.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    transition: background-color var(--transition-default);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--white);
+
+    &::after {
+      background-color: var(--white);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
   }
 `;
