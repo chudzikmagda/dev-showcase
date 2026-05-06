@@ -10,7 +10,7 @@ import { afterWorkData } from "./afterWork.data";
 
 const AfterWork = () => {
   return (
-    <SectionWrapper id="afterWork">
+    <SectionWrapper id="after-work">
       <TextWrapper>
         <H2Heading>After work</H2Heading>
         <Intro>
