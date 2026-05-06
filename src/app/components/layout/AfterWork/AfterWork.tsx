@@ -1,10 +1,13 @@
 "use client";
+import FeatureCard from "@/app/components/ui/FeatureCard/FeatureCard";
 import {
   H2Heading,
   Intro,
   SectionWrapper,
   TextWrapper,
+  CardsWrapper,
 } from "./afterWork.styles";
+import { afterWorkData } from "./afterWork.data";
 
 const AfterWork = () => {
   return (
@@ -16,6 +19,11 @@ const AfterWork = () => {
           what I usually focus on when I am not at my day job.
         </Intro>
       </TextWrapper>
+      <CardsWrapper>
+        {afterWorkData.map((card, index) => (
+          <FeatureCard key={index} {...card} />
+        ))}
+      </CardsWrapper>
     </SectionWrapper>
   );
 };

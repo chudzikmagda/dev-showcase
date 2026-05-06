@@ -25,12 +25,23 @@ export const H2Heading = styled.h2`
 `;
 
 export const Intro = styled.p`
-  max-width: 720px;
-  font-size: 1rem;
+  max-width: 55ch;
+  font-size: clamp(1rem, 0.9rem + 0.8vw, 1.35rem);
   color: var(--primary-text-color);
   line-height: 1.7;
+`;
+
+export const CardsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
 
   @media (min-width: ${breakpoints.mobile}) {
-    font-size: clamp(1rem, 0.9rem + 0.8vw, 1.35rem);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
