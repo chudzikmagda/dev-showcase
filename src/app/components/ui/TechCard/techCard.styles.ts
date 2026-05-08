@@ -1,19 +1,4 @@
-import { breakpoints } from "@/app/shared/styles/breakpoints";
 import styled from "styled-components";
-
-export const TechCardContainer = styled.div<{ $borderColor: string }>`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: 2px solid ${({ $borderColor }) => $borderColor};
-  border-radius: 8px;
-  padding: 1rem;
-  height: 100%;
-
-  @media (min-width: ${breakpoints.mobile}) {
-    padding: 1.5rem;
-  }
-`;
 
 export const TechCardTitle = styled.h4`
   margin-bottom: 1rem;

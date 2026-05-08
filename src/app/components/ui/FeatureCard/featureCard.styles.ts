@@ -2,45 +2,6 @@ import { breakpoints } from "@/app/shared/styles/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
 
-export const FeatureCardContainer = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  border: 1px solid var(--secondary-color-90);
-  border-radius: 16px;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.03),
-      transparent 45%
-    ),
-    linear-gradient(
-      160deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.01)
-    );
-  padding: 2rem 1rem;
-  transition:
-    transform var(--transition-default),
-    border-color var(--transition-default);
-
-  @media (min-width: ${breakpoints.mobile}) {
-    padding: 3rem 2rem;
-  }
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary-color);
-  }
-
-  > a {
-    margin-top: auto;
-    margin-bottom: 0;
-  }
-`;
-
 export const FeatureCardIcon = styled.div`
   margin-bottom: 2rem;
   color: var(--primary-color);
@@ -89,7 +50,8 @@ export const FeatureCardLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 1rem 0;
+  margin-top: auto;
+  margin-bottom: 0;
   font-weight: var(--font-weight-bold);
   font-size: 1rem;
   letter-spacing: 1px;
