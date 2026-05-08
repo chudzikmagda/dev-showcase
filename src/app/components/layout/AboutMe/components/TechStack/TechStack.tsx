@@ -22,11 +22,7 @@ const TechStack: React.FC = () => {
       <TechStackWrapper>
         {data.map(({ category, position, tags }) => (
           <GridItem key={category} {...position}>
-            <TechCard
-              title={category}
-              tags={tags}
-              borderColor="var(--secondary-color-90)"
-            />
+            <TechCard title={category} tags={tags} />
           </GridItem>
         ))}
       </TechStackWrapper>

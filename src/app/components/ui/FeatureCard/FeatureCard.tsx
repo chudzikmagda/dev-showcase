@@ -1,9 +1,10 @@
 "use client";
 import type { FC } from "react";
 import Image from "next/image";
+import Card from "../Card/Card";
+import { CardAlign } from "../Card/card.types";
 import { FeatureCardProps } from "./featureCard.types";
 import {
-  FeatureCardContainer,
   FeatureCardIcon,
   FeatureCardCategory,
   FeatureCardTitle,
@@ -21,7 +22,7 @@ const FeatureCard: FC<FeatureCardProps> = ({
   const isExternalLink = link?.url.startsWith("http");
 
   return (
-    <FeatureCardContainer>
+    <Card align={CardAlign.Center}>
       <FeatureCardIcon>
         <Image src={iconURL} alt={`${title} icon`} width={64} height={64} />
       </FeatureCardIcon>
@@ -37,7 +38,7 @@ const FeatureCard: FC<FeatureCardProps> = ({
           {link.label}
         </FeatureCardLink>
       )}
-    </FeatureCardContainer>
+    </Card>
   );
 };
 
