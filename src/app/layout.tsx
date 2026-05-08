@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   title: "Magda Chudzik - software engineer and UI/UX designer",
   description:
     "I’m a software engineer and UI/UX designer, with a strong technical background as a technical physicist by education. At work, I seamlessly blend technical expertise with artistic vision, crafting intuitive and visually compelling digital experiences.",
+  icons: {
+    icon: "/images/favicon.svg",
+    shortcut: "/images/favicon.svg",
+    apple: "/images/favicon.svg",
+  },
 };
 
 export default function RootLayout({
