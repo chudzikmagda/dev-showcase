@@ -15,9 +15,7 @@ export const HomepageLink = styled.a`
   text-transform: uppercase;
   letter-spacing: 0;
   color: var(--primary-color);
-  transition:
-    gap var(--transition-default),
-    letter-spacing var(--transition-default);
+  transition: letter-spacing var(--transition-default);
   white-space: nowrap;
 
   &::before {
