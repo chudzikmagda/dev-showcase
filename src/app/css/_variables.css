@@ -15,6 +15,7 @@
   --light-grey: rgb(230, 230, 230);
 
   --primary-text-color: var(--white);
+  --secondary-text-color: var(--secondary-color);
 
   --success-color: rgb(127, 198, 185);
   --success-color-dark: rgb(9, 76, 63);

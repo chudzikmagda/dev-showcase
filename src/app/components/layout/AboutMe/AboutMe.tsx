@@ -12,7 +12,7 @@ import {
   Paragraph,
 } from "./aboutMe.styles";
 import Button from "../../ui/Button/Button";
-import { ButtonType } from "../../ui/Button/models/button.model";
+import { ButtonType } from "../../ui/Button/button.types";
 import TechStack from "./components/TechStack/TechStack";
 
 const AboutMe = () => {

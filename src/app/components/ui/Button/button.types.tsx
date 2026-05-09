@@ -7,5 +7,6 @@ export interface ButtonProps {
   label: string;
   version: ButtonType;
   hasArrow: boolean;
-  onClick: () => void;
+  href?: string;
+  onClick?: () => void;
 }

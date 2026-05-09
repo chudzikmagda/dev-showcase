@@ -2,7 +2,7 @@
 import { SectionWrapper, H1Heading, H3Heading } from "./intro.styles";
 import HeroImage from "../../ui/HeroImage/HeroImage";
 import Button from "../../ui/Button/Button";
-import { ButtonType } from "../../ui/Button/models/button.model";
+import { ButtonType } from "../../ui/Button/button.types";
 
 const Intro = () => {
   const onButtonClick = () => {
