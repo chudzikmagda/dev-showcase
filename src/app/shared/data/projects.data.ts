@@ -1,6 +1,6 @@
-import type { ProjectSectionData } from "../types/projects.types";
+import type { Project } from "../types/projects.types";
 
-export const projectsData: ProjectSectionData[] = [
+export const projectsData: Project[] = [
   {
     title: "Photographer's portfolio",
     description:

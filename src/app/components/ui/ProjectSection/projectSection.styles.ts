@@ -27,9 +27,9 @@ export const ProjectVisual = styled.div<{ $imagePosition?: string }>`
 `;
 
 export const ProjectImage = styled(Image)`
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 `;
 
 export const CaseStudyLabel = styled.p`
@@ -39,9 +39,9 @@ export const CaseStudyLabel = styled.p`
   margin-bottom: 1.5rem;
   font-size: 9px;
   font-weight: 800;
+  color: var(--primary-color);
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--primary-color);
 
   &::before {
     content: "";
@@ -60,44 +60,44 @@ export const ProjectContent = styled.div`
   }
 
   @media (min-width: ${breakpoints.desktop}) {
-    padding: 4.5rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     max-width: 540px;
     margin: 0 auto;
+    padding: 4.5rem 4rem;
   }
 `;
 
 export const ProjectTitle = styled.h3`
   margin: 3rem 0 1rem;
-  color: var(--secondary-text-color);
   font-size: clamp(1.7rem, 1.2rem + 1vw, 2rem);
   font-weight: var(--font-weight-bold);
+  color: var(--secondary-text-color);
 `;
 
 export const ProjectDescription = styled.p`
-  color: var(--secondary-text-color);
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.45rem);
-  line-height: 1.55;
   max-width: 30ch;
   margin-bottom: 2rem;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.45rem);
+  color: var(--secondary-text-color);
+  line-height: 1.55;
 `;
 
 export const GroupTitle = styled.h6`
   margin-bottom: 0.4rem;
-  color: var(--secondary-text-color);
   font-size: 10px;
   font-weight: 800;
+  color: var(--secondary-text-color);
   text-transform: uppercase;
   letter-spacing: 1px;
 `;
 
 export const GroupText = styled.p`
   margin-bottom: 1.8rem;
-  color: var(--secondary-text-color);
   font-size: 1rem;
+  color: var(--secondary-text-color);
   line-height: 1.5;
 `;
 

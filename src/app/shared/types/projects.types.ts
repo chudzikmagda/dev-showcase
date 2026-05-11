@@ -1,7 +1,7 @@
 import { Image } from "./image.types";
 import { TagData } from "./tag.types";
 
-export interface ProjectSectionData {
+export interface Project {
   title: string;
   description: string;
   image: Image;

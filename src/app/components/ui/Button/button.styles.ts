@@ -1,29 +1,32 @@
 import styled from "styled-components";
-import { ButtonType } from "./button.types";
+import { ButtonVersion } from "./button.types";
 
-const getButtonColor = (version: ButtonType) => {
+const getButtonColor = (version: ButtonVersion) => {
   switch (version) {
-    case ButtonType.PRIMARY:
+    case ButtonVersion.PRIMARY:
       return "var(--primary-color)";
-    case ButtonType.SECONDARY:
+    case ButtonVersion.SECONDARY:
       return "var(--black)";
     default:
       return undefined;
   }
 };
 
-const getHoverColor = (version: ButtonType) => {
+const getHoverColor = (version: ButtonVersion) => {
   switch (version) {
-    case ButtonType.PRIMARY:
+    case ButtonVersion.PRIMARY:
       return "var(--white)";
-    case ButtonType.SECONDARY:
+    case ButtonVersion.SECONDARY:
       return "var(--primary-color)";
     default:
       return undefined;
   }
 };
 
-const sharedStyles = (version: ButtonType, hasArrow: boolean) => `
+export const StyledButton = styled.button<{
+  $version: ButtonVersion;
+  $hasArrow: boolean;
+}>`
   all: unset;
   display: inline-flex;
   flex-direction: row;
@@ -35,7 +38,7 @@ const sharedStyles = (version: ButtonType, hasArrow: boolean) => `
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: ${getButtonColor(version)};
+  color: ${({ $version }) => getButtonColor($version)};
   text-decoration: none;
   line-height: 1.25;
   transition:
@@ -47,8 +50,8 @@ const sharedStyles = (version: ButtonType, hasArrow: boolean) => `
     content: "";
     width: 8px;
     height: 22px;
-    display: ${hasArrow ? "inline-block" : "none"};
-    background-color: ${getButtonColor(version)};
+    display: ${({ $hasArrow }) => ($hasArrow ? "inline-block" : "none")};
+    background-color: ${({ $version }) => getButtonColor($version)};
     mask-image: url("/images/bracets/arrow-next-small.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
@@ -64,29 +67,15 @@ const sharedStyles = (version: ButtonType, hasArrow: boolean) => `
 
   &:hover,
   &:focus-visible {
-    color: ${getHoverColor(version)};
+    color: ${({ $version }) => getHoverColor($version)};
 
     &::after {
-      background-color: ${getHoverColor(version)};
+      background-color: ${({ $version }) => getHoverColor($version)};
     }
   }
 
   &:focus-visible {
-    outline: 2px solid ${getHoverColor(version)};
+    outline: 2px solid ${({ $version }) => getHoverColor($version)};
     outline-offset: 2px;
   }
-`;
-
-export const ButtonWrapper = styled.button<{
-  $version: ButtonType;
-  $hasArrow: boolean;
-}>`
-  ${({ $version, $hasArrow }) => sharedStyles($version, $hasArrow)}
-`;
-
-export const LinkWrapper = styled.a<{
-  $version: ButtonType;
-  $hasArrow: boolean;
-}>`
-  ${({ $version, $hasArrow }) => sharedStyles($version, $hasArrow)}
 `;

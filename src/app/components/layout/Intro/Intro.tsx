@@ -2,7 +2,7 @@
 import { SectionWrapper, H1Heading, H3Heading } from "./intro.styles";
 import HeroImage from "../../ui/HeroImage/HeroImage";
 import Button from "../../ui/Button/Button";
-import { ButtonType } from "../../ui/Button/button.types";
+import { ButtonVersion } from "../../ui/Button/button.types";
 
 const Intro = () => {
   const onButtonClick = () => {
@@ -15,7 +15,7 @@ const Intro = () => {
         <H3Heading>Hello</H3Heading>
         <H1Heading>I&apos;m a software engineer and UI/UX designer</H1Heading>
         <Button
-          version={ButtonType.PRIMARY}
+          version={ButtonVersion.PRIMARY}
           hasArrow={true}
           label="Check what I do"
           onClick={onButtonClick}

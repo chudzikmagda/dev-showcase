@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Button from "@/app/components/ui/Button/Button";
-import { ButtonType } from "@/app/components/ui/Button/button.types";
+import { ButtonVersion } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
 import { type ProjectSectionProps } from "./projectSection.types";
 import {
@@ -33,35 +33,30 @@ const ProjectSection: FC<ProjectSectionProps> = ({
           sizes="100vw"
         />
       </ProjectVisual>
-
       <ProjectContent>
         <CaseStudyLabel>Case study</CaseStudyLabel>
         <ProjectTitle>{project.title}</ProjectTitle>
         <ProjectDescription>{project.description}</ProjectDescription>
-
         <GroupTitle>The project range:</GroupTitle>
         <GroupText>{project.projectRange}</GroupText>
-
         <GroupTitle>The technology stack:</GroupTitle>
         <Technologies>
-          {project.techTags.map((technology) => (
+          {project.techTags.map((technology, index) => (
             <Tag
-              key={`${technology.label}-${technology.icon}`}
+              key={`${technology.label}-${index}`}
               {...technology}
               variant={TagVariant.LIGHT}
             />
           ))}
         </Technologies>
-
         <GroupTitle>Year:</GroupTitle>
         <GroupText>{project.implementationDate}</GroupText>
-
         <Actions>
           <Button
-            label="Check the details"
-            version={ButtonType.PRIMARY}
-            hasArrow
             href={project.detailsUrl}
+            version={ButtonVersion.PRIMARY}
+            label="Check the details"
+            hasArrow
           />
         </Actions>
       </ProjectContent>

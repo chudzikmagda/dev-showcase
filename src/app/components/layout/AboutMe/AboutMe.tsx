@@ -12,7 +12,7 @@ import {
   Paragraph,
 } from "./aboutMe.styles";
 import Button from "../../ui/Button/Button";
-import { ButtonType } from "../../ui/Button/button.types";
+import { ButtonVersion } from "../../ui/Button/button.types";
 import TechStack from "./components/TechStack/TechStack";
 
 const AboutMe = () => {
@@ -63,7 +63,7 @@ const AboutMe = () => {
         </StackWrapper>
         <CTAWrapper>
           <Button
-            version={ButtonType.PRIMARY}
+            version={ButtonVersion.PRIMARY}
             hasArrow={true}
             label="Check my projects"
             onClick={onButtonClick}

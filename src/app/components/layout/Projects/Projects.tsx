@@ -17,7 +17,7 @@ const Projects = () => {
       <SectionsWrapper>
         {projectsData.map((project, index) => (
           <ProjectSection
-            key={project.title}
+            key={project.title + index}
             project={project}
             imagePosition={
               index % 2 === 0 ? ImagePosition.LEFT : ImagePosition.RIGHT

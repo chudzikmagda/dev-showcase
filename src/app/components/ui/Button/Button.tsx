@@ -1,32 +1,39 @@
 "use client";
-import { ButtonProps } from "./button.types";
-import { ButtonWrapper, LinkWrapper } from "./button.styles";
+import Link from "next/link";
+import { ButtonHtmlType, ButtonProps } from "./button.types";
+import { StyledButton } from "./button.styles";
 
-const Button = ({ label, version, hasArrow, onClick, href }: ButtonProps) => {
+const Button = ({
+  label,
+  version,
+  hasArrow,
+  href,
+  type = ButtonHtmlType.BUTTON,
+  onClick,
+}: ButtonProps) => {
+  const commonProps = {
+    $version: version,
+    $hasArrow: hasArrow,
+    children: label,
+  };
+
   if (href) {
-    return (
-      <LinkWrapper
-        $version={version}
-        $hasArrow={hasArrow}
+    const isInternal: boolean = href.startsWith("/") || href.startsWith("#");
+
+    return isInternal ? (
+      <StyledButton as={Link} href={href} {...commonProps} />
+    ) : (
+      <StyledButton
+        as="a"
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-      >
-        {label}
-      </LinkWrapper>
+        {...commonProps}
+      />
     );
   }
 
-  return (
-    <ButtonWrapper
-      $version={version}
-      $hasArrow={hasArrow}
-      type="button"
-      onClick={onClick}
-    >
-      {label}
-    </ButtonWrapper>
-  );
+  return <StyledButton type={type} onClick={onClick} {...commonProps} />;
 };
 
 export default Button;

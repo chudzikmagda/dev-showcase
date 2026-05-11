@@ -12,7 +12,6 @@ export const SectionWrapper = styled.section`
 
 export const TextWrapper = styled.div`
   max-width: var(--container-max-width);
-  margin: 0 auto;
   margin-bottom: 2rem;
 `;
 
