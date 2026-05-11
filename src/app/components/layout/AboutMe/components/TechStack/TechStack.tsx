@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import TechCard from "@/app/components/ui/TechCard/TechCard";
+import { TagVariant } from "@/app/shared/types/tag.types";
 import styled from "styled-components";
 import { gridPositions, technologies } from "./techstack.data";
 import type { GridPosition } from "./techstack.types";
@@ -12,8 +13,12 @@ const TechStack: React.FC = () => {
     category,
     position: gridPositions[category],
     tags: technologies
-      .filter((t) => t.category === category)
-      .map((t) => ({ icon: t.image.imageSrc, label: t.image.label })),
+      .filter((tag) => tag.category === category)
+      .map((tag) => ({
+        icon: tag.image.src,
+        label: tag.image.label ?? "",
+        variant: TagVariant.DARK,
+      })),
   }));
 
   return (

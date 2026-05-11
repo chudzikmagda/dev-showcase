@@ -11,10 +11,14 @@
   --secondary-color-10: rgb(232, 233, 235);
 
   --white: rgb(241, 241, 241);
+
   --black: rgb(17, 17, 17);
-  --light-grey: rgb(230, 230, 230);
+
+  --grey-20: rgb(223, 225, 227);
+  --grey-30: rgb(230, 230, 230);
 
   --primary-text-color: var(--white);
+
   --secondary-text-color: var(--secondary-color);
 
   --success-color: rgb(127, 198, 185);

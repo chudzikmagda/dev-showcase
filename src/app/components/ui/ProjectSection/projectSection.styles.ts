@@ -9,6 +9,7 @@ export const ProjectCard = styled.article`
 
   @media (min-width: ${breakpoints.desktop}) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
   }
 `;
 
@@ -18,7 +19,7 @@ export const ProjectVisual = styled.div<{ $imagePosition?: string }>`
   justify-content: center;
   overflow: hidden;
   border-radius: 16px;
-  background: #dfe1e3;
+  background: var(--grey-20);
 
   @media (min-width: ${breakpoints.desktop}) {
     order: ${({ $imagePosition }) => ($imagePosition === "right" ? 2 : 0)};
@@ -60,6 +61,12 @@ export const ProjectContent = styled.div`
 
   @media (min-width: ${breakpoints.desktop}) {
     padding: 4.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 540px;
+    margin: 0 auto;
   }
 `;
 

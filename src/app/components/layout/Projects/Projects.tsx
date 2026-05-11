@@ -1,12 +1,12 @@
 import ProjectSection from "@/app/components/ui/ProjectSection/ProjectSection";
-import { ImagePosition } from "@/app/components/ui/ProjectSection/projectSection.types";
-import { projectsData } from "./projects.data";
+import { projectsData } from "@/app/shared/data/projects.data";
 import {
   H2Heading,
   SectionWrapper,
   TextWrapper,
   SectionsWrapper,
 } from "./projects.styles";
+import { ImagePosition } from "@/app/shared/types/image.types";
 
 const Projects = () => {
   return (

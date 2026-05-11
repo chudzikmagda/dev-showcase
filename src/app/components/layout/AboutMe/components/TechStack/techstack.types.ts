@@ -1,4 +1,4 @@
-import type { Image } from "@/app/shared/models/image.types";
+import type { Image } from "@/app/shared/types/image.types";
 
 export enum TechStackCategories {
   Frontend = "Frontend Development",

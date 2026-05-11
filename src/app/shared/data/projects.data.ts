@@ -1,19 +1,4 @@
-export interface ProjectSectionData {
-  title: string;
-  description: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  projectRange: string;
-  implementationDate: string;
-  technologies: Array<{
-    icon: string;
-    label: string;
-  }>;
-  detailsUrl: string;
-  liveUrl: string;
-}
+import type { ProjectSectionData } from "../types/projects.types";
 
 export const projectsData: ProjectSectionData[] = [
   {
@@ -26,7 +11,7 @@ export const projectsData: ProjectSectionData[] = [
     },
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
-    technologies: [
+    techTags: [
       {
         icon: "/images/techstack/react.svg",
         label: "React",
@@ -41,7 +26,6 @@ export const projectsData: ProjectSectionData[] = [
       },
     ],
     detailsUrl: "#",
-    liveUrl: "#",
   },
   {
     title: "Bookworm",
@@ -53,7 +37,7 @@ export const projectsData: ProjectSectionData[] = [
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
-    technologies: [
+    techTags: [
       {
         icon: "/images/techstack/angular.svg",
         label: "Angular",
@@ -68,7 +52,6 @@ export const projectsData: ProjectSectionData[] = [
       },
     ],
     detailsUrl: "#",
-    liveUrl: "#",
   },
   {
     title: "Workspace of tomorrow",
@@ -81,7 +64,7 @@ export const projectsData: ProjectSectionData[] = [
     projectRange:
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
-    technologies: [
+    techTags: [
       {
         icon: "/images/techstack/html.svg",
         label: "HTML",
@@ -96,6 +79,5 @@ export const projectsData: ProjectSectionData[] = [
       },
     ],
     detailsUrl: "#",
-    liveUrl: "#",
   },
 ];

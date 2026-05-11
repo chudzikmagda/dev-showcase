@@ -2,10 +2,7 @@ import type { FC } from "react";
 import Button from "@/app/components/ui/Button/Button";
 import { ButtonType } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
-import {
-  ImagePosition,
-  type ProjectSectionProps,
-} from "./projectSection.types";
+import { type ProjectSectionProps } from "./projectSection.types";
 import {
   Actions,
   CaseStudyLabel,
@@ -19,17 +16,18 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
+import { TagVariant } from "../../../shared/types/tag.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,
-  imagePosition = ImagePosition.LEFT,
+  imagePosition,
 }) => {
   return (
     <ProjectCard>
       <ProjectVisual $imagePosition={imagePosition}>
         <ProjectImage
           src={project.image.src}
-          alt={project.image.alt}
+          alt={project.image.alt ?? "Project image"}
           width={0}
           height={0}
           sizes="100vw"
@@ -46,11 +44,11 @@ const ProjectSection: FC<ProjectSectionProps> = ({
 
         <GroupTitle>The technology stack:</GroupTitle>
         <Technologies>
-          {project.technologies.map((technology) => (
+          {project.techTags.map((technology) => (
             <Tag
               key={`${technology.label}-${technology.icon}`}
-              icon={technology.icon}
-              label={technology.label}
+              {...technology}
+              variant={TagVariant.LIGHT}
             />
           ))}
         </Technologies>

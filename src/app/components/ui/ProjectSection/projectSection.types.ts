@@ -1,11 +1,7 @@
-import type { ProjectSectionData } from "@/app/components/layout/Projects/projects.data";
-
-export enum ImagePosition {
-  LEFT = "left",
-  RIGHT = "right",
-}
+import { ImagePosition } from "@/app/shared/types/image.types";
+import type { ProjectSectionData } from "@/app/shared/types/projects.types";
 
 export interface ProjectSectionProps {
   project: ProjectSectionData;
-  imagePosition?: ImagePosition;
+  imagePosition: ImagePosition;
 }
