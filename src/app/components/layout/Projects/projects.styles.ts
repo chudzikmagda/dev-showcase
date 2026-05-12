@@ -4,6 +4,7 @@ import { breakpoints } from "@/app/shared/styles/breakpoints";
 export const SectionWrapper = styled.section`
   width: 100%;
   background: var(--secondary-color-10);
+  padding: calc(var(--basic-spacer) * 4) var(--basic-spacer);
 
   @media (min-width: ${breakpoints.mobile}) {
     padding: calc(var(--basic-spacer) * 6);
@@ -12,7 +13,7 @@ export const SectionWrapper = styled.section`
 
 export const TextWrapper = styled.div`
   max-width: var(--container-max-width);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 `;
 
 export const H2Heading = styled.h2`
@@ -28,4 +29,6 @@ export const SectionsWrapper = styled.div`
   flex-direction: column;
   gap: 4rem;
   width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
 `;
