@@ -6,190 +6,190 @@ import {
 
 export const technologies: Technology[] = [
   {
-    image: { imageSrc: "/images/techstack/js.svg", label: "JavaScript" },
+    image: { src: "/images/techstack/js.svg", label: "JavaScript" },
     category: TechStackCategories.Frontend,
   },
   {
     image: {
-      imageSrc: "/images/techstack/typescript.svg",
+      src: "/images/techstack/typescript.svg",
       label: "TypeScript",
     },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/angular.svg", label: "Angular" },
+    image: { src: "/images/techstack/angular.svg", label: "Angular" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/react.svg", label: "React" },
+    image: { src: "/images/techstack/react.svg", label: "React" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/nextjs.svg", label: "Next.js" },
+    image: { src: "/images/techstack/nextjs.svg", label: "Next.js" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/nx.svg", label: "Nx" },
+    image: { src: "/images/techstack/nx.svg", label: "Nx" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/css.svg", label: "CSS" },
+    image: { src: "/images/techstack/css.svg", label: "CSS" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/sass.svg", label: "Sass" },
+    image: { src: "/images/techstack/sass.svg", label: "Sass" },
     category: TechStackCategories.Frontend,
   },
   {
     image: {
-      imageSrc: "/images/techstack/styled-components.svg",
+      src: "/images/techstack/styled-components.svg",
       label: "Styled Components",
     },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/bootstrap.svg", label: "Bootstrap" },
+    image: { src: "/images/techstack/bootstrap.svg", label: "Bootstrap" },
     category: TechStackCategories.Frontend,
   },
   {
-    image: { imageSrc: "/images/techstack/bem.svg", label: "BEM" },
+    image: { src: "/images/techstack/bem.svg", label: "BEM" },
     category: TechStackCategories.Frontend,
   },
 
   {
-    image: { imageSrc: "/images/techstack/nestjs.svg", label: "NestJS" },
+    image: { src: "/images/techstack/nestjs.svg", label: "NestJS" },
     category: TechStackCategories.Backend,
   },
   {
     image: {
-      imageSrc: "/images/techstack/express.js.svg",
+      src: "/images/techstack/express.js.svg",
       label: "Express.js",
     },
     category: TechStackCategories.Backend,
   },
   {
-    image: { imageSrc: "/images/techstack/node.js.svg", label: "Node.js" },
+    image: { src: "/images/techstack/node.js.svg", label: "Node.js" },
     category: TechStackCategories.Backend,
   },
   {
-    image: { imageSrc: "/images/techstack/mongodb.svg", label: "MongoDB" },
+    image: { src: "/images/techstack/mongodb.svg", label: "MongoDB" },
     category: TechStackCategories.Backend,
   },
 
   {
-    image: { imageSrc: "/images/techstack/cursor.svg", label: "Cursor" },
+    image: { src: "/images/techstack/cursor.svg", label: "Cursor" },
     category: TechStackCategories.AI,
   },
   {
     image: {
-      imageSrc: "/images/techstack/github-copilot.svg",
+      src: "/images/techstack/github-copilot.svg",
       label: "GitHub Copilot",
     },
     category: TechStackCategories.AI,
   },
   {
-    image: { imageSrc: "/images/techstack/gemini.svg", label: "Gemini" },
+    image: { src: "/images/techstack/gemini.svg", label: "Gemini" },
     category: TechStackCategories.AI,
   },
 
   {
-    image: { imageSrc: "/images/techstack/jest.svg", label: "Jest" },
+    image: { src: "/images/techstack/jest.svg", label: "Jest" },
     category: TechStackCategories.Testing,
   },
   {
-    image: { imageSrc: "/images/techstack/jasmine.svg", label: "Jasmine" },
+    image: { src: "/images/techstack/jasmine.svg", label: "Jasmine" },
     category: TechStackCategories.Testing,
   },
   {
     image: {
-      imageSrc: "/images/techstack/playwright.svg",
+      src: "/images/techstack/playwright.svg",
       label: "Playwright",
     },
     category: TechStackCategories.Testing,
   },
   {
-    image: { imageSrc: "/images/techstack/cypress.svg", label: "Cypress" },
+    image: { src: "/images/techstack/cypress.svg", label: "Cypress" },
     category: TechStackCategories.Testing,
   },
 
   {
-    image: { imageSrc: "/images/techstack/git.svg", label: "Git" },
+    image: { src: "/images/techstack/git.svg", label: "Git" },
     category: TechStackCategories.DevOps,
   },
   {
-    image: { imageSrc: "/images/techstack/github.svg", label: "GitHub" },
+    image: { src: "/images/techstack/github.svg", label: "GitHub" },
     category: TechStackCategories.DevOps,
   },
   {
-    image: { imageSrc: "/images/techstack/gitlab.svg", label: "GitLab" },
+    image: { src: "/images/techstack/gitlab.svg", label: "GitLab" },
     category: TechStackCategories.DevOps,
   },
   {
     image: {
-      imageSrc: "/images/techstack/github-actions.svg",
+      src: "/images/techstack/github-actions.svg",
       label: "GitHub Actions",
     },
     category: TechStackCategories.DevOps,
   },
   {
-    image: { imageSrc: "/images/techstack/azure.svg", label: "Azure" },
+    image: { src: "/images/techstack/azure.svg", label: "Azure" },
     category: TechStackCategories.DevOps,
   },
 
   {
-    image: { imageSrc: "/images/techstack/figma.svg", label: "Figma" },
+    image: { src: "/images/techstack/figma.svg", label: "Figma" },
     category: TechStackCategories.Design,
   },
   {
-    image: { imageSrc: "/images/techstack/ps.svg", label: "Photoshop" },
+    image: { src: "/images/techstack/ps.svg", label: "Photoshop" },
     category: TechStackCategories.Design,
   },
   {
-    image: { imageSrc: "/images/techstack/ai.svg", label: "Illustrator" },
+    image: { src: "/images/techstack/ai.svg", label: "Illustrator" },
     category: TechStackCategories.Design,
   },
   {
-    image: { imageSrc: "/images/techstack/indesign.svg", label: "InDesign" },
+    image: { src: "/images/techstack/indesign.svg", label: "InDesign" },
     category: TechStackCategories.Design,
   },
 
   {
-    image: { imageSrc: "/images/techstack/jira.svg", label: "Jira" },
+    image: { src: "/images/techstack/jira.svg", label: "Jira" },
     category: TechStackCategories.PM,
   },
   {
-    image: { imageSrc: "/images/techstack/slack.svg", label: "Slack" },
+    image: { src: "/images/techstack/slack.svg", label: "Slack" },
     category: TechStackCategories.PM,
   },
 
   {
-    image: { imageSrc: "/images/techstack/ux.svg", label: "UX" },
+    image: { src: "/images/techstack/ux.svg", label: "UX" },
     category: TechStackCategories.Knowledge,
   },
   {
-    image: { imageSrc: "/images/techstack/ui.svg", label: "UI" },
+    image: { src: "/images/techstack/ui.svg", label: "UI" },
     category: TechStackCategories.Knowledge,
   },
   {
-    image: { imageSrc: "/images/techstack/seo.svg", label: "SEO" },
+    image: { src: "/images/techstack/seo.svg", label: "SEO" },
     category: TechStackCategories.Knowledge,
   },
   {
     image: {
-      imageSrc: "/images/techstack/accessibility.svg",
+      src: "/images/techstack/accessibility.svg",
       label: "Accessibility",
     },
     category: TechStackCategories.Knowledge,
   },
   {
     image: {
-      imageSrc: "/images/techstack/performance.svg",
+      src: "/images/techstack/performance.svg",
       label: "Performance",
     },
     category: TechStackCategories.Knowledge,
   },
   {
-    image: { imageSrc: "/images/techstack/java.svg", label: "Java" },
+    image: { src: "/images/techstack/java.svg", label: "Java" },
     category: TechStackCategories.Learning,
   },
 ];

@@ -1,4 +1,4 @@
-import { TagData } from "../Tag/tag.types";
+import { TagData } from "@/app/shared/types/tag.types";
 
 export interface TechCardProps {
   title: string;
