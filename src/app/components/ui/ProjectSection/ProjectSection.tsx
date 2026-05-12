@@ -16,7 +16,7 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
-import { TagVariant } from "../../../shared/types/tag.types";
+import { TagVariant } from "@/app/shared/types/tag.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,
@@ -29,7 +29,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({
           src={project.image.src}
           alt={project.image.alt ?? "Project image"}
           fill
-          sizes="100vw"
+          sizes="(min-width: 1025px) 50vw, 100vw"
         />
       </ProjectVisual>
       <ProjectContent>
