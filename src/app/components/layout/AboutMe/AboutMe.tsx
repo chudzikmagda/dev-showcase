@@ -16,10 +16,6 @@ import { ButtonVersion } from "../../ui/Button/button.types";
 import TechStack from "./components/TechStack/TechStack";
 
 const AboutMe = () => {
-  const onButtonClick = () => {
-    console.log("Button clicked");
-  };
-
   return (
     <SectionWrapper id="about">
       <InnerWrapper>
@@ -66,7 +62,7 @@ const AboutMe = () => {
             version={ButtonVersion.PRIMARY}
             hasArrow={true}
             label="Check my projects"
-            onClick={onButtonClick}
+            href="/projects"
           />
         </CTAWrapper>
       </InnerWrapper>

@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact">
       <SocialMediaWrapper>
         <SocialMediaHeading>Meet me here:</SocialMediaHeading>
         <SocialMediaMenu />
