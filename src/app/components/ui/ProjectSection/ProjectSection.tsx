@@ -2,6 +2,7 @@ import type { FC } from "react";
 import Button from "@/app/components/ui/Button/Button";
 import { ButtonVersion } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
+import { getTechnologyTag } from "@/app/shared/utils/technologies.utils";
 import { type ProjectSectionProps } from "./projectSection.types";
 import {
   Actions,
@@ -22,6 +23,16 @@ const ProjectSection: FC<ProjectSectionProps> = ({
   project,
   imagePosition,
 }) => {
+  if (!project.featured) {
+    return null;
+  }
+
+  const technologyTags = project.technologies
+    .map(getTechnologyTag)
+    .filter((technology): technology is NonNullable<typeof technology> =>
+      Boolean(technology),
+    );
+
   return (
     <ProjectCard>
       <ProjectVisual $imagePosition={imagePosition}>
@@ -40,7 +51,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({
         <GroupText>{project.projectRange}</GroupText>
         <GroupTitle>The technology stack:</GroupTitle>
         <Technologies>
-          {project.techTags.map((technology, index) => (
+          {technologyTags.map((technology, index) => (
             <Tag
               key={`${technology.label}-${index}`}
               {...technology}

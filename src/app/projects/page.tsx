@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageWrapper } from "./projects.styles";
+import ProjectListing from "../components/layout/ProjectListing/ProjectListing";
 
 export const metadata: Metadata = {
   title: "Projects | Magda Chudzik",
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  return <PageWrapper></PageWrapper>;
+  return (
+    <PageWrapper>
+      <ProjectListing />
+    </PageWrapper>
+  );
 }

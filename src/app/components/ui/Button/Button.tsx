@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
-import { ButtonHtmlType, ButtonProps } from "./button.types";
+import { ButtonHtmlType, ButtonProps, ButtonSize } from "./button.types";
 import { StyledButton } from "./button.styles";
 
 const Button = ({
   label,
   version,
   hasArrow,
+  size = ButtonSize.Regular,
+  asSpan = false,
   href,
   type = ButtonHtmlType.BUTTON,
   onClick,
@@ -14,8 +16,13 @@ const Button = ({
   const commonProps = {
     $version: version,
     $hasArrow: hasArrow,
+    $size: size,
     children: label,
   };
+
+  if (asSpan) {
+    return <StyledButton as="span" {...commonProps} />;
+  }
 
   if (href) {
     const isInternal: boolean = href.startsWith("/") || href.startsWith("#");
