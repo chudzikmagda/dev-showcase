@@ -5,7 +5,6 @@ export const technologiesMap: Map<Technology, TechnologyData> = new Map<
   TechnologyData
 >([
   [Technology.ACCESSIBILITY, { icon: "/images/techstack/accessibility.svg" }],
-  [Technology.AI, { icon: "/images/techstack/ai.svg" }],
   [Technology.ANGULAR, { icon: "/images/techstack/angular.svg" }],
   [Technology.AZURE, { icon: "/images/techstack/azure.svg" }],
   [Technology.BEM, { icon: "/images/techstack/bem.svg" }],
@@ -22,6 +21,7 @@ export const technologiesMap: Map<Technology, TechnologyData> = new Map<
   [Technology.GITHUB_COPILOT, { icon: "/images/techstack/github-copilot.svg" }],
   [Technology.GITLAB, { icon: "/images/techstack/gitlab.svg" }],
   [Technology.HTML, { icon: "/images/techstack/html.svg" }],
+  [Technology.ILLUSTRATOR, { icon: "/images/techstack/ai.svg" }],
   [Technology.INDESIGN, { icon: "/images/techstack/indesign.svg" }],
   [Technology.JASMINE, { icon: "/images/techstack/jasmine.svg" }],
   [Technology.JAVA, { icon: "/images/techstack/java.svg" }],

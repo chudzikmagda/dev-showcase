@@ -1,6 +1,5 @@
 export enum Technology {
   ACCESSIBILITY = "Accessibility",
-  AI = "Ai",
   ANGULAR = "Angular",
   AZURE = "Azure",
   BEM = "BEM",
@@ -17,6 +16,7 @@ export enum Technology {
   GITHUB_COPILOT = "GitHub Copilot",
   GITLAB = "GitLab",
   HTML = "HTML",
+  ILLUSTRATOR = "Illustrator",
   INDESIGN = "InDesign",
   JASMINE = "Jasmine",
   JAVA = "Java",

@@ -15,15 +15,17 @@ const Projects = () => {
         <H2Heading>Projects</H2Heading>
       </TextWrapper>
       <SectionsWrapper>
-        {projectsData.map((project, index) => (
-          <ProjectSection
-            key={project.title + index}
-            project={project}
-            imagePosition={
-              index % 2 === 0 ? ImagePosition.LEFT : ImagePosition.RIGHT
-            }
-          />
-        ))}
+        {projectsData
+          .filter((project) => project.featured)
+          .map((project, index) => (
+            <ProjectSection
+              key={project.title + index}
+              project={project}
+              imagePosition={
+                index % 2 === 0 ? ImagePosition.LEFT : ImagePosition.RIGHT
+              }
+            />
+          ))}
       </SectionsWrapper>
     </SectionWrapper>
   );
