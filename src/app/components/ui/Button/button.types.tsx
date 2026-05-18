@@ -3,6 +3,11 @@ export enum ButtonVersion {
   SECONDARY = "secondary",
 }
 
+export enum ButtonSize {
+  REGULAR = "regular",
+  SMALL = "small",
+}
+
 export enum ButtonHtmlType {
   BUTTON = "button",
   SUBMIT = "submit",
@@ -13,6 +18,8 @@ export interface ButtonProps {
   label: string;
   version: ButtonVersion;
   hasArrow: boolean;
+  size?: ButtonSize;
+  asSpan?: boolean;
   href?: string;
   type?: ButtonHtmlType;
   onClick?: () => void;

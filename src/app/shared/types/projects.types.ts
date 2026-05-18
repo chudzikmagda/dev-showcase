@@ -1,12 +1,13 @@
 import { Image } from "./image.types";
-import { TagData } from "./tag.types";
+import { Technology } from "./technologies.types";
 
 export interface Project {
   title: string;
   description: string;
+  featured: boolean;
   image: Image;
   projectRange: string;
   implementationDate: string;
-  techTags: TagData[];
+  technologies: Technology[];
   detailsUrl: string;
 }

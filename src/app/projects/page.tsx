@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { PageWrapper } from "./projects.styles";
+import { PageWrapper, H1Heading } from "./projects.styles";
+import ProjectListing from "../components/layout/ProjectListing/ProjectListing";
 
 export const metadata: Metadata = {
   title: "Projects | Magda Chudzik",
@@ -7,6 +8,13 @@ export const metadata: Metadata = {
     "Browse selected frontend and UI/UX projects implemented by Magda Chudzik.",
 };
 
-export default function ProjectsPage() {
-  return <PageWrapper></PageWrapper>;
-}
+const ProjectsPage = () => {
+  return (
+    <PageWrapper>
+      <H1Heading>Projects</H1Heading>
+      <ProjectListing />
+    </PageWrapper>
+  );
+};
+
+export default ProjectsPage;

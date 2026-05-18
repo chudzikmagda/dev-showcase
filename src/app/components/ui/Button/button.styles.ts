@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonVersion } from "./button.types";
+import { ButtonSize, ButtonVersion } from "./button.types";
 
 const getButtonColor = (version: ButtonVersion) => {
   switch (version) {
@@ -23,9 +23,40 @@ const getHoverColor = (version: ButtonVersion) => {
   }
 };
 
+const getButtonFontSize = (size: ButtonSize) => {
+  switch (size) {
+    case ButtonSize.SMALL:
+      return "0.75rem";
+    case ButtonSize.REGULAR:
+    default:
+      return "1rem";
+  }
+};
+
+const getArrowWidth = (size: ButtonSize) => {
+  switch (size) {
+    case ButtonSize.SMALL:
+      return "6px";
+    case ButtonSize.REGULAR:
+    default:
+      return "8px";
+  }
+};
+
+const getArrowHeight = (size: ButtonSize) => {
+  switch (size) {
+    case ButtonSize.SMALL:
+      return "16px";
+    case ButtonSize.REGULAR:
+    default:
+      return "22px";
+  }
+};
+
 export const StyledButton = styled.button<{
   $version: ButtonVersion;
   $hasArrow: boolean;
+  $size: ButtonSize;
 }>`
   all: unset;
   display: inline-flex;
@@ -35,7 +66,7 @@ export const StyledButton = styled.button<{
   gap: 8px;
   margin: 1rem 0;
   font-weight: var(--font-weight-bold);
-  font-size: 1rem;
+  font-size: ${({ $size }) => getButtonFontSize($size)};
   letter-spacing: 1px;
   text-transform: uppercase;
   color: ${({ $version }) => getButtonColor($version)};
@@ -48,8 +79,8 @@ export const StyledButton = styled.button<{
 
   &::after {
     content: "";
-    width: 8px;
-    height: 22px;
+    width: ${({ $size }) => getArrowWidth($size)};
+    height: ${({ $size }) => getArrowHeight($size)};
     display: ${({ $hasArrow }) => ($hasArrow ? "inline-block" : "none")};
     background-color: ${({ $version }) => getButtonColor($version)};
     mask-image: url("/images/bracets/arrow-next-small.svg");

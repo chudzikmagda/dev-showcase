@@ -1,62 +1,54 @@
 import type { Project } from "../types/projects.types";
+import { Technology } from "../types/technologies.types";
 
 export const projectsData: Project[] = [
+  {
+    title: "The software engineer portfolio",
+    description:
+      "The website which you are currently viewing. Check more details and how I made it.",
+    featured: false,
+    image: {
+      src: "/images/projects/portfolio-frontend/listing.jpg",
+      alt: "Software engineer portfolio preview",
+    },
+    projectRange: "UI/UX design, frontend development.",
+    implementationDate: "2026",
+    technologies: [Technology.NEXT_JS, Technology.TYPESCRIPT, Technology.SASS],
+    detailsUrl: "#",
+  },
   {
     title: "Photographer's portfolio",
     description:
       "The website shows the pictures in an attractive way and focuses the visitors' attention on the author's pics.",
+    featured: true,
     image: {
       src: "/images/projects/portfolio-magda-chudzik/listing.jpg",
       alt: "Photographer portfolio preview",
     },
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
-    techTags: [
-      {
-        icon: "/images/techstack/react.svg",
-        label: "React",
-      },
-      {
-        icon: "/images/techstack/typescript.svg",
-        label: "TypeScript",
-      },
-      {
-        icon: "/images/techstack/sass.svg",
-        label: "Sass",
-      },
-    ],
+    technologies: [Technology.REACT, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "#",
   },
   {
     title: "Bookworm",
     description:
       "Angular standalone application that helps the users collect and manage data about the books they have read.",
+    featured: true,
     image: {
       src: "/images/projects/bookworm/listing.jpg",
       alt: "Bookworm app preview",
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
-    techTags: [
-      {
-        icon: "/images/techstack/angular.svg",
-        label: "Angular",
-      },
-      {
-        icon: "/images/techstack/typescript.svg",
-        label: "TypeScript",
-      },
-      {
-        icon: "/images/techstack/sass.svg",
-        label: "Sass",
-      },
-    ],
+    technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "#",
   },
   {
     title: "Workspace of tomorrow",
     description:
       'The website "Workspace of tomorrow" aims at showing how the office work will change in the future. I have created this website for Nowy Styl which is an European leader in the office furniture sector.',
+    featured: true,
     image: {
       src: "/images/projects/workspace-of-tomorrow/listing.jpg",
       alt: "Workspace of tomorrow preview",
@@ -64,20 +56,21 @@ export const projectsData: Project[] = [
     projectRange:
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
-    techTags: [
-      {
-        icon: "/images/techstack/html.svg",
-        label: "HTML",
-      },
-      {
-        icon: "/images/techstack/css.svg",
-        label: "CSS",
-      },
-      {
-        icon: "/images/techstack/js.svg",
-        label: "JavaScript",
-      },
-    ],
+    technologies: [Technology.JAVASCRIPT, Technology.HTML, Technology.CSS],
+    detailsUrl: "#",
+  },
+  {
+    title: "Weather App",
+    description:
+      "Check the current weather as well as the forecast for the next 16 days in a selected town by using geolocation.",
+    featured: false,
+    image: {
+      src: "/images/projects/weather-app/listing.jpg",
+      alt: "Weather app preview",
+    },
+    projectRange: "UI/UX design, frontend development.",
+    implementationDate: "2020",
+    technologies: [Technology.HTML, Technology.CSS, Technology.JAVASCRIPT],
     detailsUrl: "#",
   },
 ];

@@ -2,6 +2,10 @@ import type { FC } from "react";
 import Button from "@/app/components/ui/Button/Button";
 import { ButtonVersion } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
+import {
+  getTechnologyTag,
+  isTagData,
+} from "@/app/shared/utils/technologies.utils";
 import { type ProjectSectionProps } from "./projectSection.types";
 import {
   Actions,
@@ -16,20 +20,24 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
-import { TagVariant } from "@/app/shared/types/tag.types";
+import { TagData, TagVariant } from "@/app/shared/types/tag.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,
   imagePosition,
 }) => {
+  const technologyTags: TagData[] = project.technologies
+    .map(getTechnologyTag)
+    .filter(isTagData);
+
   return (
     <ProjectCard>
       <ProjectVisual $imagePosition={imagePosition}>
         <ProjectImage
           src={project.image.src}
           alt={project.image.alt ?? "Project image"}
-          fill
           sizes="(min-width: 1025px) 50vw, 100vw"
+          fill
         />
       </ProjectVisual>
       <ProjectContent>
@@ -40,7 +48,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({
         <GroupText>{project.projectRange}</GroupText>
         <GroupTitle>The technology stack:</GroupTitle>
         <Technologies>
-          {project.techTags.map((technology, index) => (
+          {technologyTags.map((technology, index) => (
             <Tag
               key={`${technology.label}-${index}`}
               {...technology}
