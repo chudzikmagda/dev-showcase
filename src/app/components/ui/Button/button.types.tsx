@@ -4,8 +4,8 @@ export enum ButtonVersion {
 }
 
 export enum ButtonSize {
-  Regular = "regular",
-  Small = "small",
+  REGULAR = "regular",
+  SMALL = "small",
 }
 
 export enum ButtonHtmlType {

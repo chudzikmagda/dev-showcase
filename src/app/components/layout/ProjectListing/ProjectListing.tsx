@@ -1,7 +1,10 @@
 import type { FC } from "react";
 import ProjectCard from "@/app/components/ui/ProjectCard/ProjectCard";
 import { projectsData } from "@/app/shared/data/projects.data";
-import { getTechnologyTag } from "@/app/shared/utils/technologies.utils";
+import {
+  getTechnologyTag,
+  isTagData,
+} from "@/app/shared/utils/technologies.utils";
 import type { TagData } from "@/app/shared/types/tag.types";
 import { Container } from "./projectListing.styles";
 
@@ -9,9 +12,9 @@ const ProjectListing: FC = () => {
   return (
     <Container>
       {projectsData.map((project) => {
-        const tags = project.technologies
+        const tags: TagData[] = project.technologies
           .map(getTechnologyTag)
-          .filter((tag): tag is TagData => tag !== null);
+          .filter(isTagData);
 
         return (
           <ProjectCard

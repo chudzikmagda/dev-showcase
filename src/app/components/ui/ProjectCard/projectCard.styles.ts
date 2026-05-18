@@ -62,7 +62,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   margin: 0;
   font-size: clamp(1rem, 1.2rem + 0.7vw, 1.3rem);
   font-weight: var(--font-weight-bold);

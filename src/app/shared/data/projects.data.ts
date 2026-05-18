@@ -1,4 +1,5 @@
 import type { Project } from "../types/projects.types";
+import { Technology } from "../types/technologies.types";
 
 export const projectsData: Project[] = [
   {
@@ -12,7 +13,7 @@ export const projectsData: Project[] = [
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2026",
-    technologies: ["Next.js", "TypeScript", "Sass"],
+    technologies: [Technology.NEXT_JS, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "#",
   },
   {
@@ -26,7 +27,7 @@ export const projectsData: Project[] = [
     },
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
-    technologies: ["React", "TypeScript", "Sass"],
+    technologies: [Technology.REACT, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "#",
   },
   {
@@ -40,7 +41,7 @@ export const projectsData: Project[] = [
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
-    technologies: ["Angular", "TypeScript", "Sass"],
+    technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "#",
   },
   {
@@ -55,7 +56,7 @@ export const projectsData: Project[] = [
     projectRange:
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
-    technologies: ["JavaScript", "HTML", "CSS"],
+    technologies: [Technology.JAVASCRIPT, Technology.HTML, Technology.CSS],
     detailsUrl: "#",
   },
   {
@@ -69,7 +70,7 @@ export const projectsData: Project[] = [
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2020",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: [Technology.HTML, Technology.CSS, Technology.JAVASCRIPT],
     detailsUrl: "#",
   },
 ];

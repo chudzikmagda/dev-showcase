@@ -25,9 +25,9 @@ const getHoverColor = (version: ButtonVersion) => {
 
 const getButtonFontSize = (size: ButtonSize) => {
   switch (size) {
-    case ButtonSize.Small:
+    case ButtonSize.SMALL:
       return "0.75rem";
-    case ButtonSize.Regular:
+    case ButtonSize.REGULAR:
     default:
       return "1rem";
   }
@@ -35,9 +35,9 @@ const getButtonFontSize = (size: ButtonSize) => {
 
 const getArrowWidth = (size: ButtonSize) => {
   switch (size) {
-    case ButtonSize.Small:
+    case ButtonSize.SMALL:
       return "6px";
-    case ButtonSize.Regular:
+    case ButtonSize.REGULAR:
     default:
       return "8px";
   }
@@ -45,9 +45,9 @@ const getArrowWidth = (size: ButtonSize) => {
 
 const getArrowHeight = (size: ButtonSize) => {
   switch (size) {
-    case ButtonSize.Small:
+    case ButtonSize.SMALL:
       return "16px";
-    case ButtonSize.Regular:
+    case ButtonSize.REGULAR:
     default:
       return "22px";
   }

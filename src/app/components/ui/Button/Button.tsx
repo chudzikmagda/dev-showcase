@@ -7,7 +7,7 @@ const Button = ({
   label,
   version,
   hasArrow,
-  size = ButtonSize.Regular,
+  size = ButtonSize.REGULAR,
   asSpan = false,
   href,
   type = ButtonHtmlType.BUTTON,

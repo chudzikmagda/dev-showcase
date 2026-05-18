@@ -2,7 +2,10 @@ import type { FC } from "react";
 import Button from "@/app/components/ui/Button/Button";
 import { ButtonVersion } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
-import { getTechnologyTag } from "@/app/shared/utils/technologies.utils";
+import {
+  getTechnologyTag,
+  isTagData,
+} from "@/app/shared/utils/technologies.utils";
 import { type ProjectSectionProps } from "./projectSection.types";
 import {
   Actions,
@@ -17,21 +20,15 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
-import { TagVariant } from "@/app/shared/types/tag.types";
+import { TagData, TagVariant } from "@/app/shared/types/tag.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,
   imagePosition,
 }) => {
-  if (!project.featured) {
-    return null;
-  }
-
-  const technologyTags = project.technologies
+  const technologyTags: TagData[] = project.technologies
     .map(getTechnologyTag)
-    .filter((technology): technology is NonNullable<typeof technology> =>
-      Boolean(technology),
-    );
+    .filter(isTagData);
 
   return (
     <ProjectCard>

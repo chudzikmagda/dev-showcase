@@ -31,8 +31,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <CoverImage
           src={image.src}
           alt={image.alt ?? `${title} preview`}
+          sizes="(min-width: 1025px) 30vw, (min-width: 768px) 50vw, 100vw"
           fill
-          sizes="(min-width: 1025px) 45vw, 100vw"
         />
       </Visual>
 
@@ -50,8 +50,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <Button
             label="View case study"
             version={ButtonVersion.PRIMARY}
+            size={ButtonSize.SMALL}
             hasArrow
-            size={ButtonSize.Small}
             asSpan
           />
         </Footer>

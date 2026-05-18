@@ -1,4 +1,5 @@
 import { Image } from "./image.types";
+import { Technology } from "./technologies.types";
 
 export interface Project {
   title: string;
@@ -7,6 +8,6 @@ export interface Project {
   image: Image;
   projectRange: string;
   implementationDate: string;
-  technologies: string[];
+  technologies: Technology[];
   detailsUrl: string;
 }
