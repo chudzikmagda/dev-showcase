@@ -2,6 +2,20 @@ import type { Project } from "../types/projects.types";
 
 export const projectsData: Project[] = [
   {
+    title: "The software engineer portfolio",
+    description:
+      "The website which you are currently viewing. Check more details and how I made it.",
+    featured: false,
+    image: {
+      src: "/images/projects/portfolio-frontend/listing.jpg",
+      alt: "Software engineer portfolio preview",
+    },
+    projectRange: "UI/UX design, frontend development.",
+    implementationDate: "2026",
+    technologies: ["Next.js", "TypeScript", "Sass"],
+    detailsUrl: "#",
+  },
+  {
     title: "Photographer's portfolio",
     description:
       "The website shows the pictures in an attractive way and focuses the visitors' attention on the author's pics.",
@@ -41,21 +55,7 @@ export const projectsData: Project[] = [
     projectRange:
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    detailsUrl: "#",
-  },
-  {
-    title: "The software engineer portfolio",
-    description:
-      "The website which you are currently viewing. Check more details and how I made it.",
-    featured: false,
-    image: {
-      src: "/images/projects/portfolio-frontend/listing.jpg",
-      alt: "Software engineer portfolio preview",
-    },
-    projectRange: "UI/UX design, frontend development.",
-    implementationDate: "2020",
-    technologies: ["React", "JavaScript", "Sass"],
+    technologies: ["JavaScript", "HTML", "CSS"],
     detailsUrl: "#",
   },
   {

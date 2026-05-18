@@ -46,13 +46,6 @@ export const Visual = styled.div`
   overflow: hidden;
 `;
 
-export const MainTagWrapper = styled.div`
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-`;
-
 export const CoverImage = styled(Image)`
   object-fit: cover;
 `;
@@ -86,6 +79,7 @@ export const Description = styled.p`
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-grow: 1;
 `;
 
 export const Tags = styled.div`
@@ -96,5 +90,5 @@ export const Tags = styled.div`
 `;
 
 export const Footer = styled.div`
-  margin-top: 0.35rem;
+  margin-top: auto;
 `;

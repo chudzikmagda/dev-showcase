@@ -13,7 +13,6 @@ import {
   CoverImage,
   Description,
   Footer,
-  MainTagWrapper,
   Tags,
   Title,
   Visual,
@@ -26,16 +25,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
   tags,
   caseStudyUrl,
 }) => {
-  const firstTag = tags[0];
-
   return (
     <Card href={caseStudyUrl} aria-label={`View case study: ${title}`}>
       <Visual>
-        {firstTag && (
-          <MainTagWrapper>
-            <Tag {...firstTag} variant={TagVariant.DARK} />
-          </MainTagWrapper>
-        )}
         <CoverImage
           src={image.src}
           alt={image.alt ?? `${title} preview`}

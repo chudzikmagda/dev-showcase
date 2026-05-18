@@ -39,8 +39,8 @@ const ProjectSection: FC<ProjectSectionProps> = ({
         <ProjectImage
           src={project.image.src}
           alt={project.image.alt ?? "Project image"}
-          fill
           sizes="(min-width: 1025px) 50vw, 100vw"
+          fill
         />
       </ProjectVisual>
       <ProjectContent>
