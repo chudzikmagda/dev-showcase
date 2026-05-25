@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
   min-height: 100vh;
   padding: var(--navbar-height) var(--basic-spacer) 3rem;
   background-color: var(--secondary-color);

@@ -20,7 +20,7 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
-import { TagData, TagVariant } from "@/app/shared/types/tag.types";
+import { TagData, TagColorMode } from "@/app/shared/types/tag.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,
@@ -52,7 +52,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({
             <Tag
               key={`${technology.label}-${index}`}
               {...technology}
-              variant={TagVariant.LIGHT}
+              colorMode={TagColorMode.LIGHT}
             />
           ))}
         </Technologies>

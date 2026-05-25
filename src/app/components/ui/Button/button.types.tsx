@@ -14,10 +14,17 @@ export enum ButtonHtmlType {
   RESET = "reset",
 }
 
+export interface ButtonIcon {
+  iconUrl: string;
+  iconWidth: number;
+  iconHeight: number;
+}
+
 export interface ButtonProps {
   label: string;
   version: ButtonVersion;
   hasArrow: boolean;
+  icon?: ButtonIcon;
   size?: ButtonSize;
   asSpan?: boolean;
   href?: string;

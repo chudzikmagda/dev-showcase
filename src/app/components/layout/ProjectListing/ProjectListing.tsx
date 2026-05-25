@@ -1,17 +1,21 @@
 import type { FC } from "react";
 import ProjectCard from "@/app/components/ui/ProjectCard/ProjectCard";
-import { projectsData } from "@/app/shared/data/projects.data";
 import {
   getTechnologyTag,
   isTagData,
 } from "@/app/shared/utils/technologies.utils";
+import type { Project } from "@/app/shared/types/projects.types";
 import type { TagData } from "@/app/shared/types/tag.types";
 import { Container } from "./projectListing.styles";
 
-const ProjectListing: FC = () => {
+type ProjectListingProps = {
+  projects: Project[];
+};
+
+const ProjectListing: FC<ProjectListingProps> = ({ projects }) => {
   return (
     <Container>
-      {projectsData.map((project) => {
+      {projects.map((project) => {
         const tags: TagData[] = project.technologies
           .map(getTechnologyTag)
           .filter(isTagData);

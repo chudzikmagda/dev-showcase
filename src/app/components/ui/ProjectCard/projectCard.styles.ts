@@ -67,6 +67,9 @@ export const Title = styled.h2`
   font-size: clamp(1rem, 1.2rem + 0.7vw, 1.3rem);
   font-weight: var(--font-weight-bold);
   color: var(--primary-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const Description = styled.p`
@@ -75,20 +78,16 @@ export const Description = styled.p`
   font-size: 1rem;
   line-height: 1.55;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
 `;
 
-export const Tags = styled.div`
+export const Icons = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0.2rem 0 0;
-`;
-
-export const Footer = styled.div`
-  margin-top: auto;
 `;
