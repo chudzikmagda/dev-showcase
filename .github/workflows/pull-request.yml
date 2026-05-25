@@ -1,0 +1,72 @@
+name: PR Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    if: &run_on_ready_pr github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Run lint
+        run: npm run lint
+
+  vulnerabilities:
+    name: Vulnerability Audit
+    if: *run_on_ready_pr
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Audit vulnerabilities
+        run: npm audit --audit-level=high
+
+  semgrep-security-scan:
+    name: Semgrep Security Scan
+    if: *run_on_ready_pr
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Semgrep Security Scan
+        run: semgrep scan --config p/ci --error
+
+  build:
+    name: Build
+    if: *run_on_ready_pr
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Build project
+        run: npm run build
