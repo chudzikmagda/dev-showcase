@@ -40,16 +40,15 @@ jobs:
   semgrep-security-scan:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup environment
-        uses: ./.github/actions/setup-environment
-
       - name: Semgrep Security Scan
-        run: npx --yes semgrep --config p/ci .
+        run: semgrep scan --config p/ci
 
   build:
     if: github.event.pull_request.draft == false
