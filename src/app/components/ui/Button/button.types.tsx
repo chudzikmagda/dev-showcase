@@ -1,3 +1,5 @@
+import { IconProps } from "../Icon/icon.types";
+
 export enum ButtonVersion {
   PRIMARY = "primary",
   SECONDARY = "secondary",
@@ -18,6 +20,7 @@ export interface ButtonProps {
   label: string;
   version: ButtonVersion;
   hasArrow: boolean;
+  icon?: IconProps;
   size?: ButtonSize;
   asSpan?: boolean;
   href?: string;

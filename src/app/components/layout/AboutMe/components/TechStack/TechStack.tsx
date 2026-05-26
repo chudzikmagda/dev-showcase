@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import TechCard from "@/app/components/ui/TechCard/TechCard";
-import { TagVariant } from "@/app/shared/types/tag.types";
+import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
 import styled from "styled-components";
 import { gridPositions, technologies } from "./techstack.data";
 import type { GridPosition } from "./techstack.types";
@@ -17,7 +17,8 @@ const TechStack: React.FC = () => {
       .map((tag) => ({
         icon: tag.image.src,
         label: tag.image.label ?? "",
-        variant: TagVariant.DARK,
+        colorMode: TagColorMode.DARK,
+        contentMode: TagContentMode.ICON_AND_TEXT,
       })),
   }));
 

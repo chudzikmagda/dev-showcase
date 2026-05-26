@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Icon from "../Icon/Icon";
 import { ButtonHtmlType, ButtonProps, ButtonSize } from "./button.types";
 import { StyledButton } from "./button.styles";
 
@@ -7,17 +8,32 @@ const Button = ({
   label,
   version,
   hasArrow,
+  icon,
   size = ButtonSize.REGULAR,
   asSpan = false,
   href,
   type = ButtonHtmlType.BUTTON,
   onClick,
 }: ButtonProps) => {
+  const content = (
+    <>
+      {icon?.iconUrl ? (
+        <Icon
+          iconUrl={icon.iconUrl}
+          width={icon.width ?? 16}
+          height={icon.height ?? 16}
+          alt={label}
+        />
+      ) : null}
+      {label}
+    </>
+  );
+
   const commonProps = {
     $version: version,
     $hasArrow: hasArrow,
     $size: size,
-    children: label,
+    children: content,
   };
 
   if (asSpan) {

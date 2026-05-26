@@ -1,19 +1,12 @@
 import type { FC } from "react";
-import Button from "@/app/components/ui/Button/Button";
-import {
-  ButtonSize,
-  ButtonVersion,
-} from "@/app/components/ui/Button/button.types";
-import Tag from "@/app/components/ui/Tag/Tag";
-import { TagVariant } from "@/app/shared/types/tag.types";
+import Icon from "@/app/components/ui/Icon/Icon";
 import { ProjectCardProps } from "./projectCard.types";
 import {
   Card,
   Content,
   CoverImage,
   Description,
-  Footer,
-  Tags,
+  Icons,
   Title,
   Visual,
 } from "./projectCard.styles";
@@ -40,21 +33,19 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <Title>{title}</Title>
         <Description>{description}</Description>
 
-        <Tags>
-          {tags.map((tag) => (
-            <Tag key={tag.label} {...tag} variant={TagVariant.DARK} />
-          ))}
-        </Tags>
-
-        <Footer>
-          <Button
-            label="View case study"
-            version={ButtonVersion.PRIMARY}
-            size={ButtonSize.SMALL}
-            hasArrow
-            asSpan
-          />
-        </Footer>
+        <Icons>
+          {tags.map((tag) =>
+            tag.icon ? (
+              <Icon
+                key={tag.label}
+                iconUrl={tag.icon}
+                width={20}
+                height={20}
+                alt={tag.label}
+              />
+            ) : null,
+          )}
+        </Icons>
       </Content>
     </Card>
   );

@@ -13,7 +13,12 @@ export const projectsData: Project[] = [
     },
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2026",
-    technologies: [Technology.NEXT_JS, Technology.TYPESCRIPT, Technology.SASS],
+    technologies: [
+      Technology.NEXT_JS,
+      Technology.TYPESCRIPT,
+      Technology.STYLED_COMPONENTS,
+      Technology.SASS,
+    ],
     detailsUrl: "#",
   },
   {

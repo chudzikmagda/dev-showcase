@@ -29,9 +29,3 @@ export const SocialMediaLink = styled.a`
     border-radius: 2px;
   }
 `;
-
-export const IconWrapper = styled.div`
-  position: relative;
-  height: 32px;
-  width: 32px;
-`;

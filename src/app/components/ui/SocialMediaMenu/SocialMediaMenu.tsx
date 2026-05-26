@@ -1,12 +1,11 @@
 "use client";
-import Image from "next/image";
+import Icon from "../Icon/Icon";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
 import {
   SocialMediaMenuLink,
   SocialMediaMenuProps,
 } from "./socialMediaMenu.types";
 import {
-  IconWrapper,
   SocialMediaLink,
   SocialMediaMenuWrapper,
 } from "./socialMediaMenu.styles";
@@ -22,9 +21,7 @@ const SocialMediaMenu = ({ linkTabIndex = 0 }: SocialMediaMenuProps) => (
         tabIndex={linkTabIndex}
         aria-label={label}
       >
-        <IconWrapper>
-          <Image src={iconSrc} alt={label} fill priority={label === "GitHub"} />
-        </IconWrapper>
+        <Icon iconUrl={iconSrc} alt={label} width={32} height={32} />
       </SocialMediaLink>
     ))}
   </SocialMediaMenuWrapper>
