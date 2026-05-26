@@ -6,3 +6,8 @@ export type ProjectFilterProps = {
   activeTechnology: Technology | null;
   onFilterChange: (technology: Technology | null) => void;
 };
+
+export enum SlideDirection {
+  LEFT = "left",
+  RIGHT = "right",
+}

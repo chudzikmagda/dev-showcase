@@ -4,13 +4,10 @@ import {
   getTechnologyTag,
   isTagData,
 } from "@/app/shared/utils/technologies.utils";
-import type { Project } from "@/app/shared/types/projects.types";
+
+import type { ProjectListingProps } from "./projectListing.types";
 import type { TagData } from "@/app/shared/types/tag.types";
 import { Container } from "./projectListing.styles";
-
-type ProjectListingProps = {
-  projects: Project[];
-};
 
 const ProjectListing: FC<ProjectListingProps> = ({ projects }) => {
   return (

@@ -6,6 +6,7 @@ import ProjectListing from "@/app/components/layout/ProjectListing/ProjectListin
 import type { Project } from "@/app/shared/types/projects.types";
 import { Technology } from "@/app/shared/types/technologies.types";
 import styled from "styled-components";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 type ProjectsContentProps = {
   projects: Project[];
@@ -43,7 +44,11 @@ export default ProjectsContent;
 export const ListingSection = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   width: 100%;
   max-width: var(--container-max-width);
+
+  @media (min-width: ${breakpoints.desktop}) {
+    gap: 4rem;
+  }
 `;
