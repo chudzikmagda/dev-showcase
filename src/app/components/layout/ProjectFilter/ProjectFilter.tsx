@@ -11,6 +11,12 @@ import {
   useState,
   type FC,
 } from "react";
+
+import {
+  SCROLL_TOLERANCE_PX,
+  FILTER_SCROLL_OFFSET_PX,
+  FILTER_ARROW_ICON_SIZE,
+} from "./projectFilter.constants";
 import {
   FilterButtonsWrapper,
   FiltersBarRow,
@@ -32,7 +38,7 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
     const handleScroll = () => {
       const container: HTMLDivElement | null = filtersRef.current;
       if (!container) return;
-      setShowLeftArrow(container.scrollLeft > 5); // 5px tolerance
+      setShowLeftArrow(container.scrollLeft > SCROLL_TOLERANCE_PX);
     };
     const container: HTMLDivElement | null = filtersRef.current;
     if (container) {
@@ -54,7 +60,10 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
 
   const handleSlide = (direction: SlideDirection): void => {
     filtersRef.current?.scrollBy({
-      left: direction === SlideDirection.LEFT ? -220 : 220,
+      left:
+        direction === SlideDirection.LEFT
+          ? -FILTER_SCROLL_OFFSET_PX
+          : FILTER_SCROLL_OFFSET_PX,
       behavior: "smooth",
     });
   };
@@ -70,9 +79,9 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
             onClick={() => handleSlide(SlideDirection.LEFT)}
           >
             <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
+              width={FILTER_ARROW_ICON_SIZE}
+              height={FILTER_ARROW_ICON_SIZE}
+              viewBox={`0 0 ${FILTER_ARROW_ICON_SIZE} ${FILTER_ARROW_ICON_SIZE}`}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
@@ -122,9 +131,9 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
           onClick={() => handleSlide(SlideDirection.RIGHT)}
         >
           <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
+            width={FILTER_ARROW_ICON_SIZE}
+            height={FILTER_ARROW_ICON_SIZE}
+            viewBox={`0 0 ${FILTER_ARROW_ICON_SIZE} ${FILTER_ARROW_ICON_SIZE}`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
