@@ -49,6 +49,7 @@ export const SlideArrowButton = styled.button<{
     $position === SlideDirection.LEFT
       ? "linear-gradient(to right, var(--secondary-color) 0%, rgba(var(--secondary-color-rgb), 0) 100%)"
       : "linear-gradient(to left, var(--secondary-color) 0%, rgba(var(--secondary-color-rgb), 0) 100%)"};
+  color: var(--primary-color);
   border: none;
   cursor: pointer;
   z-index: 10;

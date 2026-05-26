@@ -20,8 +20,8 @@ const Button = ({
       {icon?.iconUrl ? (
         <Icon
           iconUrl={icon.iconUrl}
-          width={icon.iconWidth ?? 16}
-          height={icon.iconHeight ?? 16}
+          width={icon.width ?? 16}
+          height={icon.height ?? 16}
           alt={label}
         />
       ) : null}

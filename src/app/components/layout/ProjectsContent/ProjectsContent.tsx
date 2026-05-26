@@ -3,14 +3,10 @@
 import { useMemo, useState } from "react";
 import ProjectFilter from "@/app/components/layout/ProjectFilter/ProjectFilter";
 import ProjectListing from "@/app/components/layout/ProjectListing/ProjectListing";
-import type { Project } from "@/app/shared/types/projects.types";
+import type { ProjectsContentProps } from "./projectsContent.types";
 import { Technology } from "@/app/shared/types/technologies.types";
 import styled from "styled-components";
 import { breakpoints } from "@/app/shared/styles/breakpoints";
-
-type ProjectsContentProps = {
-  projects: Project[];
-};
 
 const ProjectsContent = ({ projects }: ProjectsContentProps) => {
   const [activeTechnology, setActiveTechnology] = useState<Technology | null>(

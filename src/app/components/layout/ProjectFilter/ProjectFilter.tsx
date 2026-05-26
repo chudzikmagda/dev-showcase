@@ -1,18 +1,20 @@
 "use client";
 
-import { useMemo, useRef, useState, useEffect, type FC } from "react";
-import Button from "@/app/components/ui/Button/Button";
-import {
-  ButtonSize,
-  ButtonVersion,
-} from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
 import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
 import { Technology } from "@/app/shared/types/technologies.types";
 import {
+  RefObject,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type FC,
+} from "react";
+import {
+  FilterButtonsWrapper,
   FiltersBarRow,
   FiltersContainer,
-  FilterButtonsWrapper,
   SlideArrowButton,
 } from "./projectFilter.styles";
 import { ProjectFilterProps, SlideDirection } from "./projectFilter.types";
@@ -22,17 +24,17 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
   activeTechnology,
   onFilterChange,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const filtersRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const filtersRef: RefObject<HTMLDivElement | null> =
+    useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const container = filtersRef.current;
+      const container: HTMLDivElement | null = filtersRef.current;
       if (!container) return;
       setShowLeftArrow(container.scrollLeft > 5); // 5px tolerance
     };
-    const container = filtersRef.current;
+    const container: HTMLDivElement | null = filtersRef.current;
     if (container) {
       container.addEventListener("scroll", handleScroll);
       handleScroll();
@@ -50,7 +52,7 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
     [projects],
   );
 
-  const handleSlide = (direction: SlideDirection) => {
+  const handleSlide = (direction: SlideDirection): void => {
     filtersRef.current?.scrollBy({
       left: direction === SlideDirection.LEFT ? -220 : 220,
       behavior: "smooth",
@@ -59,7 +61,7 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
 
   return (
     <FiltersContainer>
-      <FiltersBarRow $isOpen={isOpen}>
+      <FiltersBarRow $isOpen={false}>
         {showLeftArrow && (
           <SlideArrowButton
             $position={SlideDirection.LEFT}
@@ -74,7 +76,6 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
-              style={{ color: "var(--primary-color)" }}
             >
               <path
                 d="M13 16L7 10L13 4"
@@ -88,8 +89,8 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
         )}
         <FilterButtonsWrapper
           id="project-filters-bar"
-          $isOpen={isOpen}
           ref={filtersRef}
+          $isOpen={false}
         >
           <Tag
             colorMode={TagColorMode.DARK}
@@ -101,7 +102,6 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
           />
           {technologies.map((technology: Technology) => {
             const isActive = activeTechnology === technology;
-
             return (
               <Tag
                 key={technology}
@@ -128,7 +128,6 @@ const ProjectFilter: FC<ProjectFilterProps> = ({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
-            style={{ color: "var(--primary-color)" }}
           >
             <path
               d="M7 4L13 10L7 16"

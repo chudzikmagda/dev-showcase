@@ -1,3 +1,5 @@
+import { IconProps } from "../Icon/icon.types";
+
 export enum ButtonVersion {
   PRIMARY = "primary",
   SECONDARY = "secondary",
@@ -14,17 +16,11 @@ export enum ButtonHtmlType {
   RESET = "reset",
 }
 
-export interface ButtonIcon {
-  iconUrl: string;
-  iconWidth: number;
-  iconHeight: number;
-}
-
 export interface ButtonProps {
   label: string;
   version: ButtonVersion;
   hasArrow: boolean;
-  icon?: ButtonIcon;
+  icon?: IconProps;
   size?: ButtonSize;
   asSpan?: boolean;
   href?: string;
