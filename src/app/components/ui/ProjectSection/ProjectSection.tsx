@@ -1,12 +1,14 @@
 import type { FC } from "react";
+
 import Button from "@/app/components/ui/Button/Button";
 import { ButtonVersion } from "@/app/components/ui/Button/button.types";
 import Tag from "@/app/components/ui/Tag/Tag";
+import { TagData, TagColorMode } from "@/app/shared/types/tag.types";
 import {
   getTechnologyTag,
   isTagData,
 } from "@/app/shared/utils/technologies.utils";
-import { type ProjectSectionProps } from "./projectSection.types";
+
 import {
   Actions,
   CaseStudyLabel,
@@ -20,7 +22,7 @@ import {
   ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
-import { TagData, TagColorMode } from "@/app/shared/types/tag.types";
+import { type ProjectSectionProps } from "./projectSection.types";
 
 const ProjectSection: FC<ProjectSectionProps> = ({
   project,

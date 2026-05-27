@@ -1,7 +1,8 @@
 import type { FC } from "react";
+
+import { TagButton, TagTitle, TagWrapper } from "./tag.styles";
 import { TagData, TagContentMode } from "../../../shared/types/tag.types";
 import Icon from "../Icon/Icon";
-import { TagButton, TagTitle, TagWrapper } from "./tag.styles";
 
 export const Tag: FC<TagData> = ({
   icon,

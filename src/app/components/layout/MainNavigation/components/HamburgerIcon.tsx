@@ -1,6 +1,9 @@
 "use client";
+import { JSX } from "react";
 import styled from "styled-components";
+
 import { breakpoints } from "@/app/shared/styles/breakpoints";
+
 import { HamburgerIconProps } from "../models/MainNavigation.model";
 
 const HamburgerButton = styled.button`
@@ -70,7 +73,10 @@ const HamburgerItem = styled.span`
   }
 `;
 
-const HamburgerIcon = ({ active, onClick }: HamburgerIconProps) => {
+const HamburgerIcon = ({
+  active,
+  onClick,
+}: HamburgerIconProps): JSX.Element => {
   return (
     <HamburgerButton
       onClick={onClick}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { ButtonSize, ButtonVersion } from "./button.types";
 
 const getButtonColor = (version: ButtonVersion) => {

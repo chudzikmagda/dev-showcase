@@ -1,6 +1,8 @@
-import { breakpoints } from "@/app/shared/styles/breakpoints";
-import { CardAlign } from "./card.types";
 import styled from "styled-components";
+
+import { breakpoints } from "@/app/shared/styles/breakpoints";
+
+import { CardAlign } from "./card.types";
 
 export const CardBase = styled.div<{ $align?: CardAlign }>`
   display: flex;

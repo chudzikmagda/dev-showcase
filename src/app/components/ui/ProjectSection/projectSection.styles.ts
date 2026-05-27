@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
+
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 import { ImagePosition } from "@/app/shared/types/image.types";
 

@@ -1,5 +1,7 @@
 import styled from "styled-components";
+
 import { breakpoints } from "@/app/shared/styles/breakpoints";
+
 import { SlideDirection } from "./projectFilter.types";
 
 export const FiltersContainer = styled.div`

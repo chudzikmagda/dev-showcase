@@ -1,7 +1,9 @@
 "use client";
-import { Link } from "@/app/shared/types/link.types";
-import * as React from "react";
+import { JSX } from "react";
 import styled from "styled-components";
+
+import { Link } from "@/app/shared/types/link.types";
+
 import { mainMenuItems } from "../config/mainMenu.config";
 
 const MenuList = styled.ul`
@@ -36,7 +38,7 @@ const MenuLink = styled.a`
   }
 `;
 
-const Menu: React.FC = () => {
+const Menu = (): JSX.Element => {
   return (
     <MenuList>
       {mainMenuItems.map((item: Link, index: number) => (

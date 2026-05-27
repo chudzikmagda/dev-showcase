@@ -1,4 +1,6 @@
 "use client";
+import { JSX } from "react";
+
 import {
   SectionWrapper,
   InnerWrapper,
@@ -11,11 +13,11 @@ import {
   ParagraphsWrapper,
   Paragraph,
 } from "./aboutMe.styles";
+import TechStack from "./components/TechStack/TechStack";
 import Button from "../../ui/Button/Button";
 import { ButtonVersion } from "../../ui/Button/button.types";
-import TechStack from "./components/TechStack/TechStack";
 
-const AboutMe = () => {
+const AboutMe = (): JSX.Element => {
   return (
     <SectionWrapper id="about">
       <InnerWrapper>

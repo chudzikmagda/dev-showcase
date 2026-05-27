@@ -1,9 +1,7 @@
 "use client";
-import type { FC } from "react";
 import Image from "next/image";
-import Card from "../Card/Card";
-import { CardAlign } from "../Card/card.types";
-import { FeatureCardProps } from "./featureCard.types";
+import type { FC } from "react";
+
 import {
   FeatureCardIcon,
   FeatureCardCategory,
@@ -11,6 +9,9 @@ import {
   FeatureCardDescription,
   FeatureCardLink,
 } from "./featureCard.styles";
+import { FeatureCardProps } from "./featureCard.types";
+import Card from "../Card/Card";
+import { CardAlign } from "../Card/card.types";
 
 const FeatureCard: FC<FeatureCardProps> = ({
   iconURL,

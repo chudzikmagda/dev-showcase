@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 import { TagColorMode } from "@/app/shared/types/tag.types";
 

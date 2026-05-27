@@ -1,10 +1,12 @@
 "use client";
+import { JSX } from "react";
+
 import { SectionWrapper, H1Heading, H3Heading } from "./intro.styles";
-import HeroImage from "../../ui/HeroImage/HeroImage";
 import Button from "../../ui/Button/Button";
 import { ButtonVersion } from "../../ui/Button/button.types";
+import HeroImage from "../../ui/HeroImage/HeroImage";
 
-const Intro = () => {
+const Intro = (): JSX.Element => {
   return (
     <SectionWrapper>
       <div>
