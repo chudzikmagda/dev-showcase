@@ -1,4 +1,6 @@
 "use client";
+import { JSX } from "react";
+
 import Icon from "../Icon/Icon";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
 import {

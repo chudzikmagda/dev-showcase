@@ -1,5 +1,7 @@
 "use client";
 
+import { JSX } from "react";
+
 import { GoTopButton } from "./goToTop.styles";
 
 const GoToTop = (): JSX.Element => {

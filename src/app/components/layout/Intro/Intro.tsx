@@ -1,4 +1,6 @@
 "use client";
+import { JSX } from "react";
+
 import { SectionWrapper, H1Heading, H3Heading } from "./intro.styles";
 import Button from "../../ui/Button/Button";
 import { ButtonVersion } from "../../ui/Button/button.types";

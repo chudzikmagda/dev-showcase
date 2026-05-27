@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 import ProjectSection from "@/app/components/ui/ProjectSection/ProjectSection";
 import { projectsData } from "@/app/shared/data/projects.data";
 import { ImagePosition } from "@/app/shared/types/image.types";

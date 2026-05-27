@@ -1,4 +1,6 @@
 "use client";
+import { JSX } from "react";
+
 import {
   SectionWrapper,
   InnerWrapper,

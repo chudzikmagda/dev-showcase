@@ -1,5 +1,7 @@
 "use client";
 
+import { JSX } from "react";
+
 import GoToTop from "@/app/components/ui/GoToTop/GoToTop";
 import SocialMediaMenu from "@/app/components/ui/SocialMediaMenu/SocialMediaMenu";
 

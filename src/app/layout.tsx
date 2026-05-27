@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Montserrat } from "next/font/google";
+import { JSX } from "react";
 
 import Footer from "./components/layout/Footer/Footer";
 import Header from "./components/layout/Header/Header";

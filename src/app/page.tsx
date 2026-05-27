@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import styled from "styled-components";
 
 import AboutMe from "./components/layout/AboutMe/AboutMe";

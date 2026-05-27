@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 import FeatureCard from "@/app/components/ui/FeatureCard/FeatureCard";
 
 import { afterWorkData } from "./afterWork.data";

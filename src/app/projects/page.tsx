@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JSX } from "react";
 
 import { PageWrapper, H1Heading } from "./projects.styles";
 import ProjectsContent from "../components/layout/ProjectsContent/ProjectsContent";

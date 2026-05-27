@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { JSX } from "react";
 
 import { StyledButton } from "./button.styles";
 import { ButtonHtmlType, ButtonProps, ButtonSize } from "./button.types";
