@@ -1,27 +1,25 @@
-import prettierPlugin from "eslint-plugin-prettier";
-import next from "eslint-config-next";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import reactPlugin from "eslint-plugin-react";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import tseslint from "typescript-eslint";
 import importPlugin from "eslint-plugin-import";
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
 
-export default [
-  {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "dist/**",
-      "public/**",
-      "next-env.d.ts",
-      "eslint.config.mjs",
-    ],
-  },
-  ...next,
+export default defineConfig([
+  globalIgnores([
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "build/**",
+    "dist/**",
+    "public/**",
+    "next-env.d.ts",
+    "eslint.config.mjs",
+  ]),
+  ...nextVitals,
+  ...tseslint.configs.recommended,
   {
     plugins: {
-      "@typescript-eslint": tseslint,
-      react: reactPlugin,
       import: importPlugin,
       prettier: prettierPlugin,
     },
@@ -39,18 +37,13 @@ export default [
           alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
-      "react/react-in-jsx-scope": "off",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_" },
       ],
-      "prettier/prettier": ["error"],
       "@typescript-eslint/explicit-module-boundary-types": "warn",
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
+      "prettier/prettier": "error",
     },
   },
-];
+  prettierConfig,
+]);
