@@ -1,7 +1,9 @@
 "use client";
+import { JSX } from "react";
+
 import styles from "./HeroImage.module.css";
 
-const HeroImage = () => {
+const HeroImage = (): JSX.Element => {
   return (
     <svg
       version="1.1"

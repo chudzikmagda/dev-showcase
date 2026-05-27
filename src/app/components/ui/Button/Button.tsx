@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
-import Icon from "../Icon/Icon";
-import { ButtonHtmlType, ButtonProps, ButtonSize } from "./button.types";
+
 import { StyledButton } from "./button.styles";
+import { ButtonHtmlType, ButtonProps, ButtonSize } from "./button.types";
+import Icon from "../Icon/Icon";
 
 const Button = ({
   label,
@@ -14,7 +15,7 @@ const Button = ({
   href,
   type = ButtonHtmlType.BUTTON,
   onClick,
-}: ButtonProps) => {
+}: ButtonProps): JSX.Element => {
   const content = (
     <>
       {icon?.iconUrl ? (

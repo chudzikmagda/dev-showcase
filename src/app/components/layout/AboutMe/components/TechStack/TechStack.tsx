@@ -1,14 +1,16 @@
 "use client";
-import React from "react";
-import TechCard from "@/app/components/ui/TechCard/TechCard";
-import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
+import React, { JSX } from "react";
 import styled from "styled-components";
+
+import TechCard from "@/app/components/ui/TechCard/TechCard";
+import { breakpoints } from "@/app/shared/styles/breakpoints";
+import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
+
 import { gridPositions, technologies } from "./techstack.data";
 import type { GridPosition } from "./techstack.types";
 import { TechStackCategories } from "./techstack.types";
-import { breakpoints } from "@/app/shared/styles/breakpoints";
 
-const TechStack: React.FC = () => {
+const TechStack = (): JSX.Element => {
   const data = Object.values(TechStackCategories).map((category) => ({
     category,
     position: gridPositions[category],

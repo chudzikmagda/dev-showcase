@@ -1,6 +1,7 @@
 import type { FC } from "react";
+
 import Icon from "@/app/components/ui/Icon/Icon";
-import { ProjectCardProps } from "./projectCard.types";
+
 import {
   Card,
   Content,
@@ -10,6 +11,7 @@ import {
   Title,
   Visual,
 } from "./projectCard.styles";
+import { ProjectCardProps } from "./projectCard.types";
 
 const ProjectCard: FC<ProjectCardProps> = ({
   image,

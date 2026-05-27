@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import styled from "styled-components";
+
 import HamburgerIcon from "./components/HamburgerIcon";
 import Menu from "./components/Menu";
 import SocialMediaMenu from "../../ui/SocialMediaMenu/SocialMediaMenu";
@@ -41,7 +42,7 @@ const MenuContainer = styled.nav`
   }
 `;
 
-const MainNavigation: React.FC = () => {
+const MainNavigation = (): JSX.Element => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = (): void =>

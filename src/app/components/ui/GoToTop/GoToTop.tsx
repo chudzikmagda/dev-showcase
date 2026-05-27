@@ -2,7 +2,7 @@
 
 import { GoTopButton } from "./goToTop.styles";
 
-const GoToTop = () => {
+const GoToTop = (): JSX.Element => {
   const handleGoToTop = (): void => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

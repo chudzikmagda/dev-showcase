@@ -2,15 +2,17 @@
 import Icon from "../Icon/Icon";
 import { socialMediaLinks } from "./config/socialMediaLinks.config";
 import {
-  SocialMediaMenuLink,
-  SocialMediaMenuProps,
-} from "./socialMediaMenu.types";
-import {
   SocialMediaLink,
   SocialMediaMenuWrapper,
 } from "./socialMediaMenu.styles";
+import {
+  SocialMediaMenuLink,
+  SocialMediaMenuProps,
+} from "./socialMediaMenu.types";
 
-const SocialMediaMenu = ({ linkTabIndex = 0 }: SocialMediaMenuProps) => (
+const SocialMediaMenu = ({
+  linkTabIndex = 0,
+}: SocialMediaMenuProps): JSX.Element => (
   <SocialMediaMenuWrapper>
     {socialMediaLinks.map(({ label, href, iconSrc }: SocialMediaMenuLink) => (
       <SocialMediaLink

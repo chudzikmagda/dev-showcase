@@ -1,14 +1,15 @@
 import ProjectSection from "@/app/components/ui/ProjectSection/ProjectSection";
 import { projectsData } from "@/app/shared/data/projects.data";
+import { ImagePosition } from "@/app/shared/types/image.types";
+
 import {
   H2Heading,
   SectionWrapper,
   TextWrapper,
   SectionsWrapper,
 } from "./projects.styles";
-import { ImagePosition } from "@/app/shared/types/image.types";
 
-const Projects = () => {
+const Projects = (): JSX.Element => {
   return (
     <SectionWrapper id="projects">
       <TextWrapper>

@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+
 import Logotype from "../../ui/Logotype/Logotype";
 import MainNavigation from "../MainNavigation/MainNavigation";
 
-const Header = () => {
+const Header = (): JSX.Element => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

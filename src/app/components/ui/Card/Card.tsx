@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from "react";
-import { CardAlign } from "./card.types";
+
 import { CardBase } from "./card.styles";
+import { CardAlign } from "./card.types";
 
 interface CardProps {
   children: ReactNode;

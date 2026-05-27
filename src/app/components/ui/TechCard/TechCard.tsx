@@ -1,10 +1,12 @@
 import type { FC } from "react";
+
+import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
+
+import { TechCardTitle, TechCardList } from "./techCard.styles";
+import { TechCardProps } from "./techCard.types";
 import Card from "../Card/Card";
 import { CardAlign } from "../Card/card.types";
 import Tag from "../Tag/Tag";
-import { TechCardProps } from "./techCard.types";
-import { TechCardTitle, TechCardList } from "./techCard.styles";
-import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
 
 const TechCard: FC<TechCardProps> = ({ title, tags }) => {
   return (

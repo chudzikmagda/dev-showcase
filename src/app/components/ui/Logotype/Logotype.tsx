@@ -1,5 +1,5 @@
-import React from "react";
-import type { LogotypeProps } from "./logotype.types";
+import React, { JSX } from "react";
+
 import {
   CollapsibleTextPart,
   HomepageLink,
@@ -7,8 +7,9 @@ import {
   StaticTextPart,
   WordSpacer,
 } from "./logotype.styles";
+import type { LogotypeProps } from "./logotype.types";
 
-const Logotype: React.FC<LogotypeProps> = ({ isScrolled }) => (
+const Logotype = ({ isScrolled }: LogotypeProps): JSX.Element => (
   <LogotypeWrapper>
     <HomepageLink href="/" tabIndex={1} aria-label="Magda Chudzik">
       <StaticTextPart>M</StaticTextPart>

@@ -1,5 +1,6 @@
-import type { FC } from "react";
 import Image from "next/image";
+import type { FC } from "react";
+
 import { IconProps } from "./icon.types";
 
 const Icon: FC<IconProps> = ({

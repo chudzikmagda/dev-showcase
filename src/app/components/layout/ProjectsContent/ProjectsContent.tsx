@@ -1,14 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { JSX, useMemo, useState } from "react";
+import styled from "styled-components";
+
 import ProjectFilter from "@/app/components/layout/ProjectFilter/ProjectFilter";
 import ProjectListing from "@/app/components/layout/ProjectListing/ProjectListing";
-import type { ProjectsContentProps } from "./projectsContent.types";
-import { Technology } from "@/app/shared/types/technologies.types";
-import styled from "styled-components";
 import { breakpoints } from "@/app/shared/styles/breakpoints";
+import { Technology } from "@/app/shared/types/technologies.types";
 
-const ProjectsContent = ({ projects }: ProjectsContentProps) => {
+import type { ProjectsContentProps } from "./projectsContent.types";
+
+const ProjectsContent = ({ projects }: ProjectsContentProps): JSX.Element => {
   const [activeTechnology, setActiveTechnology] = useState<Technology | null>(
     null,
   );

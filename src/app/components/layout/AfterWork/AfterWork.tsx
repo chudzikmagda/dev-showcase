@@ -1,4 +1,6 @@
 import FeatureCard from "@/app/components/ui/FeatureCard/FeatureCard";
+
+import { afterWorkData } from "./afterWork.data";
 import {
   H2Heading,
   Intro,
@@ -6,9 +8,8 @@ import {
   TextWrapper,
   CardsWrapper,
 } from "./afterWork.styles";
-import { afterWorkData } from "./afterWork.data";
 
-const AfterWork = () => {
+const AfterWork = (): JSX.Element => {
   return (
     <SectionWrapper id="after-work">
       <TextWrapper>

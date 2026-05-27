@@ -1,6 +1,7 @@
-import { breakpoints } from "@/app/shared/styles/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
+
+import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 export const FeatureCardIcon = styled.div`
   margin-bottom: 2rem;

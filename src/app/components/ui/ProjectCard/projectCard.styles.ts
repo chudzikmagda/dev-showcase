@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 export const Card = styled(Link)`

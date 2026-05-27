@@ -1,8 +1,5 @@
 "use client";
 
-import Tag from "@/app/components/ui/Tag/Tag";
-import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
-import { Technology } from "@/app/shared/types/technologies.types";
 import {
   RefObject,
   useEffect,
@@ -11,6 +8,10 @@ import {
   useState,
   type FC,
 } from "react";
+
+import Tag from "@/app/components/ui/Tag/Tag";
+import { TagColorMode, TagContentMode } from "@/app/shared/types/tag.types";
+import { Technology } from "@/app/shared/types/technologies.types";
 
 import {
   SCROLL_TOLERANCE_PX,
