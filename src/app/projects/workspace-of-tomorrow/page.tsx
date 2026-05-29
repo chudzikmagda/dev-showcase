@@ -3,13 +3,13 @@ import ProjectShowcase from "../../components/layout/ProjectShowcase/ProjectShow
 import { Project, ProjectId } from "../../shared/types/projects.types";
 import { getProjectById } from "../../shared/utils/projects.utils";
 
-const PhotographersPortfolioPage = (): JSX.Element => {
+const WorkspaceOfTomorrowPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(
-    ProjectId.PHOTOGRAPHERS_PORTFOLIO,
+    ProjectId.WORKSPACE_OF_TOMORROW,
   );
 
   if (!project) return <div>Project not found</div>;
   return <ProjectShowcase {...project} />;
 };
 
-export default PhotographersPortfolioPage;
+export default WorkspaceOfTomorrowPage;

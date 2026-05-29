@@ -51,7 +51,6 @@ export const ProjectImageWrapper = styled.div`
   align-items: center;
   gap: 4rem;
   width: 100%;
-  z-index: 1;
 `;
 
 export const ProjectImage = styled.img`

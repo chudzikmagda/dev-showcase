@@ -1,15 +1,15 @@
+import ProjectShowcase from "@/app/components/layout/ProjectShowcase/ProjectShowcase";
 import { JSX } from "react";
-import ProjectShowcase from "../../components/layout/ProjectShowcase/ProjectShowcase";
 import { Project, ProjectId } from "../../shared/types/projects.types";
 import { getProjectById } from "../../shared/utils/projects.utils";
 
-const PhotographersPortfolioPage = (): JSX.Element => {
+const DevPortfolioPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(
-    ProjectId.PHOTOGRAPHERS_PORTFOLIO,
+    ProjectId.THE_SOFTWARE_ENGINEER_PORTFOLIO,
   );
 
   if (!project) return <div>Project not found</div>;
   return <ProjectShowcase {...project} />;
 };
 
-export default PhotographersPortfolioPage;
+export default DevPortfolioPage;

@@ -3,13 +3,11 @@ import ProjectShowcase from "../../components/layout/ProjectShowcase/ProjectShow
 import { Project, ProjectId } from "../../shared/types/projects.types";
 import { getProjectById } from "../../shared/utils/projects.utils";
 
-const PhotographersPortfolioPage = (): JSX.Element => {
-  const project: Project | undefined = getProjectById(
-    ProjectId.PHOTOGRAPHERS_PORTFOLIO,
-  );
+const WeatherAppPage = (): JSX.Element => {
+  const project: Project | undefined = getProjectById(ProjectId.WEATHER_APP);
 
   if (!project) return <div>Project not found</div>;
   return <ProjectShowcase {...project} />;
 };
 
-export default PhotographersPortfolioPage;
+export default WeatherAppPage;

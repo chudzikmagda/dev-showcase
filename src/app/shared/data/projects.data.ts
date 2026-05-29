@@ -1,8 +1,9 @@
-import type { Project } from "../types/projects.types";
+import { Project, ProjectId } from "../types/projects.types";
 import { Technology } from "../types/technologies.types";
 
 export const projectsData: Project[] = [
   {
+    id: ProjectId.THE_SOFTWARE_ENGINEER_PORTFOLIO,
     title: "The software engineer portfolio",
     description:
       "The website which you are currently viewing. Check more details and how I made it.",
@@ -29,9 +30,10 @@ export const projectsData: Project[] = [
       Technology.STYLED_COMPONENTS,
       Technology.SASS,
     ],
-    detailsUrl: "#",
+    detailsUrl: "projects/dev-portfolio",
   },
   {
+    id: ProjectId.PHOTOGRAPHERS_PORTFOLIO,
     title: "Photographer's portfolio",
     description:
       "The website shows the pictures in an attractive way and focuses the visitors' attention on the author's pics.",
@@ -60,6 +62,7 @@ export const projectsData: Project[] = [
     detailsUrl: "projects/photograpers-portfolio",
   },
   {
+    id: ProjectId.BOOKWORM,
     title: "Bookworm",
     description:
       "Angular standalone application that helps the users collect and manage data about the books they have read.",
@@ -85,9 +88,10 @@ export const projectsData: Project[] = [
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
     technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
-    detailsUrl: "#",
+    detailsUrl: "projects/bookworm",
   },
   {
+    id: ProjectId.WORKSPACE_OF_TOMORROW,
     title: "Workspace of tomorrow",
     description:
       'The website "Workspace of tomorrow" aims at showing how the office work will change in the future. I have created this website for Nowy Styl which is an European leader in the office furniture sector.',
@@ -114,9 +118,10 @@ export const projectsData: Project[] = [
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
     technologies: [Technology.JAVASCRIPT, Technology.HTML, Technology.CSS],
-    detailsUrl: "#",
+    detailsUrl: "projects/workspace-of-tomorrow",
   },
   {
+    id: ProjectId.WEATHER_APP,
     title: "Weather App",
     description:
       "Check the current weather as well as the forecast for the next 16 days in a selected town by using geolocation.",
@@ -142,6 +147,6 @@ export const projectsData: Project[] = [
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2020",
     technologies: [Technology.HTML, Technology.CSS, Technology.JAVASCRIPT],
-    detailsUrl: "#",
+    detailsUrl: "projects/weather-app",
   },
 ];
