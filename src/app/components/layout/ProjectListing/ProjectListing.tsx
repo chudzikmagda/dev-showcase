@@ -21,7 +21,7 @@ const ProjectListing: FC<ProjectListingProps> = ({ projects }) => {
         return (
           <ProjectCard
             key={project.title}
-            image={project.image}
+            image={project.listImage}
             title={project.title}
             description={project.description}
             tags={tags}

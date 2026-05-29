@@ -10,10 +10,7 @@ export const FooterWrapper = styled.footer`
   align-items: center;
   min-height: 30vh;
   padding: calc(var(--basic-spacer) * 2) var(--basic-spacer);
-  background:
-    url("/images/bg-section-welcome.svg") center no-repeat,
-    var(--secondary-color);
-  background-size: cover;
+  background: var(--secondary-color);
   color: var(--white);
 
   @media (min-width: ${breakpoints.desktop}) {
@@ -33,6 +30,7 @@ export const SocialMediaHeading = styled.h6`
   text-align: center;
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
+  color: var(--secondary-color-10);
 `;
 
 export const Copyright = styled.span`
@@ -41,7 +39,7 @@ export const Copyright = styled.span`
   margin-top: 2rem;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--secondary-color-70);
+  color: var(--secondary-color-10);
 
   @media (min-width: ${breakpoints.desktop}) {
     margin-top: 4rem;

@@ -36,8 +36,8 @@ const ProjectSection: FC<ProjectSectionProps> = ({
     <ProjectCard>
       <ProjectVisual $imagePosition={imagePosition}>
         <ProjectImage
-          src={project.image.src}
-          alt={project.image.alt ?? "Project image"}
+          src={project.listImage.src}
+          alt={project.listImage.alt ?? "Project image"}
           sizes="(min-width: 1025px) 50vw, 100vw"
           fill
         />
