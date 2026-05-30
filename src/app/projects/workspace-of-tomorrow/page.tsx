@@ -1,4 +1,5 @@
 import { JSX } from "react";
+
 import ProjectShowcase from "../../components/layout/ProjectShowcase/ProjectShowcase";
 import { Project, ProjectId } from "../../shared/types/projects.types";
 import { getProjectById } from "../../shared/utils/projects.utils";

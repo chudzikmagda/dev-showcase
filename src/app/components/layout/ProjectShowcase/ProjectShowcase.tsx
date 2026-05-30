@@ -1,21 +1,22 @@
 import { JSX } from "react";
 
-import { TagColorMode, TagContentMode } from "../../../shared/types/tag.types";
-import { Technology } from "../../../shared/types/technologies.types";
-import { getTechnologyTag } from "../../../shared/utils/technologies.utils";
-import Tag from "../../ui/Tag/Tag";
 import {
-  ImplementationDate,
+  InfoLabel,
+  InfoSection,
   PageWrapper,
-  ProjectDescription,
-  ProjectImage,
-  ProjectImageWrapper,
-  ProjectLabel,
+  ShowcaseImage,
+  ImagesWrapper,
+  ShowcaseLabel,
   ShowcaseContainer,
+  ShowcaseImageWrapper,
   TagsRow,
   Title,
 } from "./projectShowcase.styles";
 import { ProjectShowcaseProps } from "./projectShowcase.types";
+import { TagColorMode, TagContentMode } from "../../../shared/types/tag.types";
+import { Technology } from "../../../shared/types/technologies.types";
+import { getTechnologyTag } from "../../../shared/utils/technologies.utils";
+import Tag from "../../ui/Tag/Tag";
 
 const ProjectShowcase = ({
   title,
@@ -28,7 +29,7 @@ const ProjectShowcase = ({
     <>
       <PageWrapper>
         <ShowcaseContainer>
-          <ProjectLabel>Project</ProjectLabel>
+          <ShowcaseLabel>Project</ShowcaseLabel>
           <Title>{title}</Title>
           <TagsRow>
             {technologies.map((tech) => {
@@ -45,29 +46,25 @@ const ProjectShowcase = ({
               );
             })}
           </TagsRow>
-          <ProjectImageWrapper>
-            {showcaseImages?.map((img, idx) => (
-              <div
-                key={img.src}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <ProjectImage src={img.src} alt={img.alt} />
-                {idx === 0 && (
-                  <>
-                    <ImplementationDate>
-                      {implementationDate}
-                    </ImplementationDate>
-                    <ProjectDescription>{description}</ProjectDescription>
-                  </>
+          <ImagesWrapper>
+            {showcaseImages?.map((img, index) => (
+              <ShowcaseImageWrapper key={img.src}>
+                <ShowcaseImage src={img.src} alt={img.alt} />
+                {index === 0 && (
+                  <InfoSection>
+                    <div>
+                      <InfoLabel>year:</InfoLabel>
+                      <p>{implementationDate}</p>
+                    </div>
+                    <div>
+                      <InfoLabel>description:</InfoLabel>
+                      <p>{description}</p>
+                    </div>
+                  </InfoSection>
                 )}
-              </div>
+              </ShowcaseImageWrapper>
             ))}
-          </ProjectImageWrapper>
+          </ImagesWrapper>
         </ShowcaseContainer>
       </PageWrapper>
     </>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { breakpoints } from "../../../shared/styles/breakpoints";
+
 export const PageWrapper = styled.main`
   display: flex;
   flex-direction: column;
@@ -9,8 +11,9 @@ export const PageWrapper = styled.main`
   min-height: 100vh;
   background:
     url("/images/bg-section-welcome.svg") center top,
-    var(--secondary-color);
+    var(--primary-background-color);
   background-size: cover;
+  padding: 8rem 1rem;
 `;
 
 export const TagsRow = styled.div`
@@ -18,7 +21,11 @@ export const TagsRow = styled.div`
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    margin-bottom: 8rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -27,24 +34,31 @@ export const Title = styled.h2`
   font-weight: var(--font-weight-bold);
   line-height: 1.3;
   color: var(--primary-text-color);
+  text-align: center;
 `;
 
 export const ShowcaseContainer = styled.div`
-  padding: 2.5rem 1.5rem 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const ProjectLabel = styled.div`
+export const ShowcaseImageWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ShowcaseLabel = styled.div`
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--grey-30);
+  color: var(--info-text-color);
 `;
 
-export const ProjectImageWrapper = styled.div`
+export const ImagesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +67,7 @@ export const ProjectImageWrapper = styled.div`
   width: 100%;
 `;
 
-export const ProjectImage = styled.img`
+export const ShowcaseImage = styled.img`
   border: 1px solid var(--secondary-color-60);
   border-radius: 8px;
   width: 100%;
@@ -62,16 +76,29 @@ export const ProjectImage = styled.img`
 
 export const ImplementationDate = styled.div`
   margin: 1.5rem 0 0.5rem 0;
-  color: var(--grey-40);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
+  color: var(--info-text-color);
+  font-size: clamp(1rem, 1.1rem + 0.5vw, 1.5rem);
 `;
 
-export const ProjectDescription = styled.div`
-  margin-bottom: 2.5rem;
+export const ShowcaseDescription = styled.div`
+  max-width: 60ch;
   color: var(--primary-text-color);
-  font-size: 1.1rem;
-  max-width: 700px;
+  font-size: clamp(1rem, 1.1rem + 0.5vw, 1.5rem);
   text-align: center;
+`;
+
+export const InfoSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0 0;
+  color: var(--primary-text-color);
+`;
+
+export const InfoLabel = styled.span`
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--info-text-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
 `;

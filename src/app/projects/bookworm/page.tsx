@@ -1,7 +1,9 @@
-import { getProjectById } from "../../shared/utils/projects.utils";
-import { Project, ProjectId } from "../../shared/types/projects.types";
-import ProjectShowcase from "@/app/components/layout/ProjectShowcase/ProjectShowcase";
 import { JSX } from "react";
+
+import ProjectShowcase from "@/app/components/layout/ProjectShowcase/ProjectShowcase";
+
+import { Project, ProjectId } from "../../shared/types/projects.types";
+import { getProjectById } from "../../shared/utils/projects.utils";
 
 const BookwormPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(ProjectId.BOOKWORM);

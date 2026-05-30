@@ -19,10 +19,14 @@
 
   --grey-20: rgb(223, 225, 227);
   --grey-30: rgb(230, 230, 230);
+  --grey-40: rgb(180, 180, 180);
+  --grey-50: rgb(153, 153, 153);
+
+  --primary-background-color: var(--secondary-color);
 
   --primary-text-color: var(--white);
-
   --secondary-text-color: var(--secondary-color);
+  --info-text-color: var(--grey-50);
 
   --success-color: rgb(127, 198, 185);
   --success-color-dark: rgb(9, 76, 63);
