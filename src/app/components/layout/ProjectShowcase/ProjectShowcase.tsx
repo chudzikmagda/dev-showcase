@@ -49,7 +49,10 @@ const ProjectShowcase = ({
           <ImagesWrapper>
             {showcaseImages?.map((img, index) => (
               <ShowcaseImageWrapper key={img.src}>
-                <ShowcaseImage src={img.src} alt={img.alt} />
+                <ShowcaseImage
+                  src={img.src}
+                  alt={img.alt ?? `${title} showcase image ${index + 1}`}
+                />
                 {index === 0 && (
                   <InfoSection>
                     <div>

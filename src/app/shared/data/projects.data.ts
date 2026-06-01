@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
       Technology.STYLED_COMPONENTS,
       Technology.SASS,
     ],
-    detailsUrl: "projects/dev-portfolio",
+    detailsUrl: "/projects/dev-portfolio",
   },
   {
     id: ProjectId.PHOTOGRAPHERS_PORTFOLIO,
@@ -59,7 +59,7 @@ export const projectsData: Project[] = [
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
     technologies: [Technology.REACT, Technology.TYPESCRIPT, Technology.SASS],
-    detailsUrl: "projects/photograpers-portfolio",
+    detailsUrl: "/projects/photographers-portfolio",
   },
   {
     id: ProjectId.BOOKWORM,
@@ -88,7 +88,7 @@ export const projectsData: Project[] = [
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
     technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
-    detailsUrl: "projects/bookworm",
+    detailsUrl: "/projects/bookworm",
   },
   {
     id: ProjectId.WORKSPACE_OF_TOMORROW,
@@ -118,7 +118,7 @@ export const projectsData: Project[] = [
       "Layout design (Figma), frontend development, Wordpress theme implementation.",
     implementationDate: "2021",
     technologies: [Technology.JAVASCRIPT, Technology.HTML, Technology.CSS],
-    detailsUrl: "projects/workspace-of-tomorrow",
+    detailsUrl: "/projects/workspace-of-tomorrow",
   },
   {
     id: ProjectId.WEATHER_APP,
@@ -147,6 +147,6 @@ export const projectsData: Project[] = [
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2020",
     technologies: [Technology.HTML, Technology.CSS, Technology.JAVASCRIPT],
-    detailsUrl: "projects/weather-app",
+    detailsUrl: "/projects/weather-app",
   },
 ];
