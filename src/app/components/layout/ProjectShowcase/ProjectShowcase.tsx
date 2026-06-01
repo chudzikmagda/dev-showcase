@@ -1,11 +1,12 @@
+import Image from "next/image";
 import { JSX } from "react";
 
 import {
   InfoLabel,
   InfoSection,
   PageWrapper,
-  ShowcaseImage,
   ImagesWrapper,
+  ShowcaseImageFrame,
   ShowcaseLabel,
   ShowcaseContainer,
   ShowcaseImageWrapper,
@@ -47,12 +48,18 @@ const ProjectShowcase = ({
             })}
           </TagsRow>
           <ImagesWrapper>
-            {showcaseImages?.map((img, index) => (
+            {showcaseImages.map((img, index) => (
               <ShowcaseImageWrapper key={img.src}>
-                <ShowcaseImage
-                  src={img.src}
-                  alt={img.alt ?? `${title} showcase image ${index + 1}`}
-                />
+                <ShowcaseImageFrame>
+                  <Image
+                    src={img.src}
+                    alt={img.alt ?? `${title} showcase image ${index + 1}`}
+                    width={1200}
+                    height={675}
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </ShowcaseImageFrame>
                 {index === 0 && (
                   <InfoSection>
                     <div>

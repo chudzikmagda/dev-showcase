@@ -22,7 +22,7 @@ const Projects = (): JSX.Element => {
           .filter((project) => project.featured)
           .map((project, index) => (
             <ProjectSection
-              key={project.title + index}
+              key={project.id}
               project={project}
               imagePosition={
                 index % 2 === 0 ? ImagePosition.LEFT : ImagePosition.RIGHT

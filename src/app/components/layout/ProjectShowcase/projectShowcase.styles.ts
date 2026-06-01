@@ -50,6 +50,13 @@ export const ShowcaseImageWrapper = styled.div`
   align-items: center;
 `;
 
+export const ShowcaseImageFrame = styled.div`
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--secondary-color-60);
+  border-radius: 8px;
+`;
+
 export const ShowcaseLabel = styled.div`
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
@@ -65,13 +72,6 @@ export const ImagesWrapper = styled.div`
   align-items: center;
   gap: 4rem;
   width: 100%;
-`;
-
-export const ShowcaseImage = styled.img`
-  border: 1px solid var(--secondary-color-60);
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
 `;
 
 export const ImplementationDate = styled.div`
