@@ -20,7 +20,7 @@ export const Card = styled(Link)`
     ),
     linear-gradient(
       160deg,
-      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.07),
       rgba(255, 255, 255, 0.01)
     );
   border: 1px solid var(--secondary-color-90);

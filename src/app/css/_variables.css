@@ -1,12 +1,15 @@
 :root {
   --primary-color: rgb(202, 73, 65);
 
-  --secondary-color-rgb: 28, 34, 56;
+  --secondary-color-rgb: 10, 11, 36;
   --secondary-color: rgb(var(--secondary-color-rgb));
-  --secondary-color-90: rgb(51, 56, 76);
-  --secondary-color-80: rgb(73, 78, 96);
-  --secondary-color-70: rgb(96, 100, 116);
-  --secondary-color-60: rgb(119, 122, 136);
+  --secondary-color-90: rgb(8, 9, 30);
+  --secondary-color-80: rgb(18, 20, 50);
+  --secondary-color-70: rgb(28, 31, 70);
+  --secondary-color-60: rgb(38, 42, 90);
+  --secondary-color-50: rgb(58, 63, 110);
+  --secondary-color-40: rgb(78, 84, 130);
+  --secondary-color-30: rgb(98, 105, 150);
   --secondary-color-20: rgb(210, 211, 215);
   --secondary-color-10: rgb(232, 233, 235);
 
@@ -16,10 +19,14 @@
 
   --grey-20: rgb(223, 225, 227);
   --grey-30: rgb(230, 230, 230);
+  --grey-40: rgb(180, 180, 180);
+  --grey-50: rgb(153, 153, 153);
+
+  --primary-background-color: var(--secondary-color);
 
   --primary-text-color: var(--white);
-
   --secondary-text-color: var(--secondary-color);
+  --info-text-color: var(--grey-50);
 
   --success-color: rgb(127, 198, 185);
   --success-color-dark: rgb(9, 76, 63);

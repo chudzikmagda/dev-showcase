@@ -20,7 +20,7 @@ const tagStyles = css<TagStyleProps>`
   background: ${({ $colorMode }) =>
     $colorMode === TagColorMode.LIGHT
       ? "var(--grey-20)"
-      : "var(--secondary-color-90)"};
+      : "var(--secondary-color-70)"};
   border-radius: 24px;
 
   @media (min-width: ${breakpoints.mobile}) {

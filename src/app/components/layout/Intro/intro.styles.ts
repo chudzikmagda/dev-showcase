@@ -12,7 +12,7 @@ export const SectionWrapper = styled.section`
   padding: var(--navbar-height);
   background:
     url("/images/bg-section-welcome.svg") center top,
-    #151a2d;
+    var(--secondary-color);
   background-size: cover;
   text-align: center;
 
