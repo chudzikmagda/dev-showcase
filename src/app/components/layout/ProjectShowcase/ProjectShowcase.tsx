@@ -15,7 +15,6 @@ import {
 } from "./projectShowcase.styles";
 import { ProjectShowcaseProps } from "./projectShowcase.types";
 import { TagColorMode, TagContentMode } from "../../../shared/types/tag.types";
-import { Technology } from "../../../shared/types/technologies.types";
 import { getTechnologyTag } from "../../../shared/utils/technologies.utils";
 import Tag from "../../ui/Tag/Tag";
 
@@ -34,7 +33,7 @@ const ProjectShowcase = ({
           <Title>{title}</Title>
           <TagsRow>
             {technologies.map((tech) => {
-              const tagData = getTechnologyTag(tech as Technology);
+              const tagData = getTechnologyTag(tech);
               return tagData ? (
                 <Tag key={String(tech)} {...tagData} />
               ) : (
