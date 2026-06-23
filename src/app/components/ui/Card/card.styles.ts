@@ -1,8 +1,16 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 import { CardAlign } from "./card.types";
+
+export const CardLink = styled(Link)`
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+`;
 
 export const CardBase = styled.div<{ $align?: CardAlign }>`
   display: flex;

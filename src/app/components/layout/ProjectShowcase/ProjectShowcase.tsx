@@ -24,6 +24,7 @@ const ProjectShowcase = ({
   showcaseImages,
   implementationDate,
   description,
+  projectRange,
 }: ProjectShowcaseProps): JSX.Element => {
   return (
     <>
@@ -62,12 +63,16 @@ const ProjectShowcase = ({
                 {index === 0 && (
                   <InfoSection>
                     <div>
-                      <InfoLabel>year:</InfoLabel>
-                      <p>{implementationDate}</p>
+                      <InfoLabel>project range:</InfoLabel>
+                      <p>{projectRange}</p>
                     </div>
                     <div>
                       <InfoLabel>description:</InfoLabel>
                       <p>{description}</p>
+                    </div>
+                    <div>
+                      <InfoLabel>year:</InfoLabel>
+                      <p>{implementationDate}</p>
                     </div>
                   </InfoSection>
                 )}

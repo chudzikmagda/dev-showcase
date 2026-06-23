@@ -13,8 +13,7 @@ export const InnerWrapper = styled.div`
   grid-template-areas:
     "image"
     "content"
-    "stack"
-    "cta";
+    "stack";
   align-items: center;
   justify-content: center;
   column-gap: 0;
@@ -28,8 +27,7 @@ export const InnerWrapper = styled.div`
     grid-template-columns: minmax(300px, 44%) 1fr;
     grid-template-areas:
       "content image"
-      "stack stack"
-      "cta cta";
+      "stack stack";
     column-gap: calc(var(--basic-spacer) * 6);
     row-gap: calc(var(--basic-spacer) * 4);
     padding: calc(var(--basic-spacer) * 6);
@@ -39,10 +37,11 @@ export const InnerWrapper = styled.div`
 export const ImageWrapper = styled.div`
   grid-area: image;
   width: min(100%, 180px);
-  margin: 0 auto;
+  margin: 4rem auto 0.5rem auto;
 
   @media (min-width: ${breakpoints.mobile}) {
     width: min(100%, 360px);
+    margin: 0 auto;
   }
 `;
 
@@ -56,10 +55,6 @@ export const ContentWrapper = styled.div`
   grid-area: content;
 `;
 
-export const CTAWrapper = styled.div`
-  grid-area: cta;
-`;
-
 export const StackWrapper = styled.div`
   grid-area: stack;
 `;
@@ -67,7 +62,6 @@ export const StackWrapper = styled.div`
 export const H2Heading = styled.h2`
   margin-bottom: 1rem;
   font-size: clamp(1.25rem, 1.5rem + 2vw, calc(3rem + 2vmin));
-  font-weight: var(--font-weight-bold);
   line-height: 1.3;
   color: var(--primary-text-color);
 `;

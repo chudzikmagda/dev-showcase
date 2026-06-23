@@ -99,6 +99,7 @@ export const InfoLabel = styled.span`
   display: inline-block;
   margin-bottom: 0.5rem;
   color: var(--info-text-color);
-  font-size: 1rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
 `;

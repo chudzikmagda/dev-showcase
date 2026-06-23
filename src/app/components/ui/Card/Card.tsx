@@ -1,20 +1,16 @@
-import type { FC, ReactNode } from "react";
+import type { FC, JSX } from "react";
 
-import { CardBase } from "./card.styles";
-import { CardAlign } from "./card.types";
+import { CardBase, CardLink } from "./card.styles";
+import { CardProps } from "./card.types";
 
-interface CardProps {
-  children: ReactNode;
-  align: CardAlign;
-  className?: string;
-}
-
-const Card: FC<CardProps> = ({ children, className, align }) => {
-  return (
-    <CardBase className={className} $align={align}>
+const Card: FC<CardProps> = ({ children, align, style, href }) => {
+  const content: JSX.Element = (
+    <CardBase $align={align} style={style}>
       {children}
     </CardBase>
   );
+
+  return href ? <CardLink href={href}>{content}</CardLink> : content;
 };
 
 export default Card;

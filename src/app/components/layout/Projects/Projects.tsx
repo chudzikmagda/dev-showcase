@@ -2,7 +2,7 @@ import { JSX } from "react";
 
 import ProjectSection from "@/app/components/ui/ProjectSection/ProjectSection";
 import { projectsData } from "@/app/shared/data/projects.data";
-import { ImagePosition } from "@/app/shared/types/image.types";
+import { Project } from "@/app/shared/types/projects.types";
 
 import {
   H2Heading,
@@ -19,15 +19,9 @@ const Projects = (): JSX.Element => {
       </TextWrapper>
       <SectionsWrapper>
         {projectsData
-          .filter((project) => project.featured)
-          .map((project, index) => (
-            <ProjectSection
-              key={project.id}
-              project={project}
-              imagePosition={
-                index % 2 === 0 ? ImagePosition.LEFT : ImagePosition.RIGHT
-              }
-            />
+          .filter((project: Project) => project.featured)
+          .map((project: Project) => (
+            <ProjectSection key={project.id} project={project} />
           ))}
       </SectionsWrapper>
     </SectionWrapper>

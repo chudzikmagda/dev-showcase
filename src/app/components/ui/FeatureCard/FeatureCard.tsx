@@ -3,13 +3,14 @@ import Image from "next/image";
 import type { FC } from "react";
 
 import {
-  FeatureCardIcon,
   FeatureCardCategory,
-  FeatureCardTitle,
   FeatureCardDescription,
-  FeatureCardLink,
+  FeatureCardIcon,
+  FeatureCardTitle,
 } from "./featureCard.styles";
 import { FeatureCardProps } from "./featureCard.types";
+import Button from "../Button/Button";
+import { ButtonSize, ButtonVersion } from "../Button/button.types";
 import Card from "../Card/Card";
 import { CardAlign } from "../Card/card.types";
 
@@ -20,8 +21,6 @@ const FeatureCard: FC<FeatureCardProps> = ({
   description,
   link,
 }) => {
-  const isExternalLink = link?.url.startsWith("http");
-
   return (
     <Card align={CardAlign.Center}>
       <FeatureCardIcon>
@@ -31,13 +30,13 @@ const FeatureCard: FC<FeatureCardProps> = ({
       <FeatureCardTitle>{title}</FeatureCardTitle>
       <FeatureCardDescription>{description}</FeatureCardDescription>
       {link && (
-        <FeatureCardLink
+        <Button
+          label={link.label}
           href={link.url}
-          target={isExternalLink ? "_blank" : undefined}
-          rel={isExternalLink ? "noopener noreferrer" : undefined}
-        >
-          {link.label}
-        </FeatureCardLink>
+          version={ButtonVersion.PRIMARY}
+          hasArrow={true}
+          size={ButtonSize.SMALL}
+        />
       )}
     </Card>
   );

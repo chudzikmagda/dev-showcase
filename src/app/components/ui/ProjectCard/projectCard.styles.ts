@@ -1,42 +1,17 @@
 import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
 
 import { breakpoints } from "@/app/shared/styles/breakpoints";
 
-export const Card = styled(Link)`
+export const Content = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.03),
-      transparent 45%
-    ),
-    linear-gradient(
-      160deg,
-      rgba(255, 255, 255, 0.07),
-      rgba(255, 255, 255, 0.01)
-    );
-  border: 1px solid var(--secondary-color-90);
-  transition:
-    transform var(--transition-default),
-    border-color var(--transition-default);
+  gap: 1rem;
 
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-4px);
-    border-color: var(--primary-color);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+  @media (min-width: ${breakpoints.mobile}) {
+    gap: 1.5rem;
   }
 `;
 
@@ -45,22 +20,14 @@ export const Visual = styled.div`
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 2rem;
+  z-index: 0;
 `;
 
 export const CoverImage = styled(Image)`
   object-fit: cover;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem 1.3rem 1.6rem;
-
-  @media (min-width: ${breakpoints.mobile}) {
-    gap: 1.1rem;
-    padding: 1.8rem;
-  }
 `;
 
 export const Title = styled.h2`

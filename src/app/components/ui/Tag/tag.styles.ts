@@ -43,7 +43,7 @@ export const TagButton = styled.button<TagStyleProps>`
       ? "var(--primary-color)"
       : $colorMode === TagColorMode.LIGHT
         ? "var(--grey-20)"
-        : "var(--secondary-color-90)"};
+        : "var(--secondary-color-70)"};
 
   &:hover,
   &:focus-visible {

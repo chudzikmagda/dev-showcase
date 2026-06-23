@@ -4,7 +4,7 @@ import { breakpoints } from "@/app/shared/styles/breakpoints";
 
 export const SectionWrapper = styled.section`
   width: 100%;
-  background: var(--secondary-color-10);
+  background: var(--secondary-color);
   padding: calc(var(--basic-spacer) * 4) var(--basic-spacer);
 
   @media (min-width: ${breakpoints.mobile}) {
@@ -20,9 +20,8 @@ export const TextWrapper = styled.div`
 export const H2Heading = styled.h2`
   margin-bottom: 1rem;
   font-size: clamp(1.25rem, 1.5rem + 2vw, calc(3rem + 2vmin));
-  font-weight: var(--font-weight-bold);
   line-height: 1.3;
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
 `;
 
 export const SectionsWrapper = styled.div`
