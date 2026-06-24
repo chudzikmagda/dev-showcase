@@ -1,9 +1,6 @@
 import type { FC } from "react";
 
-import Icon from "@/app/components/ui/Icon/Icon";
-
 import {
-  Card,
   Content,
   CoverImage,
   Description,
@@ -12,6 +9,8 @@ import {
   Visual,
 } from "./projectCard.styles";
 import { ProjectCardProps } from "./projectCard.types";
+import Card from "../Card/Card";
+import Icon from "../Icon/Icon";
 
 const ProjectCard: FC<ProjectCardProps> = ({
   image,
@@ -21,7 +20,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   caseStudyUrl,
 }) => {
   return (
-    <Card href={caseStudyUrl} aria-label={`View case study: ${title}`}>
+    <Card href={caseStudyUrl}>
       <Visual>
         <CoverImage
           src={image.src}
@@ -30,11 +29,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
           fill
         />
       </Visual>
-
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>
-
         <Icons>
           {tags.map((tag) =>
             tag.icon ? (

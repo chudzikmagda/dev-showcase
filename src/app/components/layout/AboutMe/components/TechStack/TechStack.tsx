@@ -26,7 +26,7 @@ const TechStack = (): JSX.Element => {
 
   return (
     <>
-      <TechStackHeading>Technology Stack</TechStackHeading>
+      <TechStackHeading>The Technology Stack:</TechStackHeading>
       <TechStackWrapper>
         {data.map(({ category, position, tags }) => (
           <GridItem key={category} {...position}>
@@ -59,7 +59,9 @@ const GridItem = styled.div<GridPosition>`
 `;
 
 const TechStackHeading = styled.h3`
+  margin-bottom: 1rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
   color: var(--primary-text-color);
-  font-size: 1.625rem;
-  margin-bottom: 2rem;
+  letter-spacing: 1px;
 `;

@@ -3,8 +3,3 @@ export interface Image {
   alt?: string;
   label?: string;
 }
-
-export enum ImagePosition {
-  LEFT = "left",
-  RIGHT = "right",
-}

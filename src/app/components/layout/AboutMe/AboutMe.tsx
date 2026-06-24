@@ -2,20 +2,17 @@
 import { JSX } from "react";
 
 import {
-  SectionWrapper,
-  InnerWrapper,
-  ImageWrapper,
-  PortraitSvg,
   ContentWrapper,
-  CTAWrapper,
-  StackWrapper,
   H2Heading,
-  ParagraphsWrapper,
+  ImageWrapper,
+  InnerWrapper,
   Paragraph,
+  ParagraphsWrapper,
+  PortraitSvg,
+  SectionWrapper,
+  StackWrapper,
 } from "./aboutMe.styles";
 import TechStack from "./components/TechStack/TechStack";
-import Button from "../../ui/Button/Button";
-import { ButtonVersion } from "../../ui/Button/button.types";
 
 const AboutMe = (): JSX.Element => {
   return (
@@ -59,14 +56,6 @@ const AboutMe = (): JSX.Element => {
         <StackWrapper>
           <TechStack />
         </StackWrapper>
-        <CTAWrapper>
-          <Button
-            version={ButtonVersion.PRIMARY}
-            hasArrow={true}
-            label="Check my projects"
-            href="/projects"
-          />
-        </CTAWrapper>
       </InnerWrapper>
     </SectionWrapper>
   );
