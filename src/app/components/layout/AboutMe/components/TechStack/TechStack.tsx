@@ -26,7 +26,7 @@ const TechStack = (): JSX.Element => {
 
   return (
     <>
-      <TechStackHeading> The Technology Stack:</TechStackHeading>
+      <TechStackHeading>The Technology Stack:</TechStackHeading>
       <TechStackWrapper>
         {data.map(({ category, position, tags }) => (
           <GridItem key={category} {...position}>

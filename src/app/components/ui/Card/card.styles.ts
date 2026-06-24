@@ -10,6 +10,12 @@ export const CardLink = styled(Link)`
   width: 100%;
   text-decoration: none;
   color: inherit;
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 16px;
+  }
 `;
 
 export const CardBase = styled.div<{ $align?: CardAlign }>`
