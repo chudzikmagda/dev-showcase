@@ -44,4 +44,20 @@
   --navbar-height: 80px;
 
   --basic-spacer: 1rem;
+
+  --form-input-padding-top: 16px;
+  --form-input-height: 44px;
+
+  /* Card / surface background used across cards and inputs */
+  --card-bg:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.03),
+      transparent 45%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.01)
+    );
 }

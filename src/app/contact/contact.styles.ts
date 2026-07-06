@@ -4,6 +4,7 @@ export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
@@ -12,7 +13,7 @@ export const PageWrapper = styled.div`
 `;
 
 export const H1Heading = styled.h1`
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: clamp(1.25rem, 1.5rem + 2vw, calc(3rem + 2vmin));
   line-height: 1.3;
   color: var(--primary-text-color);

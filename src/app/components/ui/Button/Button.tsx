@@ -12,10 +12,11 @@ const Button = ({
   hasArrow,
   icon,
   size = ButtonSize.REGULAR,
-  asSpan = false,
+  asSpan,
   href,
   type = ButtonHtmlType.BUTTON,
   onClick,
+  disabled,
 }: ButtonProps): JSX.Element => {
   const content = (
     <>
@@ -58,7 +59,14 @@ const Button = ({
     );
   }
 
-  return <StyledButton type={type} onClick={onClick} {...commonProps} />;
+  return (
+    <StyledButton
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      {...commonProps}
+    />
+  );
 };
 
 export default Button;
