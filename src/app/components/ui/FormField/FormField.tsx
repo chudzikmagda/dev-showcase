@@ -1,65 +1,54 @@
 "use client";
-import type { ChangeEventHandler } from "react";
 import React, { forwardRef, useId } from "react";
 
 import { Control, FloatingLabel, Wrapper } from "./formField.styles";
-import {
-  FormFieldProps,
-  FormFieldVariant,
-  isInputVariant,
-  isTextareaVariant,
-} from "./formField.types";
+import { FormFieldProps, isInputVariant } from "./formField.types";
 
 const FormField = forwardRef<
   HTMLInputElement | HTMLTextAreaElement,
   FormFieldProps
 >((props, ref) => {
   const id = useId();
+  let controlNode: React.ReactNode;
 
   if (isInputVariant(props)) {
-    const { value, placeholder, name, type = "text", onChange } = props;
-    const hasValue = Boolean(value && value !== "");
+    const { variant, placeholder, type = "text", ...rest } = props;
 
-    return (
-      <Wrapper htmlFor={id} {...(hasValue ? { "data-has-value": "true" } : {})}>
-        <Control
-          as={FormFieldVariant.Input}
-          data-variant={FormFieldVariant.Input}
-          id={id}
-          ref={ref as React.Ref<HTMLInputElement>}
-          value={value}
-          placeholder={placeholder}
-          type={type}
-          name={name}
-          onChange={onChange as ChangeEventHandler<HTMLInputElement>}
-        />
-        {placeholder ? <FloatingLabel>{placeholder}</FloatingLabel> : null}
-      </Wrapper>
+    controlNode = (
+      <Control
+        as={variant}
+        data-variant={variant}
+        id={id}
+        ref={ref as React.Ref<HTMLInputElement>}
+        placeholder={placeholder}
+        type={type}
+        {...rest}
+      />
+    );
+  } else {
+    const { variant, placeholder, rows, ...rest } = props;
+
+    controlNode = (
+      <Control
+        as={variant}
+        data-variant={variant}
+        id={id}
+        ref={ref as React.Ref<HTMLTextAreaElement>}
+        placeholder={placeholder}
+        rows={rows}
+        {...rest}
+      />
     );
   }
-
-  if (isTextareaVariant(props)) {
-    const { value, placeholder, name, rows = 4, onChange } = props;
-    const hasValue = Boolean(value && value !== "");
-
-    return (
-      <Wrapper htmlFor={id} {...(hasValue ? { "data-has-value": "true" } : {})}>
-        <Control
-          as={FormFieldVariant.Textarea}
-          data-variant={FormFieldVariant.Textarea}
-          id={id}
-          ref={ref as React.Ref<HTMLTextAreaElement>}
-          value={value}
-          onChange={onChange as ChangeEventHandler<HTMLTextAreaElement>}
-          placeholder={placeholder ? " " : " "}
-          name={name}
-          rows={rows}
-        />
-        {placeholder ? <FloatingLabel>{placeholder}</FloatingLabel> : null}
-      </Wrapper>
-    );
-  }
-  return null;
+  return (
+    <Wrapper
+      htmlFor={id}
+      data-has-value={Boolean(props.value) ? "true" : undefined}
+    >
+      {controlNode}
+      {<FloatingLabel>{props.placeholder}</FloatingLabel>}
+    </Wrapper>
+  );
 });
 
 FormField.displayName = "FormField";

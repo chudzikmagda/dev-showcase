@@ -28,8 +28,8 @@
   --secondary-text-color: var(--secondary-color);
   --info-text-color: var(--grey-50);
 
-  --success-color: rgb(127, 198, 185);
-  --success-color-dark: rgb(9, 76, 63);
+  --success-color: rgb(32, 123, 9);
+  --error-color: rgb(211, 2, 2);
 
   --font-family-basic: "Montserrat", sans-serif;
   --font-size-basic: 1rem;

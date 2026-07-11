@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { JSX } from "react";
 
+import { ToastProvider } from "./_providers/toast-provider";
 import { H1Heading, PageWrapper } from "./contact.styles";
-import ContactForm from "../components/layout/ContactForm/ContactForm";
+import ContactForm from "./_components/ContactForm/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Magda Chudzik",
@@ -12,10 +13,12 @@ export const metadata: Metadata = {
 
 const ContactPage = (): JSX.Element => {
   return (
-    <PageWrapper>
-      <H1Heading>Let&apos;s get in touch</H1Heading>
-      <ContactForm />
-    </PageWrapper>
+    <ToastProvider>
+      <PageWrapper>
+        <H1Heading>Let&apos;s get in touch</H1Heading>
+        <ContactForm />
+      </PageWrapper>
+    </ToastProvider>
   );
 };
 
