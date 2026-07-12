@@ -26,4 +26,5 @@ export interface ButtonProps {
   href?: string;
   type?: ButtonHtmlType;
   onClick?: () => void;
+  disabled?: boolean;
 }

@@ -110,4 +110,11 @@ export const StyledButton = styled.button<{
     outline: 2px solid ${({ $version }) => getHoverColor($version)};
     outline-offset: 2px;
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    pointer-events: none;
+  }
 `;

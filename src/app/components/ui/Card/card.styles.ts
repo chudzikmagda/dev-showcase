@@ -27,17 +27,7 @@ export const CardBase = styled.div<{ $align?: CardAlign }>`
   height: 100%;
   border: 1px solid var(--secondary-color-70);
   border-radius: 16px;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.03),
-      transparent 45%
-    ),
-    linear-gradient(
-      160deg,
-      rgba(255, 255, 255, 0.07),
-      rgba(255, 255, 255, 0.01)
-    );
+  background: var(--card-bg);
   padding: 2rem 1rem;
   transition:
     transform var(--transition-default),

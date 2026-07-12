@@ -28,8 +28,8 @@
   --secondary-text-color: var(--secondary-color);
   --info-text-color: var(--grey-50);
 
-  --success-color: rgb(127, 198, 185);
-  --success-color-dark: rgb(9, 76, 63);
+  --success-color: rgb(32, 123, 9);
+  --error-color: rgb(211, 2, 2);
 
   --font-family-basic: "Montserrat", sans-serif;
   --font-size-basic: 1rem;
@@ -44,4 +44,19 @@
   --navbar-height: 80px;
 
   --basic-spacer: 1rem;
+
+  --form-input-padding-top: 16px;
+  --form-input-height: 44px;
+
+  --card-bg:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.03),
+      transparent 45%
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.01)
+    );
 }
