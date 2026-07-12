@@ -1,4 +1,3 @@
-import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useReducer } from "react";
 
@@ -18,7 +17,6 @@ import { ToastType } from "../_components/ToastContainer/toastContainer.types";
 
 export const useContactForm = (): ContactForm => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const router = useRouter();
   const { show } = useToast();
 
   const isFormValid =
@@ -50,7 +48,6 @@ export const useContactForm = (): ContactForm => {
       if (data.ok) {
         show("Message sent successfully", ToastType.Success);
         dispatch({ type: ActionType.RESET });
-        router.push(data.redirect || "/thankyoupage");
       } else {
         show(
           `An error occurred: ${data.error || "Unknown error"}`,

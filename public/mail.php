@@ -13,7 +13,6 @@ function loadEnv($path) {
     }
 }
 
-// Try to load .env from the same directory as this script
 loadEnv(__DIR__ . '/.env');
 
 try {
@@ -51,7 +50,7 @@ try {
     }
 
     header('Content-Type: application/json; charset=utf-8');
-    echo json_encode(['ok' => true, 'redirect' => 'https://dev.magdachudzik.pl/thankyoupage']);
+    echo json_encode(['ok' => true, 'redirect' => 'https://dev.magdachudzik.pl']);
     exit;
 } catch (Exception $e) {
     http_response_code(400);

@@ -48,7 +48,6 @@
   --form-input-padding-top: 16px;
   --form-input-height: 44px;
 
-  /* Card / surface background used across cards and inputs */
   --card-bg:
     radial-gradient(
       circle at top left,
