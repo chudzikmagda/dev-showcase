@@ -2,13 +2,9 @@
 
 import React from "react";
 
-import {
-  Container,
-  ToastBox,
-  Message,
-  CloseButton,
-} from "./toastContainer.styles";
+import { Container } from "./toastContainer.styles";
 import type { Toast } from "./toastContainer.types";
+import { ToastContent } from "../ToastContent/ToastContent";
 
 interface ToastContainerProps {
   toasts: Toast[];
@@ -22,12 +18,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
   return (
     <Container aria-live="polite" aria-atomic="true">
       {toasts.map((toast: Toast) => (
-        <ToastBox key={toast.id} type={toast.type}>
-          <Message>{toast.message}</Message>
-          <CloseButton onClick={() => onRemove(toast.id)} aria-label="Close">
-            ×
-          </CloseButton>
-        </ToastBox>
+        <ToastContent key={toast.id} toast={toast} onClose={onRemove} />
       ))}
     </Container>
   );
