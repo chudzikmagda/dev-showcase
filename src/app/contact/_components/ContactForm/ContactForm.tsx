@@ -1,104 +1,47 @@
 "use client";
-import { useRouter } from "next/navigation";
-import React, { JSX, useReducer } from "react";
+import type { JSX } from "react";
 
 import Button from "@/app/components/ui/Button/Button";
 import {
-  ButtonHtmlType,
   ButtonVersion,
+  ButtonHtmlType,
 } from "@/app/components/ui/Button/button.types";
-import Input from "@/app/contact/_components/Input/Input";
-import Textarea from "@/app/contact/_components/Textarea/Textarea";
-import { ToastType } from "@/app/contact/_components/Toast/toast.types";
-import { isEmailValid, isNotEmpty } from "@/app/shared/utils/validation.utils";
 
-import { initialState, reducer } from "./contactForm.reducer";
-import { ButtonRow, ContactFormWrapper } from "./contactForm.styles";
-import { ActionType } from "./contactForm.types";
-import { useToast } from "../../_hooks/useToast";
+import { ContactFormWrapper, ButtonRow } from "./contactForm.styles";
+import { Field } from "./contactForm.types";
+import { useContactForm } from "../../_hooks/useContactForm";
+import Input from "../Input/Input";
+import Textarea from "../Textarea/Textarea";
 
-const ContactForm = (): JSX.Element => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const router = useRouter();
-  const { show } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const res = await fetch("./mail.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          name: state.name,
-          email: state.email,
-          message: state.message,
-        }),
-      });
-      const data = await res.json();
-      if (res.ok && data.ok) {
-        show("Wiadomość wysłana pomyślnie", ToastType.Success);
-        dispatch({ type: ActionType.RESET });
-        router.push(data.redirect || "/thankyoupage");
-      } else {
-        show(
-          "Wystąpił błąd: " + (data.error || "Nieznany błąd"),
-          ToastType.Error,
-        );
-      }
-    } catch (err) {
-      show("Błąd sieciowy: " + String(err), ToastType.Error);
-    }
-  };
-
-  const isFormValid =
-    isNotEmpty(state.name) &&
-    isEmailValid(state.email) &&
-    isNotEmpty(state.message);
+export const ContactForm = (): JSX.Element => {
+  const { formState, isFormValid, handleSubmit, handleFieldChange } =
+    useContactForm();
 
   return (
     <ContactFormWrapper onSubmit={handleSubmit}>
       <Input
         name="name"
-        value={state.name}
+        value={formState.name}
         placeholder="Name"
         type="text"
         required
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          dispatch({
-            type: ActionType.SET_FIELD,
-            field: "name",
-            value: e.target.value,
-          })
-        }
+        onChange={(e) => handleFieldChange(Field.NAME, e.target.value)}
       />
       <Input
         name="email"
-        value={state.email}
+        value={formState.email}
         placeholder="Email"
         type="email"
         required
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          dispatch({
-            type: ActionType.SET_FIELD,
-            field: "email",
-            value: e.target.value,
-          })
-        }
+        onChange={(e) => handleFieldChange(Field.EMAIL, e.target.value)}
       />
       <Textarea
         name="message"
-        value={state.message}
+        value={formState.message}
         placeholder="Message"
         required
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-          dispatch({
-            type: ActionType.SET_FIELD,
-            field: "message",
-            value: e.target.value,
-          })
-        }
         rows={8}
+        onChange={(e) => handleFieldChange(Field.MESSAGE, e.target.value)}
       />
       <ButtonRow>
         <Button

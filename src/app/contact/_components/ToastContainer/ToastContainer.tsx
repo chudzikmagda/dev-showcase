@@ -1,8 +1,14 @@
 "use client";
 
 import React from "react";
-import { Container, ToastBox, Message, CloseButton } from "./toast.styles";
-import type { Toast } from "./toast.types";
+
+import {
+  Container,
+  ToastBox,
+  Message,
+  CloseButton,
+} from "./toastContainer.styles";
+import type { Toast } from "./toastContainer.types";
 
 interface ToastContainerProps {
   toasts: Toast[];

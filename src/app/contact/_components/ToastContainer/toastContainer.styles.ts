@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { ToastType } from "./toast.types";
+
+import { ToastType } from "./toastContainer.types";
 
 export const slideDown = keyframes`
   from { transform: translateY(-120%); opacity: 0; }

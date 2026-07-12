@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import type { Toast } from "@/app/contact/_components/Toast/toast.types";
-import { ToastType } from "@/app/contact/_components/Toast/toast.types";
+import type { Toast } from "@/app/contact/_components/ToastContainer/toastContainer.types";
+import { ToastType } from "@/app/contact/_components/ToastContainer/toastContainer.types";
 
 const generateToastId = (): string => {
   return String(Date.now()) + Math.random().toString(36).slice(2, 7);

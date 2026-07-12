@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { JSX } from "react";
 
-import { ToastProvider } from "./_providers/toast-provider";
-import { H1Heading, PageWrapper } from "./contact.styles";
 import ContactForm from "./_components/ContactForm/ContactForm";
+import { ToastProvider } from "./_providers/toast.provider";
+import { H1Heading, PageWrapper } from "./contact.styles";
 
 export const metadata: Metadata = {
   title: "Contact | Magda Chudzik",

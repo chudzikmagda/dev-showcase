@@ -1,8 +1,9 @@
 "use client";
 
-import React, { createContext, useContext } from "react";
-import { ToastContainer } from "../_components/Toast/Toast";
-import { ToastType } from "../_components/Toast/toast.types";
+import React, { createContext } from "react";
+
+import { ToastContainer } from "../_components/ToastContainer/ToastContainer";
+import { ToastType } from "../_components/ToastContainer/toastContainer.types";
 import { useToastState } from "../_hooks/useToastState";
 
 export interface ToastContextValue {
