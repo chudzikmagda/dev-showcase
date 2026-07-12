@@ -58,10 +58,6 @@ export const Control = styled.input`
     color: transparent;
   }
 
-  @media (min-width: ${breakpoints.mobile}) {
-    height: var(--form-input-height-lg);
-  }
-
   &:focus-visible {
     outline: none;
     border-color: var(--primary-color);

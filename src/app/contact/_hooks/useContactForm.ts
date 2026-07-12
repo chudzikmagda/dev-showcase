@@ -55,9 +55,10 @@ export const useContactForm = (): ContactForm => {
         );
       }
     } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : "Unknown network error";
-      show(`Network error: ${errorMessage}`, ToastType.Error);
+      show(
+        `Error: ${err instanceof Error ? err.message : "Unknown error"}`,
+        ToastType.Error,
+      );
     }
   };
 

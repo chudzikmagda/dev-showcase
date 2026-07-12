@@ -37,7 +37,7 @@ export const useToastState = (): {
         setToasts((prev: Toast[]) => withoutId(prev, toast.id));
       }, 5000),
     );
-    return () => timers.forEach((id: NodeJS.Timeout) => clearTimeout(id));
+    return () => timers.forEach((id) => clearTimeout(id));
   }, [toasts]);
 
   return { toasts, show, remove };
