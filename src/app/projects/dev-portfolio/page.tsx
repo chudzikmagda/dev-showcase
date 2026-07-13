@@ -1,9 +1,9 @@
 import { JSX } from "react";
 
-import ProjectShowcase from "@/app/components/layout/ProjectShowcase/ProjectShowcase";
+import ProjectShowcase from "@/app/projects/_components/layout/ProjectShowcase/ProjectShowcase";
 
-import { ProjectId, type Project } from "../../shared/types/projects.types";
-import { getProjectById } from "../../shared/utils/projects.utils";
+import { ProjectId, type Project } from "../../../shared/types/projects.types";
+import { getProjectById } from "../_utils/projects.utils";
 
 const DevPortfolioPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(

@@ -1,10 +1,10 @@
 import { JSX } from "react";
 import styled from "styled-components";
 
-import AboutMe from "./components/layout/AboutMe/AboutMe";
-import AfterWork from "./components/layout/AfterWork/AfterWork";
-import Intro from "./components/layout/Intro/Intro";
-import Projects from "./components/layout/Projects/Projects";
+import AboutMe from "./_components/layout/AboutMe/AboutMe";
+import AfterWork from "./_components/layout/AfterWork/AfterWork";
+import Intro from "./_components/layout/Intro/Intro";
+import Projects from "./_components/layout/Projects/Projects";
 
 export default function Home(): JSX.Element {
   return (

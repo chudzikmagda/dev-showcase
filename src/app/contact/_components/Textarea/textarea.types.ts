@@ -1,3 +1,3 @@
-import type { TextareaVariant } from "../../../components/ui/FormField/formField.types";
+import type { TextareaVariant } from "../FormField/formField.types";
 
 export type TextareaProps = Omit<TextareaVariant, "variant">;

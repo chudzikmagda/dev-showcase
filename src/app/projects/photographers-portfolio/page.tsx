@@ -1,8 +1,8 @@
 import { JSX } from "react";
 
-import ProjectShowcase from "../../components/layout/ProjectShowcase/ProjectShowcase";
-import { ProjectId, type Project } from "../../shared/types/projects.types";
-import { getProjectById } from "../../shared/utils/projects.utils";
+import { ProjectId, type Project } from "../../../shared/types/projects.types";
+import ProjectShowcase from "../_components/layout/ProjectShowcase/ProjectShowcase";
+import { getProjectById } from "../_utils/projects.utils";
 
 const PhotographersPortfolioPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(

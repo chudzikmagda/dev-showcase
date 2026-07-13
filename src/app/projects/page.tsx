@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { JSX } from "react";
 
+import ProjectsContent from "./_components/layout/ProjectsContent/ProjectsContent";
 import { PageWrapper, H1Heading } from "./projects.styles";
-import ProjectsContent from "../components/layout/ProjectsContent/ProjectsContent";
-import { projectsData } from "../shared/data/projects.data";
+import { projectsData } from "../../shared/data/projects.data";
 
 export const metadata: Metadata = {
   title: "Projects | Magda Chudzik",
