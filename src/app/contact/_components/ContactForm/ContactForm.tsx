@@ -1,11 +1,11 @@
 "use client";
 import type { JSX } from "react";
 
-import Button from "@/app/components/ui/Button/Button";
+import Button from "@/components/ui/Button/Button";
 import {
   ButtonVersion,
   ButtonHtmlType,
-} from "@/app/components/ui/Button/button.types";
+} from "@/components/ui/Button/button.types";
 
 import { ContactFormWrapper, ButtonRow } from "./contactForm.styles";
 import { Field } from "./contactForm.types";

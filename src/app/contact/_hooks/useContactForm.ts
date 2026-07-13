@@ -1,8 +1,6 @@
 import type { FormEvent } from "react";
 import { useReducer } from "react";
 
-import { isEmailValid, isNotEmpty } from "@/app/shared/utils/validation.utils";
-
 import { useToast } from "./useToast";
 import {
   initialState,
@@ -14,6 +12,7 @@ import {
   Field,
 } from "../_components/ContactForm/contactForm.types";
 import { ToastType } from "../_components/ToastContainer/toastContainer.types";
+import { isNotEmpty, isEmailValid } from "../_utils/validation.utils";
 
 export const useContactForm = (): ContactForm => {
   const [state, dispatch] = useReducer(reducer, initialState);
