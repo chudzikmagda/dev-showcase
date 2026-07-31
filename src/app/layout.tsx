@@ -6,7 +6,7 @@ import { JSX } from "react";
 import Footer from "../components/layouts/Footer/Footer";
 import Header from "../components/layouts/Header/Header";
 import "./../css/global.css";
-import StyledJsxRegistry from "./registry";
+import StyledComponentsRegistry from "./registry";
 
 const montserrat: NextFont = Montserrat({
   subsets: ["latin"],
@@ -33,11 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={montserrat.className}>
-        <StyledJsxRegistry>
+        <StyledComponentsRegistry>
           <Header></Header>
           <main>{children}</main>
           <Footer></Footer>
-        </StyledJsxRegistry>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

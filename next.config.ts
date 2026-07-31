@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   compiler: {
     styledComponents: true,
   },
+  reactCompiler: true,
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
