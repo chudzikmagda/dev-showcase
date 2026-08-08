@@ -3,10 +3,10 @@ import { NextFont } from "next/dist/compiled/@next/font";
 import { Montserrat } from "next/font/google";
 import { JSX } from "react";
 
+import StyledComponentsRegistry from "./registry";
 import Footer from "../components/layouts/Footer/Footer";
 import Header from "../components/layouts/Header/Header";
 import "./../css/global.css";
-import StyledComponentsRegistry from "./registry";
 
 const montserrat: NextFont = Montserrat({
   subsets: ["latin"],
