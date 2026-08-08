@@ -2,12 +2,9 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { JSX, useRef } from "react";
 
 import HeroSVG from "./HeroSVG";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const HeroImage = (): JSX.Element => {
   const containerRef = useRef<HTMLDivElement>(null);
