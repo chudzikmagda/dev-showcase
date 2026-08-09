@@ -4,26 +4,26 @@ export const afterWorkData: FeatureCardProps[] = [
   {
     iconURL: "/images/after-work/code.svg",
     category: "Development",
-    title: "I gain new skills",
+    title: "Continuous growth",
     description:
-      "The world moves forward and I try to go with it. I’m a self-taught and I want to develop my current skills and gain new ones in the future. Each day, I try to find at least a moment for writing a code.",
+      "Tech moves fast, and I make sure to stay ahead of the curve. I consistently refine my stack, explore emerging technologies - like AI-assisted development - and tackle new challenges daily to build better, faster, and smarter software.",
   },
   {
     iconURL: "/images/after-work/photos.svg",
     category: "Photography",
-    title: "I take pictures",
+    title: "Visual storytelling",
     description:
-      "I like to re-define my surroundings, frequently showing simple elements in an unusual way. In my pieces, I work with light and clear forms, vesting my photos with a dose of nostalgia. My vision of the world has been recognized in many photography contests.",
+      "I redefine surroundings by presenting simple elements through a distinct lens. Working with light, geometry, and nostalgic moods, I capture visual narratives - a vision recognized across multiple award-winning photography contests.",
     link: {
-      label: "Check my pictures",
+      label: "Check my portfolio",
       url: "https://magdachudzik.pl",
     },
   },
   {
     iconURL: "/images/after-work/graphic-design.svg",
     category: "Design",
-    title: "I design graphics",
+    title: "Clean & minimal aesthetics",
     description:
-      "I’m a fan of minimalism, geometry and clean design. I comprehensively design materials for the Internet and for printing. My experience, gained while working for various brands and trades, makes me ready for each and every challenge.",
+      "Driven by minimalism, strong layout geometry, and clean visual structure. I craft comprehensive digital and print assets, leveraging cross-industry design experience to solve complex communication challenges.",
   },
 ];

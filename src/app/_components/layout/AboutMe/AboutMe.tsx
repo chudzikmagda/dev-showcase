@@ -22,16 +22,15 @@ const AboutMe = (): JSX.Element => {
           <H2Heading>About me</H2Heading>
           <ParagraphsWrapper>
             <Paragraph>
-              I&apos;m a software engineer and UI/UX designer with a strong
-              technical background in technical physics.
+              I’m a Software Engineer & UI/UX Designer specializing in building
+              scalable, high-performance web applications - from micro-frontends
+              (Angular, React, Next.js) to robust backend services (NestJS,
+              Node.js).
             </Paragraph>
             <Paragraph>
-              I combine solid engineering foundations with design thinking to
-              build intuitive, visually polished digital products.
-            </Paragraph>
-            <Paragraph>
-              My focus is responsive, scalable, and accessible user interfaces
-              that deliver high performance and meaningful user experiences.
+              I combine solid engineering foundations, modern AI-assisted
+              workflows, and deep UI/UX intuition to deliver accessible,
+              responsive, and visually polished digital products.
             </Paragraph>
           </ParagraphsWrapper>
         </ContentWrapper>

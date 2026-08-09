@@ -17,8 +17,8 @@ const AfterWork = (): JSX.Element => {
       <TextWrapper>
         <H2Heading>After work</H2Heading>
         <Intro>
-          I like to stay creative and curious outside regular hours. Here is
-          what I usually focus on when I am not at my day job.
+          Creativity doesn’t stop at the end of the workday. Here is how I
+          explore design, visual art, and tech in my personal time.
         </Intro>
       </TextWrapper>
       <CardsWrapper>

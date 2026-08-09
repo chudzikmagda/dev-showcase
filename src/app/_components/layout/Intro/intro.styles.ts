@@ -4,25 +4,27 @@ import { Breakpoints } from "@/shared/types/breakpoints.types";
 
 export const SectionWrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 40%;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  column-gap: calc(var(--basic-spacer) * 8);
-  height: 100vh;
-  padding: var(--navbar-height);
-  background:
-    url("/images/bg-section-welcome.svg") center top,
-    var(--secondary-color);
+  column-gap: 0;
+  row-gap: calc(var(--basic-spacer) * 2);
+  padding: var(--navbar-height) var(--basic-spacer) var(--basic-spacer)
+    var(--basic-spacer);
+  height: auto;
+  background-image: url("/images/bg-section-welcome.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: var(--secondary-color);
   background-size: cover;
   text-align: center;
+  box-sizing: border-box;
 
-  @media (max-width: ${Breakpoints.MOBILE}) {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: calc(var(--basic-spacer) * 2);
-    padding: var(--navbar-height) var(--basic-spacer) var(--basic-spacer)
-      var(--basic-spacer);
-    height: auto;
+  @media (min-width: ${Breakpoints.MOBILE}) {
+    grid-template-columns: 1fr 40%;
+    column-gap: calc(var(--basic-spacer) * 8);
+    height: 100vh;
+    padding: var(--navbar-height) 0;
   }
 
   > div {
