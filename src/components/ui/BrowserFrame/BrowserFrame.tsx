@@ -1,5 +1,6 @@
-import type { Image } from "@App/shared/types/image.types";
 import type { FC } from "react";
+
+import type { Image } from "@/shared/types/image.types";
 
 import {
   AddressBar,
