@@ -1,5 +1,6 @@
 import type { FC } from "react";
 
+import BrowserFrame from "@/components/ui/BrowserFrame/BrowserFrame";
 import Button from "@/components/ui/Button/Button";
 import { ButtonSize, ButtonVersion } from "@/components/ui/Button/button.types";
 import Card from "@/components/ui/Card/Card";
@@ -13,9 +14,7 @@ import {
   GroupTitle,
   ProjectCard,
   ProjectContent,
-  ProjectImage,
   ProjectTitle,
-  ProjectVisual,
   Technologies,
 } from "./projectSection.styles";
 import { type ProjectSectionProps } from "./projectSection.types";
@@ -28,14 +27,12 @@ const ProjectSection: FC<ProjectSectionProps> = ({ project }) => {
   return (
     <Card align={CardAlign.Start} style={{ paddingBottom: "0" }}>
       <ProjectCard>
-        <ProjectVisual>
-          <ProjectImage
-            src={project.listImage.src}
-            alt={project.listImage.alt ?? "Project image"}
-            sizes="(min-width: 1025px) 50vw, 100vw"
-            fill
-          />
-        </ProjectVisual>
+        <BrowserFrame
+          image={{
+            src: project.listImage.src,
+            alt: project.listImage.alt ?? "Project image",
+          }}
+        />
         <ProjectContent>
           <ProjectTitle>{project.title}</ProjectTitle>
           <GroupTitle>The technology stack:</GroupTitle>

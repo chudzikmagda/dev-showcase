@@ -30,6 +30,20 @@ export const projectsData: Project[] = [
         alt: "Software engineer portfolio mockup 4",
       },
     ],
+    showcaseMobileImages: [
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-1.jpg",
+        alt: "Software engineer portfolio mockup 1",
+      },
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-2.jpg",
+        alt: "Software engineer portfolio mockup 2",
+      },
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-3.jpg",
+        alt: "Software engineer portfolio mockup 3",
+      },
+    ],
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2026",
     technologies: [
@@ -69,6 +83,20 @@ export const projectsData: Project[] = [
         alt: "Photographer portfolio mockup 4",
       },
     ],
+    showcaseMobileImages: [
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-1.jpg",
+        alt: "Photographer portfolio mockup 1",
+      },
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-2.jpg",
+        alt: "Photographer portfolio mockup 2",
+      },
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-3.jpg",
+        alt: "Photographer portfolio mockup 3",
+      },
+    ],
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
     technologies: [Technology.REACT, Technology.TYPESCRIPT, Technology.SASS],
@@ -79,7 +107,7 @@ export const projectsData: Project[] = [
     title: "Bookworm app",
     description:
       "A client-side web application built with Angular and SCSS that enables users to organize reading habits, track personal progress, and manage personal book collections.",
-    featured: true,
+    featured: false,
     listImage: {
       src: "/images/projects/bookworm/listing.jpg",
       alt: "Bookworm app preview",

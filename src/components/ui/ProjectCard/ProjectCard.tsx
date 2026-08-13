@@ -1,8 +1,9 @@
 import type { FC } from "react";
 
+import BrowserFrame from "@/components/ui/BrowserFrame/BrowserFrame";
+
 import {
   Content,
-  CoverImage,
   Description,
   Icons,
   Title,
@@ -20,13 +21,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
   caseStudyUrl,
 }) => {
   return (
-    <Card href={caseStudyUrl}>
+    <Card href={caseStudyUrl} style={{ background: "none" }}>
       <Visual>
-        <CoverImage
-          src={image.src}
-          alt={image.alt ?? `${title} preview`}
-          sizes="(min-width: 1025px) 30vw, (min-width: 768px) 50vw, 100vw"
-          fill
+        <BrowserFrame
+          image={{
+            src: image.src,
+            alt: image.alt ?? `${title} preview`,
+          }}
         />
       </Visual>
       <Content>

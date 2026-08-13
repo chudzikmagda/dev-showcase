@@ -15,6 +15,6 @@ export const Container = styled.div`
 
   @media (min-width: ${Breakpoints.DESKTOP}) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 4rem;
   }
 `;
