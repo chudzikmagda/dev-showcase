@@ -74,23 +74,11 @@ export const ImagesWrapper = styled.div`
   width: 100%;
 `;
 
-export const ImplementationDate = styled.div`
-  margin: 1.5rem 0 0.5rem 0;
-  color: var(--info-text-color);
-  font-size: clamp(1rem, 1.1rem + 0.5vw, 1.5rem);
-`;
-
-export const ShowcaseDescription = styled.div`
-  max-width: 60ch;
-  color: var(--primary-text-color);
-  font-size: clamp(1rem, 1.1rem + 0.5vw, 1.5rem);
-  text-align: center;
-`;
-
 export const InfoSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 75ch;
   margin: 3rem 0 0;
   color: var(--primary-text-color);
 `;
@@ -102,4 +90,35 @@ export const InfoLabel = styled.span`
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+`;
+
+export const InfoParagraph = styled.p`
+  margin: 0;
+  line-height: 1.6;
+`;
+
+export const MobileImagesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  @media (min-width: ${Breakpoints.MOBILE}) {
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 6rem;
+  }
+`;
+
+export const MobileImageItem = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${Breakpoints.MOBILE}) {
+    width: auto;
+  }
 `;

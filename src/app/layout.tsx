@@ -14,9 +14,9 @@ const montserrat: NextFont = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Magda Chudzik - software engineer and UI/UX designer",
+  title: "Magda Chudzik - Software Engineer and UI/UX Designer",
   description:
-    "I’m a software engineer and UI/UX designer, with a strong technical background as a technical physicist by education. At work, I seamlessly blend technical expertise with artistic vision, crafting intuitive and visually compelling digital experiences.",
+    "I'm a Software Engineer & UI/UX Designer specializing in building scalable, high-performance web applications - from micro-frontends (Angular, React, Next.js) to robust backend services (NestJS, Node.js). I combine solid engineering foundations, modern AI-assisted workflows, and deep UI/UX intuition to deliver accessible, responsive, and visually polished digital products.",
   icons: {
     icon: "/images/favicon.svg",
     shortcut: "/images/favicon.svg",

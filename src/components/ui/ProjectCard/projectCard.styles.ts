@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 
 import { Breakpoints } from "@/shared/types/breakpoints.types";
@@ -23,10 +22,6 @@ export const Visual = styled.div`
   border-top-right-radius: 16px;
   margin-bottom: 2rem;
   z-index: 0;
-`;
-
-export const CoverImage = styled(Image)`
-  object-fit: cover;
 `;
 
 export const Title = styled.h2`

@@ -4,15 +4,19 @@ import { Technology } from "../types/technologies.types";
 export const projectsData: Project[] = [
   {
     id: ProjectId.THE_SOFTWARE_ENGINEER_PORTFOLIO,
-    title: "The software engineer portfolio",
+    title: "Software engineer showcase",
     description:
-      "The website which you are currently viewing. Check more details and how I made it.",
-    featured: false,
+      "An interactive web application engineered with Next.js 16, React 19, and GSAP. Features custom styling with styled-components, Turbopack integration, and React Compiler optimizations.",
+    featured: true,
     listImage: {
       src: "/images/projects/dev-portfolio/listing.jpg",
       alt: "Software engineer portfolio preview",
     },
     showcaseImages: [
+      {
+        src: "/images/projects/dev-portfolio/mockup1.jpg",
+        alt: "Software engineer portfolio mockup 1",
+      },
       {
         src: "/images/projects/dev-portfolio/mockup2.jpg",
         alt: "Software engineer portfolio mockup 2",
@@ -21,11 +25,30 @@ export const projectsData: Project[] = [
         src: "/images/projects/dev-portfolio/mockup3.jpg",
         alt: "Software engineer portfolio mockup 3",
       },
+      {
+        src: "/images/projects/dev-portfolio/mockup4.jpg",
+        alt: "Software engineer portfolio mockup 4",
+      },
+    ],
+    showcaseMobileImages: [
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-1.jpg",
+        alt: "Software engineer portfolio mockup 1",
+      },
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-2.jpg",
+        alt: "Software engineer portfolio mockup 2",
+      },
+      {
+        src: "/images/projects/dev-portfolio/mockup-mobile-3.jpg",
+        alt: "Software engineer portfolio mockup 3",
+      },
     ],
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2026",
     technologies: [
       Technology.NEXT_JS,
+      Technology.REACT,
       Technology.TYPESCRIPT,
       Technology.STYLED_COMPONENTS,
       Technology.SASS,
@@ -34,9 +57,9 @@ export const projectsData: Project[] = [
   },
   {
     id: ProjectId.PHOTOGRAPHERS_PORTFOLIO,
-    title: "Photographer's portfolio",
+    title: "Fine art photography showcase",
     description:
-      "The website shows the pictures in an attractive way and focuses the visitors' attention on the author's pics.",
+      "A responsive, highly visual web platform built with React 19, Vite, and SASS. Features localized content (i18next), lightbox viewports, dynamic gallery metadata generation, and SEO/analytics integration.",
     featured: true,
     listImage: {
       src: "/images/projects/photo-portfolio/listing.jpg",
@@ -55,6 +78,24 @@ export const projectsData: Project[] = [
         src: "/images/projects/photo-portfolio/mockup3.jpg",
         alt: "Photographer portfolio mockup 3",
       },
+      {
+        src: "/images/projects/photo-portfolio/mockup4.jpg",
+        alt: "Photographer portfolio mockup 4",
+      },
+    ],
+    showcaseMobileImages: [
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-1.jpg",
+        alt: "Photographer portfolio mockup 1",
+      },
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-2.jpg",
+        alt: "Photographer portfolio mockup 2",
+      },
+      {
+        src: "/images/projects/photo-portfolio/mockup-mobile-3.jpg",
+        alt: "Photographer portfolio mockup 3",
+      },
     ],
     projectRange: "UI/UX design, frontend development, SEO.",
     implementationDate: "2023",
@@ -63,10 +104,10 @@ export const projectsData: Project[] = [
   },
   {
     id: ProjectId.BOOKWORM,
-    title: "Bookworm",
+    title: "Bookworm app",
     description:
-      "Angular standalone application that helps the users collect and manage data about the books they have read.",
-    featured: true,
+      "A client-side web application built with Angular and SCSS that enables users to organize reading habits, track personal progress, and manage personal book collections.",
+    featured: false,
     listImage: {
       src: "/images/projects/bookworm/listing.jpg",
       alt: "Bookworm app preview",
@@ -84,11 +125,36 @@ export const projectsData: Project[] = [
         src: "/images/projects/bookworm/mockup3.jpg",
         alt: "Bookworm app mockup 3",
       },
+      {
+        src: "/images/projects/bookworm/mockup4.jpg",
+        alt: "Bookworm app mockup 4",
+      },
     ],
     projectRange: "UI/UX design, frontend development.",
     implementationDate: "2022",
     technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
     detailsUrl: "/projects/bookworm",
+  },
+  {
+    id: ProjectId.WEATHER_APP,
+    title: "Weather app",
+    description:
+      "Check the current weather as well as the forecast for the next 16 days in a selected town by using geolocation.",
+    featured: false,
+    listImage: {
+      src: "/images/projects/weather-app/listing.jpg",
+      alt: "Weather app preview",
+    },
+    showcaseImages: [
+      {
+        src: "/images/projects/weather-app/mockup1.jpg",
+        alt: "Weather app mockup 1",
+      },
+    ],
+    projectRange: "UI/UX design, frontend development.",
+    implementationDate: "2022",
+    technologies: [Technology.ANGULAR, Technology.TYPESCRIPT, Technology.SASS],
+    detailsUrl: "/projects/weather-app",
   },
   {
     id: ProjectId.WORKSPACE_OF_TOMORROW,
@@ -102,16 +168,20 @@ export const projectsData: Project[] = [
     },
     showcaseImages: [
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup-1.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup1.jpg",
         alt: "Workspace of tomorrow mockup 1",
       },
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup-2.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup2.jpg",
         alt: "Workspace of tomorrow mockup 2",
       },
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup-3.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup3.jpg",
         alt: "Workspace of tomorrow mockup 3",
+      },
+      {
+        src: "/images/projects/workspace-of-tomorrow/mockup4.jpg",
+        alt: "Workspace of tomorrow mockup 4",
       },
     ],
     projectRange:
@@ -119,34 +189,5 @@ export const projectsData: Project[] = [
     implementationDate: "2021",
     technologies: [Technology.JAVASCRIPT, Technology.HTML, Technology.CSS],
     detailsUrl: "/projects/workspace-of-tomorrow",
-  },
-  {
-    id: ProjectId.WEATHER_APP,
-    title: "Weather App",
-    description:
-      "Check the current weather as well as the forecast for the next 16 days in a selected town by using geolocation.",
-    featured: false,
-    listImage: {
-      src: "/images/projects/weather-app/listing.jpg",
-      alt: "Weather app preview",
-    },
-    showcaseImages: [
-      {
-        src: "/images/projects/weather-app/mockup1.jpg",
-        alt: "Weather app mockup 1",
-      },
-      {
-        src: "/images/projects/weather-app/mockup2.jpg",
-        alt: "Weather app mockup 2",
-      },
-      {
-        src: "/images/projects/weather-app/mockup3.jpg",
-        alt: "Weather app mockup 3",
-      },
-    ],
-    projectRange: "UI/UX design, frontend development.",
-    implementationDate: "2020",
-    technologies: [Technology.HTML, Technology.CSS, Technology.JAVASCRIPT],
-    detailsUrl: "/projects/weather-app",
   },
 ];
