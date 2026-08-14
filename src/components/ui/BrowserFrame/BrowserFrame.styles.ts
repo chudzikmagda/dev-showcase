@@ -8,6 +8,7 @@ export const Frame = styled.div`
   background: var(--card-bg);
   border: 1px solid var(--secondary-color-70);
   border-radius: 12px;
+  overflow: hidden;
 `;
 
 export const Toolbar = styled.div`

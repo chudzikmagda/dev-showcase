@@ -40,7 +40,14 @@ const BrowserFrame: FC<{ image: Image }> = ({ image }) => {
           <span />
         </MenuButton>
       </Toolbar>
-      <Content>{<StyledImg src={image.src} alt={image.alt} />}</Content>
+      <Content>
+        <StyledImg
+          src={image.src}
+          alt={image.alt ?? ""}
+          loading="lazy"
+          decoding="async"
+        />
+      </Content>
     </Frame>
   );
 };
