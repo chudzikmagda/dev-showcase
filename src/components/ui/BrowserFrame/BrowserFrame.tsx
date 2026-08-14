@@ -19,17 +19,22 @@ import { DotColor } from "./BrowserFrame.types";
 const BrowserFrame: FC<{ image: Image }> = ({ image }) => {
   return (
     <Frame>
-      <Toolbar>
-        <TrafficLights aria-label="Browser controls">
+      <Toolbar aria-hidden="true" role="presentation" tabIndex={-1}>
+        <TrafficLights>
           <Dot color={DotColor.RED} />
           <Dot color={DotColor.YELLOW} />
           <Dot color={DotColor.GREEN} />
         </TrafficLights>
-        <AddressBar aria-label="Address bar">
+        <AddressBar>
           <LockIcon aria-hidden="true">🔒</LockIcon>
           <AddressText>https://www.example.com</AddressText>
         </AddressBar>
-        <MenuButton aria-label="Menu button">
+        <MenuButton
+          as="div"
+          aria-hidden="true"
+          role="presentation"
+          tabIndex={-1}
+        >
           <span />
           <span />
           <span />
