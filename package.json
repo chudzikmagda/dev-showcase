@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start",
+    "start": "serve out",
     "lint": "eslint",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
@@ -16,6 +16,7 @@
     "next": "^16.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "serve": "^14.2.6",
     "styled-components": "^6.4.2"
   },
   "devDependencies": {
