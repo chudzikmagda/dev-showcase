@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { JSX } from "react";
 
 import { StyledButton } from "./button.styles";
@@ -47,7 +46,7 @@ const Button = ({
     const isInternal: boolean = href.startsWith("/") || href.startsWith("#");
 
     return isInternal ? (
-      <StyledButton as={Link} href={href} {...commonProps} />
+      <StyledButton as="a" href={href} {...commonProps} />
     ) : (
       <StyledButton
         as="a"

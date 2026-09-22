@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 import { DotColor } from "./BrowserFrame.types";
 
-export const Frame = styled.div`
+export const Frame = styled.div<{ $radius: string }>`
   display: flex;
   flex-direction: column;
   background: var(--card-bg);
   border: 1px solid var(--secondary-color-70);
-  border-radius: 12px;
+  border-radius: ${({ $radius }) => $radius};
   overflow: hidden;
 `;
 

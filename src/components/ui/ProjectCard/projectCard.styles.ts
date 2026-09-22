@@ -14,14 +14,7 @@ export const Content = styled.div`
 `;
 
 export const Visual = styled.div`
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
   margin-bottom: 2rem;
-  z-index: 0;
 `;
 
 export const Title = styled.h2`

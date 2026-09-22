@@ -1,7 +1,5 @@
 import type { FC } from "react";
 
-import type { Image } from "@/shared/types/image.types";
-
 import {
   AddressBar,
   AddressText,
@@ -14,11 +12,11 @@ import {
   Toolbar,
   TrafficLights,
 } from "./BrowserFrame.styles";
-import { DotColor } from "./BrowserFrame.types";
+import { DotColor, type BrowserFrameProps } from "./BrowserFrame.types";
 
-const BrowserFrame: FC<{ image: Image }> = ({ image }) => {
+const BrowserFrame: FC<BrowserFrameProps> = ({ image, radius = "12px" }) => {
   return (
-    <Frame>
+    <Frame $radius={radius}>
       <Toolbar aria-hidden="true" role="presentation" tabIndex={-1}>
         <TrafficLights>
           <Dot color={DotColor.RED} />
