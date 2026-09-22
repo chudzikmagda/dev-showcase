@@ -12,11 +12,6 @@ export const socialMediaLinks: SocialMediaMenuLink[] = [
     iconSrc: "/images/social-media/li-icon.svg",
   },
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/chudzikmagda",
-    iconSrc: "/images/social-media/fb-icon.svg",
-  },
-  {
     label: "Instagram",
     href: "https://www.instagram.com/chudzikmagda/",
     iconSrc: "/images/social-media/insta-icon.svg",
