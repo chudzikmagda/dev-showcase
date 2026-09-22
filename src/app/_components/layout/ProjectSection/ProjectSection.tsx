@@ -28,6 +28,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({ project }) => {
     <Card align={CardAlign.Start} style={{ paddingBottom: "0" }}>
       <ProjectCard>
         <BrowserFrame
+          radius="12px 12px 0 0"
           image={{
             src: project.listImage.src,
             alt: project.listImage.alt ?? "Project image",

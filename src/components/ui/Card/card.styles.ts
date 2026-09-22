@@ -1,11 +1,10 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 import { Breakpoints } from "@/shared/types/breakpoints.types";
 
 import { CardAlign } from "./card.types";
 
-export const CardLink = styled(Link)`
+export const CardLink = styled.a`
   display: block;
   width: 100%;
   text-decoration: none;

@@ -25,6 +25,7 @@ export const FeatureCardTitle = styled.h3`
   font-size: clamp(1.2rem, 1.2rem + 1vw, 2rem);
   color: var(--primary-text-color);
   line-height: 1.2;
+  text-align: center;
 
   @media (min-width: ${Breakpoints.MOBILE}) {
     margin-bottom: 1.25rem;

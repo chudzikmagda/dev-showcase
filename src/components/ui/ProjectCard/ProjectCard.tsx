@@ -24,6 +24,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
     <Card href={caseStudyUrl} style={{ background: "none" }}>
       <Visual>
         <BrowserFrame
+          radius="12px 12px 0 0"
           image={{
             src: image.src,
             alt: image.alt ?? `${title} preview`,

@@ -28,7 +28,7 @@ export const useContactForm = (): ContactForm => {
     if (!isFormValid) return;
 
     try {
-      const res = await fetch("./mail.php", {
+      const res = await fetch("/php/mail.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
