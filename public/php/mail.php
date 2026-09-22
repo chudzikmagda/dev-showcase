@@ -11,6 +11,15 @@ require __DIR__ . '/phpmailer/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'], $_POST['message'], $_POST['email'])) {
 
+    if (
+        !is_string($_POST['name']) || !is_string($_POST['message']) ||
+        trim($_POST['name']) === '' || trim($_POST['message']) === ''
+    ) {
+        http_response_code(400);
+        echo json_encode(['ok' => false, 'error' => 'Name and message are required.']);
+        exit;
+    }
+
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     if (!$email) {
         http_response_code(400);
@@ -18,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'], $_POST['messa
         exit;
     }
 
-    $name = htmlspecialchars(trim($_POST['name']));
-    $message = htmlspecialchars(trim($_POST['message']));
-    $recipient = $env['MAIL_TO'] ?? '';
+    $name = trim($_POST['name']);
+    $message = trim($_POST['message']);
+    $recipient = $env['MAIL_TO'] ?? ($env['MAIL_RECIPIENT'] ?? '');
     $subject = "[DEV PORTFOLIO] Message from contact form";
     $formcontent = "Name: $name\n";
     $formcontent .= "Email: $email\n\n";
