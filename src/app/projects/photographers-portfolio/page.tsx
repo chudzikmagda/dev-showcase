@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { JSX } from "react";
 
 import { ProjectId, type Project } from "../../../shared/types/projects.types";
 import ProjectShowcase from "../_components/layout/ProjectShowcase/ProjectShowcase";
-import { getProjectById } from "../_utils/projects.utils";
+import { getProjectById, getProjectMetadata } from "../_utils/projects.utils";
+
+export function generateMetadata(): Metadata {
+  return getProjectMetadata(ProjectId.PHOTOGRAPHERS_PORTFOLIO);
+}
 
 const PhotographersPortfolioPage = (): JSX.Element => {
   const project: Project | undefined = getProjectById(
