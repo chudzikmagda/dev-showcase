@@ -50,15 +50,15 @@ Open `http://localhost:3000` in your browser to view the application.
 
 ## 🖼️ Mockups
 
-![Dev Portfolio mockup 1](./public/images/projects/dev-portfolio/mockup1.jpg)
+![Dev Portfolio mockup 1](./public/images/projects/dev-portfolio/mockup1.webp)
 
-![Dev Portfolio mockup 2](./public/images/projects/dev-portfolio/mockup2.jpg)
+![Dev Portfolio mockup 2](./public/images/projects/dev-portfolio/mockup2.webp)
 
-![Dev Portfolio mockup 3](./public/images/projects/dev-portfolio/mockup3.jpg)
+![Dev Portfolio mockup 3](./public/images/projects/dev-portfolio/mockup3.webp)
 
 <table>
 	<tr>
-		<td><img src="./public/images/projects/dev-portfolio/mockup-mobile-1.jpg" alt="Dev Portfolio mobile mockup 1"></td>
-		<td><img src="./public/images/projects/dev-portfolio/mockup-mobile-2.jpg" alt="Dev Portfolio mobile mockup 2"></td>
+		<td><img src="./public/images/projects/dev-portfolio/mockup-mobile-1.webp" alt="Dev Portfolio mobile mockup 1"></td>
+		<td><img src="./public/images/projects/dev-portfolio/mockup-mobile-2.webp" alt="Dev Portfolio mobile mockup 2"></td>
 	</tr>
 </table>

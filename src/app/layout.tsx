@@ -6,6 +6,7 @@ import { JSX } from "react";
 import StyledComponentsRegistry from "./registry";
 import Footer from "../components/layouts/Footer/Footer";
 import Header from "../components/layouts/Header/Header";
+import { buildSeoMetadata, SITE_URL } from "../shared/utils/seo.utils";
 import "./../css/global.css";
 
 const montserrat: NextFont = Montserrat({
@@ -14,9 +15,15 @@ const montserrat: NextFont = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Magda Chudzik - Software Engineer and UI/UX Designer",
-  description:
-    "I'm a Software Engineer & UI/UX Designer specializing in building scalable, high-performance web applications - from micro-frontends (Angular, React, Next.js) to robust backend services (NestJS, Node.js). I combine solid engineering foundations, modern AI-assisted workflows, and deep UI/UX intuition to deliver accessible, responsive, and visually polished digital products.",
+  ...buildSeoMetadata({
+    title: "Magda Chudzik - Software Engineer and UI/UX Designer",
+    description:
+      "Software engineer and UI designer blending technical expertise with creative design to build responsive, scalable and intuitive digital experiences.",
+    url: SITE_URL,
+    imageUrl: "/images/magdachudzik.webp",
+    keywords:
+      "software engineer, UI designer, frontend developer, technical physicist, modern web development, responsive UI, scalable interfaces, intuitive design, JavaScript, TypeScript, Angular, React, Next.js, Nx, HTML, CSS, Sass, BEM, Bootstrap, WordPress, Node.js, Nest.js, Express.js, AI-assisted development, GitHub Copilot, Cursor IDE, Gemini AI, prompt engineering, Playwright, Cypress, Jasmine, Jest, Figma, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, interaction design, digital design, performance-optimized UI, design systems, user-friendly interfaces, modern web applications, hybrid designer-developer",
+  }),
   icons: {
     icon: "/images/favicon.svg",
     shortcut: "/images/favicon.svg",
