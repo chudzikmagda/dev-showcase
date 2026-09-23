@@ -47,7 +47,7 @@ const AboutMe = (): JSX.Element => {
               width="100%"
               height="100%"
               preserveAspectRatio="xMinYMin slice"
-              href="/images/magdachudzik.jpg"
+              href="/images/magdachudzik.webp"
               clipPath="url(#blob)"
             />
           </PortraitSvg>

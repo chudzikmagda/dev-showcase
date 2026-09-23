@@ -9,38 +9,38 @@ export const projectsData: Project[] = [
       "An interactive web application engineered with Next.js 16, React 19, and GSAP. Features custom styling with styled-components, Turbopack integration, and React Compiler optimizations.",
     featured: true,
     listImage: {
-      src: "/images/projects/dev-portfolio/listing.jpg",
+      src: "/images/projects/dev-portfolio/listing.webp",
       alt: "Software engineer portfolio preview",
     },
     showcaseImages: [
       {
-        src: "/images/projects/dev-portfolio/mockup1.jpg",
+        src: "/images/projects/dev-portfolio/mockup1.webp",
         alt: "Software engineer portfolio mockup 1",
       },
       {
-        src: "/images/projects/dev-portfolio/mockup2.jpg",
+        src: "/images/projects/dev-portfolio/mockup2.webp",
         alt: "Software engineer portfolio mockup 2",
       },
       {
-        src: "/images/projects/dev-portfolio/mockup3.jpg",
+        src: "/images/projects/dev-portfolio/mockup3.webp",
         alt: "Software engineer portfolio mockup 3",
       },
       {
-        src: "/images/projects/dev-portfolio/mockup4.jpg",
+        src: "/images/projects/dev-portfolio/mockup4.webp",
         alt: "Software engineer portfolio mockup 4",
       },
     ],
     showcaseMobileImages: [
       {
-        src: "/images/projects/dev-portfolio/mockup-mobile-1.jpg",
+        src: "/images/projects/dev-portfolio/mockup-mobile-1.webp",
         alt: "Software engineer portfolio mockup 1",
       },
       {
-        src: "/images/projects/dev-portfolio/mockup-mobile-2.jpg",
+        src: "/images/projects/dev-portfolio/mockup-mobile-2.webp",
         alt: "Software engineer portfolio mockup 2",
       },
       {
-        src: "/images/projects/dev-portfolio/mockup-mobile-3.jpg",
+        src: "/images/projects/dev-portfolio/mockup-mobile-3.webp",
         alt: "Software engineer portfolio mockup 3",
       },
     ],
@@ -62,38 +62,38 @@ export const projectsData: Project[] = [
       "A responsive, highly visual web platform built with React 19, Vite, and SASS. Features localized content (i18next), lightbox viewports, dynamic gallery metadata generation, and SEO/analytics integration.",
     featured: true,
     listImage: {
-      src: "/images/projects/photo-portfolio/listing.jpg",
+      src: "/images/projects/photo-portfolio/listing.webp",
       alt: "Photographer portfolio preview",
     },
     showcaseImages: [
       {
-        src: "/images/projects/photo-portfolio/mockup1.jpg",
+        src: "/images/projects/photo-portfolio/mockup1.webp",
         alt: "Photographer portfolio mockup 1",
       },
       {
-        src: "/images/projects/photo-portfolio/mockup2.jpg",
+        src: "/images/projects/photo-portfolio/mockup2.webp",
         alt: "Photographer portfolio mockup 2",
       },
       {
-        src: "/images/projects/photo-portfolio/mockup3.jpg",
+        src: "/images/projects/photo-portfolio/mockup3.webp",
         alt: "Photographer portfolio mockup 3",
       },
       {
-        src: "/images/projects/photo-portfolio/mockup4.jpg",
+        src: "/images/projects/photo-portfolio/mockup4.webp",
         alt: "Photographer portfolio mockup 4",
       },
     ],
     showcaseMobileImages: [
       {
-        src: "/images/projects/photo-portfolio/mockup-mobile-1.jpg",
+        src: "/images/projects/photo-portfolio/mockup-mobile-1.webp",
         alt: "Photographer portfolio mockup 1",
       },
       {
-        src: "/images/projects/photo-portfolio/mockup-mobile-2.jpg",
+        src: "/images/projects/photo-portfolio/mockup-mobile-2.webp",
         alt: "Photographer portfolio mockup 2",
       },
       {
-        src: "/images/projects/photo-portfolio/mockup-mobile-3.jpg",
+        src: "/images/projects/photo-portfolio/mockup-mobile-3.webp",
         alt: "Photographer portfolio mockup 3",
       },
     ],
@@ -109,24 +109,24 @@ export const projectsData: Project[] = [
       "A client-side web application built with Angular and SCSS that enables users to organize reading habits, track personal progress, and manage personal book collections.",
     featured: false,
     listImage: {
-      src: "/images/projects/bookworm/listing.jpg",
+      src: "/images/projects/bookworm/listing.webp",
       alt: "Bookworm app preview",
     },
     showcaseImages: [
       {
-        src: "/images/projects/bookworm/mockup1.jpg",
+        src: "/images/projects/bookworm/mockup1.webp",
         alt: "Bookworm app mockup 1",
       },
       {
-        src: "/images/projects/bookworm/mockup2.jpg",
+        src: "/images/projects/bookworm/mockup2.webp",
         alt: "Bookworm app mockup 2",
       },
       {
-        src: "/images/projects/bookworm/mockup3.jpg",
+        src: "/images/projects/bookworm/mockup3.webp",
         alt: "Bookworm app mockup 3",
       },
       {
-        src: "/images/projects/bookworm/mockup4.jpg",
+        src: "/images/projects/bookworm/mockup4.webp",
         alt: "Bookworm app mockup 4",
       },
     ],
@@ -142,12 +142,12 @@ export const projectsData: Project[] = [
       "Check the current weather as well as the forecast for the next 16 days in a selected town by using geolocation.",
     featured: false,
     listImage: {
-      src: "/images/projects/weather-app/listing.jpg",
+      src: "/images/projects/weather-app/listing.webp",
       alt: "Weather app preview",
     },
     showcaseImages: [
       {
-        src: "/images/projects/weather-app/mockup1.jpg",
+        src: "/images/projects/weather-app/mockup1.webp",
         alt: "Weather app mockup 1",
       },
     ],
@@ -163,24 +163,24 @@ export const projectsData: Project[] = [
       'The website "Workspace of tomorrow" aims at showing how the office work will change in the future. I have created this website for Nowy Styl which is an European leader in the office furniture sector.',
     featured: true,
     listImage: {
-      src: "/images/projects/workspace-of-tomorrow/listing.jpg",
+      src: "/images/projects/workspace-of-tomorrow/listing.webp",
       alt: "Workspace of tomorrow preview",
     },
     showcaseImages: [
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup1.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup1.webp",
         alt: "Workspace of tomorrow mockup 1",
       },
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup2.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup2.webp",
         alt: "Workspace of tomorrow mockup 2",
       },
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup3.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup3.webp",
         alt: "Workspace of tomorrow mockup 3",
       },
       {
-        src: "/images/projects/workspace-of-tomorrow/mockup4.jpg",
+        src: "/images/projects/workspace-of-tomorrow/mockup4.webp",
         alt: "Workspace of tomorrow mockup 4",
       },
     ],

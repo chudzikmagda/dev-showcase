@@ -13,7 +13,7 @@ export const metadata: Metadata = buildSeoMetadata({
   description:
     "Software engineer and UI designer blending technical expertise with creative design to build responsive, scalable and intuitive digital experiences.",
   url: SITE_URL,
-  imageUrl: "/images/magdachudzik.jpg",
+  imageUrl: "/images/magdachudzik.webp",
   keywords:
     "software engineer, UI designer, frontend developer, technical physicist, modern web development, responsive UI, scalable interfaces, intuitive design, JavaScript, TypeScript, Angular, React, Next.js, Nx, HTML, CSS, Sass, BEM, Bootstrap, WordPress, Node.js, Nest.js, Express.js, AI-assisted development, GitHub Copilot, Cursor IDE, Gemini AI, prompt engineering, Playwright, Cypress, Jasmine, Jest, Figma, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, interaction design, digital design, performance-optimized UI, design systems, user-friendly interfaces, modern web applications, hybrid designer-developer",
 });

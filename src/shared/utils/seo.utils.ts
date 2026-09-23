@@ -14,7 +14,7 @@ export const buildSeoMetadata = ({
   imageAlt = title,
   imageWidth = "1200",
   imageHeight = "630",
-  imageType = "image/jpeg",
+  imageType = "image/webp",
   keywords,
   type = SEOType.WEBSITE,
   siteName = SITE_NAME,
